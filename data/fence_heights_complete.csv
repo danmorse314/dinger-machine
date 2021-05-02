@@ -1,0 +1,1304 @@
+stadium,full_team_name,team,team_abbr,x,y,d_wall,segment,spray_angle_stadia,fence_height,orientation
+Angel Stadium,Los Angeles Angels,angels,LAA,-245.69442266919052,264.87664362521014,361.282971739471,outfield_outer,-32.1,5,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-239.40979247228552,278.37375605707365,367.16344697279703,outfield_outer,-30.5,5,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-229.63628413271363,289.7141867313982,369.6851809089943,outfield_outer,-28.8,5,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-219.4177675353718,300.6995334162334,372.24234862109245,outfield_outer,-27.1,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-209.13024124047956,311.62032683525706,375.2901356260428,outfield_outer,-25.4,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-198.7641186756749,322.46646603379025,378.8031105854853,outfield_outer,-23.7,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-188.4451837275506,333.3573719743964,382.934360850246,outfield_outer,-22.1,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-178.19112755312906,344.30952343342074,387.6868915318195,outfield_outer,-20.5,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-167.93083783489553,355.25573252070967,392.94707249800956,outfield_outer,-19,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-156.49479748327454,364.55628899257914,396.7264920362289,outfield_outer,-17.4,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-141.99930033838575,368.42452626540364,394.8422885792227,outfield_outer,-15.8,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-127.4979454671677,372.27043859847043,393.498418742244,outfield_outer,-14.2,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-113.03330395889682,376.2538079718497,392.86569692094764,outfield_outer,-12.5,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-98.55889520749248,380.2013866330811,392.76831621483814,outfield_outer,-10.9,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-84.10096433402585,384.20960588516084,393.3064879408217,outfield_outer,-9.3,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-69.59850718503276,388.0534538822638,394.2453998112588,outfield_outer,-7.6,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-55.12235286260027,391.995347075404,395.8520252744395,outfield_outer,-6,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-40.64239903494937,395.9231302737327,398.00368049186073,outfield_outer,-4.4,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-26.164748713136344,399.85946452883286,400.714593505785,outfield_outer,-2.8,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,-11.684759873544767,403.78724589527155,403.9562767936536,outfield_outer,-1.2,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,2.7914173560069364,407.72897886564857,407.73853413392254,outfield_outer,0.3,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,17.103339556345166,410.19873858846125,410.55514777377283,outfield_outer,1.8,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,30.314625330359448,403.0883234679791,404.22663571955053,outfield_outer,3.2,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,43.52783837583165,395.98138447428164,398.3665768658829,outfield_outer,4.7,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,56.7557516700314,388.9018837869976,393.0214886754993,outfield_outer,6.2,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,69.96650016268336,381.7904072224308,388.1484589587911,outfield_outer,7.8,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,83.1790329431707,374.6822056289683,383.8039952063417,outfield_outer,9.4,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,96.388210107774,367.56778282575084,379.99573947508765,outfield_outer,11,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,109.59279428137873,360.4449178242188,376.7374674009853,outfield_outer,12.7,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,122.84003464449438,353.40252835997387,374.14304906370063,outfield_outer,14.4,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,136.0770915230295,346.3411227737487,372.1144288542811,outfield_outer,16.1,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,149.2789206234043,339.2130991771372,370.60723521788805,outfield_outer,17.8,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,162.50315105433458,332.1267117072233,369.7504925379288,outfield_outer,19.6,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,175.70637191248122,325.001251386141,369.4570915995588,outfield_outer,21.3,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,188.87389910479058,317.8104872999429,369.6983305356866,outfield_outer,23,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,202.1037449225629,310.7351952613547,370.6781424441379,outfield_outer,24.8,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,214.8694348091004,302.9223736682968,371.3904124826292,outfield_outer,26.5,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,226.10142113622678,292.9755916299849,370.07641093531083,outfield_outer,28.2,8,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,236.07982649009193,282.0244646003419,367.79271758519286,outfield_outer,29.9,5,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,242.40953082417602,268.4704672174625,361.71642539752014,outfield_outer,31.6,5,NE
+Angel Stadium,Los Angeles Angels,angels,LAA,246.2105606491796,253.9780078562958,353.72937204851394,outfield_outer,33.1,5,NE
+Minute Maid Park,Houston Astros,astros,HOU,232.2561599906836,240.39807524691886,334.2665978467506,outfield_outer,33,7,ENE
+Minute Maid Park,Houston Astros,astros,HOU,222.9193137078114,251.70421232784278,336.22616038544857,outfield_outer,31.1,7,ENE
+Minute Maid Park,Houston Astros,astros,HOU,213.6256915038171,263.04340676595933,338.86246459814043,outfield_outer,29.3,7,ENE
+Minute Maid Park,Houston Astros,astros,HOU,204.30700318779697,274.3643398777807,342.07768496081246,outfield_outer,27.5,7,ENE
+Minute Maid Park,Houston Astros,astros,HOU,194.99980888746538,285.6947265432954,345.89941058174173,outfield_outer,25.7,7,ENE
+Minute Maid Park,Houston Astros,astros,HOU,185.5619106830714,296.9164359789136,350.132250229499,outfield_outer,24,7,ENE
+Minute Maid Park,Houston Astros,astros,HOU,176.1810872623351,308.1859954567338,354.99068058837327,outfield_outer,22.3,7,ENE
+Minute Maid Park,Houston Astros,astros,HOU,166.82372086592392,319.47516007564906,360.4088397208277,outfield_outer,20.7,7,ENE
+Minute Maid Park,Houston Astros,astros,HOU,157.49838307974147,330.7907650918046,366.3717660283806,outfield_outer,19.1,7,ENE
+Minute Maid Park,Houston Astros,astros,HOU,148.1009622519802,342.04587773208516,372.73217931039306,outfield_outer,17.6,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,135.76468008166526,348.232407931158,373.76176675953536,outfield_outer,16,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,125.65876315837252,358.67327676434246,380.04821302482475,outfield_outer,14.5,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,116.3479427630984,370.0006979250946,387.86255329725026,outfield_outer,13.1,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,107.05637829600369,381.3440778741421,396.08632122750316,outfield_outer,11.8,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,97.76063021671293,392.68398507776425,404.67005443561385,outfield_outer,10.5,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,87.79525558074455,403.4178032870617,412.86066767306215,outfield_outer,9.2,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,79.05113205405209,414.95655091420576,422.41924746114614,outfield_outer,8.1,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,69.64667212815363,425.85392832343086,431.51156091931574,outfield_outer,7,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,57.464410782106306,434.00483064800295,437.7925896270246,outfield_outer,5.7,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,44.09788786004155,439.92493311843776,442.12958563409745,outfield_outer,4.3,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,29.832128719811205,443.1631899531055,444.1661500310077,outfield_outer,2.9,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,15.64097809470906,443.4682539835776,443.74399431091126,outfield_outer,1.5,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,7.700977888642873,431.3298569968006,431.3985982792733,outfield_outer,0.8,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-6.592198683333008,434.6020968799469,434.6520904078655,outfield_outer,-0.7,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-20.329165251119118,432.17001649049513,432.6478916084096,outfield_outer,-2,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-32.28181035262744,423.6903433770876,424.9183713969513,outfield_outer,-3.3,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-42.97379067911044,413.7168180286188,415.94272707316003,outfield_outer,-4.4,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-54.27995287106913,404.41488179146444,408.0413090583962,outfield_outer,-5.7,9,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-65.77382611147078,395.31028742219326,400.7448309624954,outfield_outer,-7.1,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-77.24500417234266,386.17853925245294,393.82820474001545,outfield_outer,-8.5,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-88.69665662744214,377.02081760793527,387.3135600603759,outfield_outer,-9.9,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-100.16729564597485,367.8868210075051,381.2796876153203,outfield_outer,-11.4,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-111.6870999989355,358.8150184874789,375.7954573945008,outfield_outer,-13,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-123.17642006690012,349.7045242503527,370.76365078262853,outfield_outer,-14.6,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-134.63019781541317,340.5495342107043,366.19567913199757,outfield_outer,-16.2,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-145.8828578778113,331.3388487462909,362.0320992828055,outfield_outer,-17.8,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-143.4906292400505,316.87223532740586,347.84705576027596,outfield_outer,-18.3,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-144.49590585371533,303.62074993364007,336.25083880750657,outfield_outer,-19.1,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-155.42457711297234,293.84498582630965,332.41792199881525,outfield_outer,-20.9,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-166.3436540010216,284.05829091322937,329.1797743831726,outfield_outer,-22.8,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-177.07158352032488,274.06508961658096,326.29131008493,outfield_outer,-24.6,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-187.55490799489877,263.81303697848074,323.6883717293289,outfield_outer,-26.6,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-198.06717222487956,253.59061691703127,321.77446402957554,outfield_outer,-28.5,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-208.58008880697506,243.3689010789054,320.5215678532096,outfield_outer,-30.4,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-219.11550998555236,233.17036382168598,319.9687879793373,outfield_outer,-32.4,21,ENE
+Minute Maid Park,Houston Astros,astros,HOU,-229.60876534542768,222.92850446934798,320.02703515233173,outfield_outer,-34.4,21,ENE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,241.5466241332004,231.66530869604733,334.6843092876935,outfield_outer,34.6,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,235.38402451022867,245.48483184402644,340.1006346070555,outfield_outer,32.8,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,229.23326406431983,259.3109060721504,346.1069709808541,outfield_outer,31.1,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,223.14310998801918,273.1635964373979,352.7197158562856,outfield_outer,29.4,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,216.9490727055311,286.970050031834,359.74811988815605,outfield_outer,27.8,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,210.74824155354878,300.7720835280035,367.258311747589,outfield_outer,26.3,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,199.94149944344338,310.10447274759366,368.9734234572397,outfield_outer,24.6,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,185.97506473432537,315.92576658600404,366.60034737557305,outfield_outer,22.9,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,172.0189777536475,321.7731063644438,364.8677303994333,outfield_outer,21.1,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,158.10472807027648,327.71912050013003,363.8638852367116,outfield_outer,19.3,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,144.37839946394368,334.03639840213896,363.90306084071705,outfield_outer,17.5,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,131.9195536493422,342.60754636898554,367.1276337515582,outfield_outer,15.8,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,119.7388620192948,351.58487622201284,371.415293526968,outfield_outer,14.1,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,107.45980939419243,360.42892509586085,376.10719307239236,outfield_outer,12.5,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,95.15194689188536,369.23255030800016,381.2959076678716,outfield_outer,10.8,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,82.8282690761835,378.01050382517076,386.97863398424994,outfield_outer,9.3,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,69.51927858293834,385.1602642374823,391.38390263548064,outfield_outer,7.7,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,55.81028877097228,391.5676175620494,395.5249517488355,outfield_outer,6.1,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,42.105828451102745,397.98463135179554,400.20578154466773,outfield_outer,4.5,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,27.79003459752331,402.37703533,403.3355483761525,outfield_outer,3,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,12.657492644267773,402.37703533,402.57606819208684,outfield_outer,1.4,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-2.4748554637624163,402.339686810134,402.34729835310594,outfield_outer,-0.3,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-17.60681408460349,402.2272950700001,402.6124647865969,outfield_outer,-1.9,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-32.71925628264757,401.78110274580257,403.11115620300404,outfield_outer,-3.5,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-46.54007951762605,395.934910002238,398.6607981228995,outfield_outer,-5,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-60.164838086453045,389.3502584788541,393.9713587553283,outfield_outer,-6.6,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-73.57359015576155,382.34566131663235,389.3600877029654,outfield_outer,-8.2,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-86.63844741586473,374.7506016713455,384.63519602821975,outfield_outer,-9.8,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-99.18760743106543,366.2941871149937,379.48598522492654,outfield_outer,-11.4,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-111.7846915016864,357.90936567555894,374.95990624653217,outfield_outer,-13,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-124.33510227811831,349.45478333142364,370.9149002826961,outfield_outer,-14.7,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-136.97650210540624,341.13858064583496,367.6113346104649,outfield_outer,-16.4,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-150.19372335169348,333.8689069973995,366.09643755967255,outfield_outer,-18.2,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-164.19013425106397,328.1161616576281,366.9040960882246,outfield_outer,-19.9,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-178.12846097860157,322.2275231859914,368.18517801397684,outfield_outer,-21.7,15,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-191.98500541925415,316.16200830846265,369.88735826393344,outfield_outer,-23.5,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-205.4665926093226,309.40014278025285,371.409435839918,outfield_outer,-25.2,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-212.16104494239886,296.0337463751593,364.2091267170041,outfield_outer,-26.7,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-218.41080436638825,282.25241770812625,356.88892777173027,outfield_outer,-28.3,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-224.62369768580078,268.45420154674537,350.03351823810044,outfield_outer,-29.9,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-230.8054419701996,254.6420942634938,343.6768077917933,outfield_outer,-31.6,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-237.00039787500384,240.83636790249076,337.8925046481114,outfield_outer,-33.4,8,NE
+RingCentral Coliseum,Oakland Athletics,athletics,OAK,-242.9985854960228,226.9446734063449,332.49390571945895,outfield_outer,-35.2,8,NE
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-233.1101659619768,243.79339918981967,337.30634586877716,outfield_outer,-32.8,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-224.35005314843278,256.7287738450069,340.94370454323587,outfield_outer,-30.9,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-215.38665888199782,269.52687308796334,345.0161563476777,outfield_outer,-29,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-206.4122505775398,282.31733867173597,349.72717495667496,outfield_outer,-27.1,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-197.47637415860538,295.1352456269406,355.1080561774177,outfield_outer,-25.3,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-188.55791083867484,307.9652697663587,361.10482290065266,outfield_outer,-23.6,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-179.66212222292143,320.81096935475165,367.6930189981574,outfield_outer,-21.9,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-170.82355724106208,333.69553069104825,374.8778399848019,outfield_outer,-20.3,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-160.95944437133218,345.7262307333345,381.35884590423075,outfield_outer,-18.7,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-148.33778643506128,354.91000147495674,384.6624598676191,outfield_outer,-17,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-135.5524679881221,363.8924034385385,388.3196529380749,outfield_outer,-15.3,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-122.85280454040824,372.9946556909514,392.7057737765707,outfield_outer,-13.7,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-110.0761179123019,381.9893520884998,397.53316445755166,outfield_outer,-12.1,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-97.28918177238785,390.96948467565716,402.8924457438854,outfield_outer,-10.5,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-83.43162072594609,397.79120344080417,406.44640098276346,outfield_outer,-8.9,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-68.06616706385316,400.62021024435785,406.3613612968116,outfield_outer,-7.2,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-52.60411326267833,402.8651688172162,406.28504400023985,outfield_outer,-5.6,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-37.069041555117195,404.5330074137129,406.22785223196854,outfield_outer,-3.9,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-21.48009227280832,405.5879876129914,406.1563862110313,outfield_outer,-2.3,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,-5.863230070294903,406.0456717,406.0880015134175,outfield_outer,-0.6,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,9.761140366490531,405.97175694190565,406.08908788066697,outfield_outer,1,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,25.370072158432965,405.2909553176228,406.0842265141499,outfield_outer,2.7,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,40.94434126966759,404.0455887158941,406.11485671270447,outfield_outer,4.3,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,56.45930932750769,402.20173085012067,406.14515374256547,outfield_outer,6,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,71.89548659664919,399.7842585435581,406.1975066050892,outfield_outer,7.6,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,87.10106915828705,396.42518847209965,405.881172640043,outfield_outer,9.3,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,100.26771144956896,388.0562468637287,400.8007793022578,outfield_outer,10.9,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,113.05114482646351,379.0711315268087,395.56982203346746,outfield_outer,12.5,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,125.82564738385507,370.07333705080543,390.8789689091564,outfield_outer,14.1,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,138.60075333098712,361.0763757503294,386.7639046613712,outfield_outer,15.7,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,151.4201275204649,352.14303840036814,383.318111380296,outfield_outer,17.5,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,163.50641111458754,342.2985635219269,379.34503168586133,outfield_outer,19.1,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,172.58319767502334,329.5929712419226,372.0436625072587,outfield_outer,20.7,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,181.5161593105923,316.7730560586597,365.0935292984676,outfield_outer,22.4,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,190.41726994228853,303.93098308983525,358.6541219256069,outfield_outer,24.1,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,199.34331067246268,291.10622124133715,352.8180658005884,outfield_outer,25.8,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,208.27273532250464,278.28381572878425,347.5908721115818,outfield_outer,27.6,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,217.17986360861562,265.44596503419325,342.9703391111118,outfield_outer,29.5,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,226.11432280087735,252.62713015737955,339.0400475862003,outfield_outer,31.4,8,NNW
+Rogers Centre,Toronto Blue Jays,blue_jays,TOR,235.08499367351394,239.833593833553,335.83494008455074,outfield_outer,33.3,8,NNW
+Truist Park,Atlanta Braves,braves,ATL,-238.45253562596525,248.38349446871877,344.31667411112153,outfield_outer,-32.9,6,SSE
+Truist Park,Atlanta Braves,braves,ATL,-232.0838694626866,261.2617444934571,349.45761059181103,outfield_outer,-31.2,6,SSE
+Truist Park,Atlanta Braves,braves,ATL,-225.88978535665382,274.2241634140339,355.28170080740426,outfield_outer,-29.6,6,SSE
+Truist Park,Atlanta Braves,braves,ATL,-219.69716940961928,287.1877380607185,361.58490446785913,outfield_outer,-28.1,6,SSE
+Truist Park,Atlanta Braves,braves,ATL,-213.46202700026288,300.1312681216562,368.29989828314433,outfield_outer,-26.6,6,SSE
+Truist Park,Atlanta Braves,braves,ATL,-207.23026544144756,313.0765201907059,375.4481194647994,outfield_outer,-25.1,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-198.29804001770214,324.0096248055951,379.8741234165927,outfield_outer,-23.6,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-186.61090337755036,332.36608502130247,381.17036051058994,outfield_outer,-22,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-174.88443763411755,340.66720527412815,382.934343296454,outfield_outer,-20.4,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-163.09757922528243,348.882367545259,385.12300208262354,outfield_outer,-18.8,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-151.37828929123384,357.1931099664494,387.94626467623647,outfield_outer,-17.2,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-138.50632103806913,363.42025282983263,388.9193761364946,outfield_outer,-15.6,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-125.11932963209182,368.63428239668264,389.28919944650556,outfield_outer,-14.1,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-111.74363815538504,373.87629472564265,390.2180472837939,outfield_outer,-12.5,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-98.3743015396139,379.1344588444368,391.68921492258477,outfield_outer,-10.9,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-85.19727658745057,384.8479042335685,394.1655557388145,outfield_outer,-9.4,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-71.84689387119285,390.1566748367037,396.7167844679272,outfield_outer,-7.8,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-58.50613348246872,395.4898712503673,399.7939543273516,outfield_outer,-6.3,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-45.17939395347306,400.85757593726623,403.3955550378614,outfield_outer,-4.8,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-31.255750508225564,403.82452451000006,405.0323055455701,outfield_outer,-3.3,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-16.889967708037346,403.97426477000005,404.3271912766202,outfield_outer,-1.8,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,-2.5226466428742027,403.97426477000005,403.9821411183258,outfield_outer,-0.3,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,11.844674422288977,403.97426477000005,404.1478725771449,outfield_outer,1.3,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,26.211995487452153,403.97426477000005,404.82375832440505,outfield_outer,2.8,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,40.55363179057956,403.6013508986395,405.63363704038727,outfield_outer,4.3,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,53.76200915905713,398.4330996050988,402.0438887605993,outfield_outer,5.8,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,66.51873821233363,391.8237724575579,397.4300079211849,outfield_outer,7.2,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,79.30417604435051,385.2702729385049,393.34760142675765,outfield_outer,8.7,8,SSE
+Truist Park,Atlanta Braves,braves,ATL,92.02252028763313,378.5873300424526,389.6107168813004,outfield_outer,10.2,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,104.77980637693292,371.97980583536486,386.45540981296057,outfield_outer,11.8,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,117.57594435924524,365.44798431140646,383.89625151756604,outfield_outer,13.4,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,130.35671225336338,358.8868779275455,381.82805499083895,outfield_outer,15,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,143.12259642618122,352.2951877724486,380.2577769558387,outfield_outer,16.6,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,153.80808372717235,343.0325547644302,375.9365109270934,outfield_outer,18.1,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,162.41672235331893,331.52990043436967,369.176470786016,outfield_outer,19.6,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,171.01446902770715,320.0192148922074,362.8474149240331,outfield_outer,21.1,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,179.56997752738937,308.4770190747143,356.93619615613204,outfield_outer,22.7,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,188.20486176472073,296.994360079729,351.60591563715957,outfield_outer,24.3,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,196.88699244066524,285.54721831421745,346.8453570098898,outfield_outer,25.9,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,205.50499161453413,274.05166798081916,342.54433041806266,outfield_outer,27.6,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,214.11208430879478,262.548361859156,338.78551763908496,outfield_outer,29.4,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,222.6957930283505,251.02729422087762,335.5713317260296,outfield_outer,31.2,16,SSE
+Truist Park,Atlanta Braves,braves,ATL,231.23905832068982,239.47652861726178,332.8971460550745,outfield_outer,33,16,SSE
+American Family Field,Milwaukee Brewers,brewers,MIL,242.96458530981755,244.81094619538533,344.91185698936397,outfield_outer,33.6,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,231.96914430577536,254.62114065670465,344.4439129659211,outfield_outer,31.8,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,220.9737033017306,264.43133511802375,344.60601930782036,outfield_outer,29.9,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,209.97826229768842,274.24152957934285,345.39728890594154,outfield_outer,28.1,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,198.98282129364623,284.05172404066167,346.81341539861364,outfield_outer,26.3,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,187.98738028960156,293.8619185019808,348.84678914075175,outfield_outer,24.5,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,176.9919392855569,303.67211296329964,351.4866978473827,outfield_outer,22.7,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,174.69697000000002,317.37972841616624,362.28293271516446,outfield_outer,21.6,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,165.42096208094543,327.8772115193667,367.24318990214255,outfield_outer,20.1,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,154.28111280623264,337.5231120153782,371.11253402879703,outfield_outer,18.4,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,143.14126353151985,347.1690125113897,375.5206313553671,outfield_outer,16.8,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,129.74146512539335,353.20922048908136,376.28393695637357,outfield_outer,15.1,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,116.20426949034771,359.0302146121507,377.3673637879041,outfield_outer,13.5,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,102.66707385530209,364.85120873522015,379.0210186382297,outfield_outer,11.8,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,89.12987822025647,370.6722028582896,381.2374813202064,outfield_outer,10.1,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,75.59268258521085,376.493196981359,384.00700649034104,outfield_outer,8.5,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,63.12847143090965,383.97255063519697,389.1273872994576,outfield_outer,7,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,54.4127742271265,395.8344029887731,399.5567851864997,outfield_outer,5.9,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,42.000825385133126,401.10424312000004,403.29726403969136,outfield_outer,4.5,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,27.265166653936095,401.10424312000004,402.02985357002404,outfield_outer,2.9,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,12.529507922741544,401.10424312000004,401.2998908767035,outfield_outer,1.3,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-2.2061508084555244,401.10424312000004,401.11031020189165,outfield_outer,-0.2,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-16.941809539652557,401.10424312000004,401.4618770933872,outfield_outer,-1.8,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-31.67746827084959,401.10424312000004,402.3531730270296,outfield_outer,-3.4,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-46.41312700204662,401.10424312000004,403.7806238627309,outfield_outer,-5,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-58.78586525730896,393.8815070664007,398.24417078338956,outfield_outer,-6.4,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-71.1159219430399,379.48781501521285,386.0938695431837,outfield_outer,-8,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-77.86902978439677,372.4504573443456,380.5035203195569,outfield_outer,-8.9,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-91.3056508485671,366.4009240879541,377.6060897938315,outfield_outer,-10.5,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-104.74227191273766,360.3513908315629,375.265330665762,outfield_outer,-12.2,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-118.17889297690799,354.3018575751717,373.49170944810106,outfield_outer,-13.8,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-131.61551404107857,348.25232431878027,372.2933318362421,outfield_outer,-15.5,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-145.05213510524914,342.20279106238905,371.67576206887713,outfield_outer,-17.2,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-158.4887561694197,336.1532578059976,371.6418956007453,outfield_outer,-18.9,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-171.92537723359004,330.1037245496064,372.19189176879536,outfield_outer,-20.6,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-185.36199829776035,324.0541912932152,373.32317006534515,outfield_outer,-22.3,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-195.8877334306682,313.8000929633319,369.9222924512664,outfield_outer,-24,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-206.27967568218207,303.35274045260013,366.8435494044413,outfield_outer,-25.7,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-216.67161793369618,292.9053879418683,364.3352251750879,outfield_outer,-27.4,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-227.0635601852098,282.4580354311365,362.4091639895432,outfield_outer,-29.1,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-237.44703139038447,272.00517968686864,361.06496713554463,outfield_outer,-30.8,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-242.76910633534638,258.2641769387973,354.4534159529812,outfield_outer,-32.4,8,SE
+American Family Field,Milwaukee Brewers,brewers,MIL,-248.0911812803083,244.52317419072696,348.3400880538549,outfield_outer,-34.1,8,SE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-239.57092340227288,261.26758009380546,354.4784559714324,outfield_outer,-31.9,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-229.24449553883554,271.4961936847589,355.3353654228176,outfield_outer,-30.1,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-218.96135360959488,281.7698922617073,356.84498953988435,outfield_outer,-28.4,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-208.66429507304747,292.029618416109,358.9179377944073,outfield_outer,-26.7,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-198.38888173785645,302.31057704840293,361.59346425583465,outfield_outer,-25,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-188.1570000911272,312.63309716723455,364.88698267774635,outfield_outer,-23.3,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-177.9219598905545,322.9526677222518,368.7202861251538,outfield_outer,-21.6,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-167.65936608041994,333.2467603295801,373.0456624927421,outfield_outer,-20,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-157.3276954323536,343.47131426136235,377.7890250794522,outfield_outer,-18.5,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-146.9889723013576,353.688389762015,383.01597229183056,outfield_outer,-16.9,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-136.67068910088497,363.9266332186204,388.743452195855,outfield_outer,-15.4,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-125.23325561214341,372.3996057325874,392.892904823952,outfield_outer,-13.9,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-111.43329366665799,376.9584564295196,393.0840327603318,outfield_outer,-12.4,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-97.59623421739093,381.4111780599518,393.69977353625194,outfield_outer,-10.8,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-83.73333804827313,385.7829325318399,394.76542773344846,outfield_outer,-9.2,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-69.9136513153196,390.2893644894014,396.5018369109794,outfield_outer,-7.6,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-56.06094271097066,394.69321804915063,398.654694781884,outfield_outer,-6.1,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-42.23842971909313,399.1908856970671,401.419292222912,outfield_outer,-4.5,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-28.085251486680384,401.9990611145593,402.97894050192906,outfield_outer,-3,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,-13.550279887950405,402.02764139000004,402.2559316239454,outfield_outer,-1.4,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,0.9856334393537374,402.02764139000004,402.0288496052034,outfield_outer,0.1,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,15.521546766657844,402.02764139000004,402.3271589833776,outfield_outer,1.7,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,30.057385693919116,402.02537561936174,403.1474284633872,outfield_outer,3.2,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,44.15282971928252,399.0917491671589,401.52670723816425,outfield_outer,4.7,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,57.9417878824755,394.4925214156124,398.72496816209684,outfield_outer,6.3,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,71.65967513967072,389.6881450961916,396.22210875925845,outfield_outer,7.8,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,85.44120630722234,385.067080512532,394.4323214819979,outfield_outer,9.4,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,99.1952719885913,380.36502111182193,393.0868240863427,outfield_outer,11,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,112.95932733854976,375.69143851092747,392.30583299664005,outfield_outer,12.6,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,126.72215138386623,371.01579628881916,392.0602310196509,outfield_outer,14.1,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,138.72308664091244,363.3207720086848,388.9036874859492,outfield_outer,15.7,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,149.01591748595374,353.056970690832,383.21660743966663,outfield_outer,17.2,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,159.36095207680998,342.8473572562013,378.07436229449445,outfield_outer,18.7,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,169.5616449673475,332.492490102653,373.2323772379556,outfield_outer,20.3,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,179.82320899194931,322.19742343974383,368.98179652033224,outfield_outer,21.9,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,190.02665817097872,311.84504625121974,365.18141202292236,outfield_outer,23.5,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,200.34777572175727,301.6096518222588,362.0878530260298,outfield_outer,25.2,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,210.5961810759267,291.30178767457573,359.45442407371775,outfield_outer,26.9,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,220.8275922695464,280.97737168168095,357.3697089915575,outfield_outer,28.6,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,231.21145359020335,270.806123421312,356.0824241011814,outfield_outer,30.4,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,240.89772909400963,260.056926941686,354.4874061698162,outfield_outer,32.1,8,NE
+Busch Stadium,St. Louis Cardinals,cardinals,STL,244.51760777079176,246.17160703893126,346.9716423889433,outfield_outer,33.6,8,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,260.0489182,243.65235973,356.3592460691705,outfield_outer,35.1,16,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,250.6663822438388,255.1952955166995,357.71255784647803,outfield_outer,33.4,16,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,241.2261798675599,266.6911776245047,359.6029116626303,outfield_outer,31.6,16,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,231.79187615477025,278.1915305099834,362.1021975890721,outfield_outer,29.9,16,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,222.2845606475675,289.630578920063,365.09765563182265,outfield_outer,28.1,16,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,211.2138960215288,298.55712173,365.71527833588686,outfield_outer,26.5,16,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,196.66938042113384,296.08471387744754,355.45042268524963,outfield_outer,25.2,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,184.4065575458359,303.4662001558986,355.10211644394013,outfield_outer,23.5,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,174.04772428288646,314.1394177642248,359.13254394623976,outfield_outer,21.7,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,163.53539619489922,324.66228777031074,363.5236263420505,outfield_outer,20.1,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,153.04485870893436,335.2082157310649,368.4932518660848,outfield_outer,18.4,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,142.6119440349302,345.81105740038475,374.0634357990557,outfield_outer,16.8,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,132.08655922159375,356.3217027985177,380.01580889778097,outfield_outer,15.3,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,121.55383446233425,366.8254117895999,386.44044483866605,outfield_outer,13.8,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,110.00387199515278,376.176517409743,391.9306368535747,outfield_outer,12.2,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,97.5580972421627,384.31552714324926,396.50473734988947,outfield_outer,10.7,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,84.3952022211172,391.16613182409776,400.16683126437493,outfield_outer,9.1,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,70.58117495541316,396.6308347057283,402.8619134361667,outfield_outer,7.6,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,56.28232361215617,400.72781459644284,404.660946154215,outfield_outer,6,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,41.579899197552656,402.7683412377018,404.90890916433096,outfield_outer,4.4,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,26.73690122883016,403.71849664276715,404.6028749512492,outfield_outer,2.8,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,11.931389133260712,402.4100689917733,402.5869119489766,outfield_outer,1.3,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-2.715501372333549,400.01389548832145,400.02311249657174,outfield_outer,-0.3,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-17.064060762169525,396.09209215741527,396.4594905401224,outfield_outer,-1.9,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-30.331203111732034,389.39850160861585,390.57800109227907,outfield_outer,-3.3,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-43.162826410387936,381.878252331285,384.30980886171756,outfield_outer,-4.8,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-55.84384544183883,374.10298269222204,378.2480359935118,outfield_outer,-6.4,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-68.56030496039058,366.38723817024857,372.7467286379375,outfield_outer,-7.9,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-81.24619980334515,358.6203547291593,367.7084494658141,outfield_outer,-9.6,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-93.92316902190973,350.8388240643885,363.1933949702296,outfield_outer,-11.2,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-106.6460548140217,343.1319498013926,359.3228575834005,outfield_outer,-12.9,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-119.33733426249316,335.3730671518042,355.9726022037182,outfield_outer,-14.7,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-132.02320409515244,327.6049297313482,353.2069031089736,outfield_outer,-16.5,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-144.712473965145,319.84320333880873,351.05750931028854,outfield_outer,-18.3,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-157.3935806500684,312.0679029032614,349.51268253425224,outfield_outer,-20.1,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-170.6820931718569,305.7675800747336,350.18022496178315,outfield_outer,-21.9,11,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-185.04293062718506,303.94535284830533,355.8421893103431,outfield_outer,-23.5,16,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-196.68641365833162,294.7667995359848,354.362824554811,outfield_outer,-25.3,16,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-208.13710040338526,285.2717046482073,353.13028479192053,outfield_outer,-27.1,16,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-219.52622829102728,275.70866555432355,352.4301819785446,outfield_outer,-28.9,16,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-230.87165007454706,266.093016173617,352.2885352442184,outfield_outer,-30.7,16,NE
+Wrigley Field,Chicago Cubs,cubs,CHC,-242.27487519937267,256.5447188420112,352.8630157987632,outfield_outer,-32.5,16,NE
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,245.77726654788475,242.12285795313406,345.00716383162757,outfield_outer,34.1,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,245.11558649961478,256.70198443234534,354.93317618469285,outfield_outer,32.8,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,243.37690883104193,271.13340579583047,364.34275550722805,outfield_outer,31.4,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,231.26364536814282,275.73683079852145,359.8800821492828,outfield_outer,30,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,219.570460273632,283.95859250163454,358.948003588659,outfield_outer,28.3,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,208.6256860282783,293.612264152698,360.1844507077498,outfield_outer,26.5,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,197.64365836767178,303.2239139316488,361.94993807567494,outfield_outer,24.8,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,186.7126367009002,312.8934532147447,364.3678385484234,outfield_outer,23.1,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,175.84114051197304,322.62987604098,367.43726486404387,outfield_outer,21.4,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,164.9163822025191,332.3065434294479,370.97850601455997,outfield_outer,19.8,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,153.99145444756337,341.98296405856775,375.05428373658077,outfield_outer,18.2,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,143.0498861273153,351.64064537163637,379.6240421764918,outfield_outer,16.6,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,132.16896457289144,361.3664166407632,384.77827676735586,outfield_outer,15.1,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,121.21958922555099,371.0151826144053,390.3158394715898,outfield_outer,13.6,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,110.28718841392906,380.683246662529,396.33697558740766,outfield_outer,12.1,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,99.37478879120957,390.37356883302124,402.82362379920954,outfield_outer,10.7,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,86.45946934136722,395.56385350000005,404.90245990183894,outfield_outer,9.2,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,71.86533027648187,395.56385350000005,402.0390377706092,outfield_outer,7.7,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,57.27159177196312,395.64196482541564,399.76568081190993,outfield_outer,6.2,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,42.844139124444055,396.01015016727536,398.3210505268617,outfield_outer,4.6,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,33.87826793683878,406.0456717,407.45653086520093,outfield_outer,3.6,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,19.28412887195351,406.0456717,406.50333963284277,outfield_outer,2,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,4.689989807068168,406.0456717,406.07275642511974,outfield_outer,0.5,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-9.90414925781714,406.0456717,406.1664433195156,outfield_outer,-1,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-24.49828832270245,406.0456717,406.78403808046164,outfield_outer,-2.6,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-37.91711956597034,403.95003105023,405.7256900193305,outfield_outer,-4,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-47.89197947603774,395.71359376000004,398.60116656200034,outfield_outer,-5.2,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-62.48611854092379,395.71359376000004,400.61672867812786,outfield_outer,-6.7,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-77.08025760580885,395.71359376000004,403.1508581152125,outfield_outer,-8.3,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-91.62353478994336,395.0370062937543,405.52325268587947,outfield_outer,-9.8,25,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-103.199587034956,386.77906841487487,400.31013293203546,outfield_outer,-11.2,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-114.0899689346088,377.0636985739666,393.9461305734315,outfield_outer,-12.6,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-124.98332785037263,367.3517163531818,388.0310757506185,outfield_outer,-14.1,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-135.91703132383108,357.6852876614652,382.63847743444256,outfield_outer,-15.6,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-146.76769182679539,347.9256640161641,377.614913695492,outfield_outer,-17.2,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-157.67854672464478,338.23337650204803,373.1813782561667,outfield_outer,-18.7,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-168.52562211883355,328.4706703538928,369.1799921356459,outfield_outer,-20.4,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-179.20386565473348,318.5242960310162,365.4746949210769,outfield_outer,-22,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-190.0670048832026,308.77858228384963,362.5874780277105,outfield_outer,-23.7,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-201.0099685853814,299.1225366956644,360.38770710159514,outfield_outer,-25.4,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-211.95753518037577,289.4718079948195,358.77559050683743,outfield_outer,-27.2,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-222.94863708444404,279.89211915897926,357.83472881361774,outfield_outer,-28.9,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-236.4959359323454,276.53332040831583,363.8694889772489,outfield_outer,-30.4,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-240.59775602425748,263.0351834556753,356.4755081902106,outfield_outer,-31.8,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-241.66112979622804,248.47983682630186,346.6155376834902,outfield_outer,-33.2,8,N
+Chase Field,Arizona Diamondbacks,diamondbacks,ARI,-242.7108312671685,233.9234984296414,337.08863928047526,outfield_outer,-34.5,8,N
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,241.13609916502932,244.68212924759928,343.5345145595501,outfield_outer,33.4,4,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,239.45139024811593,259.45674742106024,353.06482701349813,outfield_outer,32,4,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,234.86141651373654,273.5793478390981,360.5628163453701,outfield_outer,30.5,4,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,228.08407052401256,286.79507642362233,366.43383998702154,outfield_outer,28.9,4,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,219.3861760361461,298.7879655284907,370.6811872491204,outfield_outer,27.2,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,207.14115107358387,307.2047112591689,370.5161144780597,outfield_outer,25.5,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,194.74716757524254,315.44527554971245,370.71846615081586,outfield_outer,23.8,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,182.335608718724,323.6593369719508,371.485720608411,outfield_outer,22,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,169.93196464111355,331.8853309093491,372.86022244213285,outfield_outer,20.3,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,157.49518651820873,340.0608576129813,374.76141831421455,outfield_outer,18.6,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,144.75905698485496,347.75638767139833,376.68247868118897,outfield_outer,17,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,131.86948624166482,355.19785425410885,378.88662825225674,outfield_outer,15.3,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,118.76429205394133,362.24701625944977,381.2189106746253,outfield_outer,13.6,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,105.488917457906,368.97621789601544,383.7595094317387,outfield_outer,12,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,91.97993164185812,375.19815983509744,386.3081243884009,outfield_outer,10.3,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,78.19460359279849,380.80889468112827,388.75417721138064,outfield_outer,8.7,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,64.42323521698627,386.4539424958281,391.78693559943,outfield_outer,7.1,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,50.30891581509468,391.1683015615872,394.3901965782962,outfield_outer,5.5,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,36.11401791873031,395.64044841967115,397.28527120439895,outfield_outer,3.9,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,21.424190219663164,398.02654101734663,398.6027135893606,outfield_outer,2.3,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,6.590507871905658,399.08805499785046,399.14246884536976,outfield_outer,0.7,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-8.284517804832873,399.0250305022886,399.11102240180105,outfield_outer,-0.9,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-23.092439583352522,397.70381763948245,398.3736780096415,outfield_outer,-2.5,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-37.700957156921845,394.94433869539915,396.7397041362185,outfield_outer,-4.1,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-51.885965757007995,390.4404310577576,393.8729282993501,outfield_outer,-5.7,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-65.95764581893367,385.6121637787548,391.21241275822155,outfield_outer,-7.3,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-79.73965241181355,379.99305711789464,388.2694111368553,outfield_outer,-8.9,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-93.52087513938582,374.37203719396604,385.87637439936236,outfield_outer,-10.5,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-106.95265701205783,367.9742163786851,383.20215912941603,outfield_outer,-12.2,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-120.21439921450569,361.2182345068238,380.69688036380245,outfield_outer,-13.8,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-133.2677745250092,354.0789221701197,378.3281417658517,outfield_outer,-15.5,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-146.17494579834997,346.66801927333773,376.22577047040494,outfield_outer,-17.1,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-158.83428271201782,338.84664766190974,374.2263753349777,outfield_outer,-18.8,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-171.249441443896,330.6380947439629,372.3545634080025,outfield_outer,-20.5,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-183.66115217753128,322.4243352903701,371.0645103032831,outfield_outer,-22.3,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-196.0689517748059,314.20458917835487,370.3613879858562,outfield_outer,-24,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-208.47119246034478,305.97642968661097,370.2456125460553,outfield_outer,-25.7,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-220.36772246874037,297.1458888830747,369.9427150062187,outfield_outer,-27.4,8,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-228.63912322205883,284.84363113861883,365.25572256706033,outfield_outer,-29.1,4,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-235.02976087552784,271.4481763700668,359.05863163533985,outfield_outer,-30.7,4,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-239.21205444402804,257.2214716288121,351.2624267669749,outfield_outer,-32.2,4,NNE
+Dodger Stadium,Los Angeles Dodgers,dodgers,LAD,-240.73588795509423,242.42442560544424,341.6480204532982,outfield_outer,-33.6,4,NNE
+Oracle Park,San Franciso Giants,giants,SF,226.80658048,214.90222981000002,312.44870511228044,outfield_outer,34.9,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,221.57538565692985,228.7373500228586,318.45945868272923,outfield_outer,33.1,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,216.32334596076998,242.56455920112913,325.0128541890321,outfield_outer,31.3,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,210.96648277307258,256.35134867254175,331.998299423163,outfield_outer,29.6,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,205.7767853523423,270.2019079363536,339.6368007775213,outfield_outer,28,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,200.53561294333403,284.0332092182712,347.6915241954985,outfield_outer,26.4,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,195.27993298144986,297.85899748482313,356.1660211304602,outfield_outer,24.9,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,190.05859030782548,311.6978382559451,365.07233546685944,outfield_outer,23.5,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,181.12443633319717,322.7139112444272,370.0680071928597,outfield_outer,22,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,170.17484563015842,331.28148251485953,372.4337508101158,outfield_outer,20.4,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,164.70486420012338,345.0203276953257,382.3175627854036,outfield_outer,19.1,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,159.37297290659743,358.8169436416145,392.61857258336187,outfield_outer,18,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,154.04195420692696,372.6139052956756,403.1997595182612,outfield_outer,16.8,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,148.73900453282008,386.4215678061322,414.05907734907044,outfield_outer,15.8,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,143.4464246957562,400.23323841456295,425.16293569619125,outfield_outer,14.8,25,ESE
+Oracle Park,San Franciso Giants,giants,SF,130.33089704170854,402.67651585000004,423.24286070859097,outfield_outer,13.5,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,115.53981874688823,402.67651585000004,418.92460674106877,outfield_outer,12,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,100.74874045206793,402.67651585000004,415.08876775910653,outfield_outer,10.5,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,85.95766215724764,402.67651585000004,411.7488264714726,outfield_outer,9,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,71.16658386242493,402.67651585000004,408.9169342002638,outfield_outer,7.5,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,56.375505567604634,402.67651585000004,406.6037063838675,outfield_outer,6,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,41.58442727278434,402.67651585000004,404.8180344410323,outfield_outer,4.4,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,26.79334897796411,402.67651585000004,403.5669212987485,outfield_outer,2.9,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,12.002270683143813,402.67651585000004,402.8553473874299,outfield_outer,1.3,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-2.7888076116764826,402.67651585000004,402.68617292500903,outfield_outer,-0.3,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-17.579885906496745,402.67651585000004,403.0600808881733,outfield_outer,-1.9,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-32.370964201319524,402.67651585000004,403.9755632961212,outfield_outer,-3.4,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-47.16204249613978,402.67651585000004,405.4289514446434,outfield_outer,-5,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-61.95312079096004,402.67651585000004,407.41448868791423,outfield_outer,-6.6,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-75.87824039083861,400.43982631842204,407.56540808407414,outfield_outer,-8,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-87.04422818626875,390.74326349047965,400.3211156356028,outfield_outer,-9.4,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-98.29987726269177,381.14775455191887,393.6197107232183,outfield_outer,-10.8,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-109.61557018847492,371.6225772473942,387.4518204212492,outfield_outer,-12.3,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-120.85996490427333,362.01345564844394,381.6554377801921,outfield_outer,-13.8,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-132.18553462331644,352.50011424467476,376.46958191354685,outfield_outer,-15.4,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-143.49358066237087,342.96584012462546,371.77409159824265,outfield_outer,-17,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-154.7964771590485,333.425516795489,367.6064806164205,outfield_outer,-18.7,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-166.18459060489118,323.9878794930531,364.12286966478825,outfield_outer,-20.4,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-177.4340590407399,314.3846467788674,360.9993787223823,outfield_outer,-22.1,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-188.70658633141954,304.8083680392506,358.49451453489314,outfield_outer,-23.8,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-200.0413096475001,295.3057793242374,356.68197160465263,outfield_outer,-25.6,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-211.36079574666718,285.78540166649964,355.45278418426676,outfield_outer,-27.4,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-222.66739009622918,276.25205728282776,354.818215097902,outfield_outer,-29.2,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-233.92660736922522,266.66132840890646,354.72513542752836,outfield_outer,-30.9,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-242.97104483433404,255.2921854535282,352.43301289965245,outfield_outer,-32.7,8,ESE
+Oracle Park,San Franciso Giants,giants,SF,-248.04484576357277,241.39894800651223,346.1209291685861,outfield_outer,-34.3,8,ESE
+Progressive Field,Cleveland Indians,indians,CLE,231.77063841956556,240.63581324611016,334.1006187513423,outfield_outer,32.9,9,N
+Progressive Field,Cleveland Indians,indians,CLE,223.7972088486998,252.5044673505627,337.4073157482806,outfield_outer,31.2,9,N
+Progressive Field,Cleveland Indians,indians,CLE,215.81604839365133,264.36792105092434,341.2725661770055,outfield_outer,29.4,9,N
+Progressive Field,Cleveland Indians,indians,CLE,207.81816761747277,276.2204486130624,345.6676540029244,outfield_outer,27.7,9,N
+Progressive Field,Cleveland Indians,indians,CLE,199.94777849664985,288.1578475011647,350.7336014730409,outfield_outer,26.1,9,N
+Progressive Field,Cleveland Indians,indians,CLE,191.98967669051,300.0372630293722,356.20555184034293,outfield_outer,24.5,9,N
+Progressive Field,Cleveland Indians,indians,CLE,184.00977410312976,311.9019618285913,362.1359285655165,outfield_outer,22.9,9,N
+Progressive Field,Cleveland Indians,indians,CLE,175.88465036383317,323.6676493374668,368.36959356229335,outfield_outer,21.4,9,N
+Progressive Field,Cleveland Indians,indians,CLE,167.9095305419679,335.53514520102465,375.2032037601715,outfield_outer,19.9,9,N
+Progressive Field,Cleveland Indians,indians,CLE,158.19579739363922,345.7614891438912,380.23271517323514,outfield_outer,18.4,9,N
+Progressive Field,Cleveland Indians,indians,CLE,144.87816205647175,350.9662951306226,379.6933264604167,outfield_outer,16.8,9,N
+Progressive Field,Cleveland Indians,indians,CLE,131.50699423062147,356.03179337999154,379.5427873493919,outfield_outer,15.2,9,N
+Progressive Field,Cleveland Indians,indians,CLE,118.19307245920436,361.2463921804669,380.0901975067897,outfield_outer,13.6,9,N
+Progressive Field,Cleveland Indians,indians,CLE,104.87291661231231,366.4450713897233,381.1565544295315,outfield_outer,12,9,N
+Progressive Field,Cleveland Indians,indians,CLE,91.5424049650292,371.6171377796785,382.7261540557974,outfield_outer,10.4,9,N
+Progressive Field,Cleveland Indians,indians,CLE,78.19280177937063,376.7396604801642,384.7686136222878,outfield_outer,8.8,9,N
+Progressive Field,Cleveland Indians,indians,CLE,64.82502514014823,381.8146007906987,387.27854738079856,outfield_outer,7.2,9,N
+Progressive Field,Cleveland Indians,indians,CLE,51.43316228684542,386.8256174050021,390.22996868972797,outfield_outer,5.7,9,N
+Progressive Field,Cleveland Indians,indians,CLE,38.04728123091008,391.8514926543349,393.6942822857531,outfield_outer,4.2,9,N
+Progressive Field,Cleveland Indians,indians,CLE,24.668264864726492,396.89459017181866,397.6604569215956,outfield_outer,2.7,9,N
+Progressive Field,Cleveland Indians,indians,CLE,11.27153874151689,401.8915959723908,402.0496269104561,outfield_outer,1.2,9,N
+Progressive Field,Cleveland Indians,indians,CLE,-2.216375509354607,406.62592752330096,406.6319678217433,outfield_outer,-0.2,9,N
+Progressive Field,Cleveland Indians,indians,CLE,-15.583748054180646,411.7015993889474,411.9964321967285,outfield_outer,-1.6,9,N
+Progressive Field,Cleveland Indians,indians,CLE,-29.2532048242226,412.5646763272109,413.6004861523548,outfield_outer,-3,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-41.18166879041628,404.7210708333806,406.81085902527457,outfield_outer,-4.4,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-53.02149176688832,396.70436981403736,400.2319772566139,outfield_outer,-5.7,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-64.87429534550016,388.7067253530347,394.0832304618591,outfield_outer,-7.1,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-76.73781799630811,380.7249046536809,388.38144360201983,outfield_outer,-8.5,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-88.56178348779083,372.6853832669085,383.06342085265834,outfield_outer,-10,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-100.47418520555208,364.77678647280544,378.36115794587886,outfield_outer,-11.5,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-112.28269653568108,356.7139501023304,373.9682421529022,outfield_outer,-13.1,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-124.19788012043074,348.80972090642086,370.2611711011892,outfield_outer,-14.7,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-136.07265631958776,340.8446440102748,367.00250564316264,outfield_outer,-16.3,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-147.9509981679956,332.8850666768446,364.28280974450814,outfield_outer,-18,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-159.8119422662477,324.9001462460365,362.0772872213975,outfield_outer,-19.6,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-171.69887499069318,316.9532342190716,360.4717136683534,outfield_outer,-21.3,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-183.52657075418878,308.9185277287039,359.3224999173615,outfield_outer,-23,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-195.33154309558503,300.8507604020724,358.6998630646624,outfield_outer,-24.7,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-204.12474473067678,290.01219812211343,354.64628359956623,outfield_outer,-26.4,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-211.06872345922076,277.5132256441115,348.65971437793695,outfield_outer,-27.9,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-217.90948485980348,264.95725763084783,343.05523165100453,outfield_outer,-29.6,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-224.7013471116728,252.37476518040214,337.9108129280026,outfield_outer,-31.3,19,N
+Progressive Field,Cleveland Indians,indians,CLE,-231.5873269189682,239.84361184013733,333.4031315539725,outfield_outer,-33,19,N
+T-Mobile Park,Seattle Mariners,mariners,SEA,-243.17818224,239.84596524307352,341.5577774856434,outfield_outer,-34,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-233.98770794797943,250.68939513240807,342.9218865902285,outfield_outer,-32.3,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-224.27044587620767,261.33037524748687,344.3701466743383,outfield_outer,-30.5,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-214.55557962972068,271.9736061848225,346.41555855853574,outfield_outer,-28.7,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-204.80053272169292,282.57978395187735,348.9908200818166,outfield_outer,-26.9,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-195.10071843558467,293.23670869053905,352.210246383806,outfield_outer,-25.2,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-185.48288393832078,303.96759977964354,356.0901598610584,outfield_outer,-23.5,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-175.7670475462221,314.60978356497606,360.37948182147795,outfield_outer,-21.9,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-165.99410907745022,325.1992968708926,365.11453947184765,outfield_outer,-20.3,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-156.3200702644475,335.87959526552936,370.4741109486837,outfield_outer,-18.7,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-146.58822596082993,346.5071990770872,376.2384177653732,outfield_outer,-17.2,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-134.8631883768136,354.777069804121,379.54558202929735,outfield_outer,-15.6,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-122.72267226019937,362.5391640641559,382.7473053687266,outfield_outer,-14,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-110.63413217543011,370.3828860372511,386.5532220425719,outfield_outer,-12.5,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-97.98695114800823,377.12495567543414,389.646859076883,outfield_outer,-10.9,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-84.56335200165337,382.36542913935307,391.60475214516634,outfield_outer,-9.4,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-71.06802197976754,387.41811441885966,393.8825448379013,outfield_outer,-7.8,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-57.64223643782667,392.652752932142,396.8611996740725,outfield_outer,-6.3,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-44.358969338795745,398.2286218928165,400.69159394159,outfield_outer,-4.8,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-30.929554103561344,403.4543097661422,404.6381314037511,outfield_outer,-3.3,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-17.323885822516683,408.1178378346252,408.48535662713914,outfield_outer,-1.8,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,-3.506879881356431,405.38534083647653,405.4005090914521,outfield_outer,-0.4,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,10.252181545072432,401.1022365432354,401.2332381376432,outfield_outer,1.1,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,24.016741027580753,396.8368025617811,397.5628902664884,outfield_outer,2.6,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,37.779088627603464,392.5642821773323,394.37795980370976,outfield_outer,4.1,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,51.54834304419695,388.31403290723335,391.7205889703554,outfield_outer,5.7,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,65.30878757183592,384.0354913356574,389.5490936191779,outfield_outer,7.2,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,79.06761877762386,379.7517549630971,387.89571244951367,outfield_outer,8.8,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,92.8265484636626,375.46823800786945,386.77275738139934,outfield_outer,10.4,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,106.5955202188018,371.21706797846946,386.2184828426115,outfield_outer,12,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,120.35450417208833,366.93386005657425,386.16792245152476,outfield_outer,13.6,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,132.44087166746309,360.2024583773835,383.7790972801256,outfield_outer,15.1,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,141.5305116671988,349.02086381978836,376.6250776492324,outfield_outer,16.6,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,150.66568890536252,337.8761799695826,369.9465674988285,outfield_outer,18,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,159.76710994573233,326.70384594294416,363.6769615666116,outfield_outer,19.5,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,168.84899055549164,315.5156307012889,357.8548516206545,outfield_outer,21.1,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,177.96060108102333,304.3516016996749,352.5618711577823,outfield_outer,22.7,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,187.001166252078,293.1314562758953,347.70028305721064,outfield_outer,24.4,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,196.1613743717211,282.00744039426826,343.52216992958296,outfield_outer,26.1,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,205.18719203628925,270.774161639253,339.73582440946285,outfield_outer,27.9,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,214.21430235554635,259.54217656317235,336.52623783120146,outfield_outer,29.7,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,223.28794094085126,248.34730951531938,333.9669006250514,outfield_outer,31.5,8,NE
+T-Mobile Park,Seattle Mariners,mariners,SEA,232.38059514438066,237.16784042136675,332.0381386675203,outfield_outer,33.3,8,NE
+LoanDepot Park,Miami Marlins,marlins,MIA,245.92342034,233.17054153000004,338.8905872241332,outfield_outer,34.9,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,236.8903280099656,244.64968992511112,340.5444145557553,outfield_outer,33.1,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,228.0343597965289,256.2663615200276,343.03369702483496,outfield_outer,31.2,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,219.05556595959567,267.7881490629981,345.9708568022244,outfield_outer,29.5,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,210.04095206763537,279.28178606255847,349.45030772882626,outfield_outer,27.7,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,200.95381902060532,290.7181565918284,353.411210845266,outfield_outer,26,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,191.93251130846477,302.20689023449796,358.00432036831603,outfield_outer,24.3,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,183.0034669040624,313.7669972727485,363.23545735027466,outfield_outer,22.7,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,174.05011752529447,325.3088138831418,368.9434479708583,outfield_outer,21.1,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,165.06769523077705,336.8280381976563,375.1006149353564,outfield_outer,19.6,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,156.0595819295433,348.3271445727244,381.68886905202186,outfield_outer,18.1,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,146.6110637821387,359.40056817176605,388.15405759249586,outfield_outer,16.6,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,135.68561012022565,369.09635366041755,393.24636435587536,outfield_outer,15.1,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,124.32940590423145,378.2250739710772,398.13566500996365,outfield_outer,13.6,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,111.64941898158582,385.4734015164418,401.3170019268828,outfield_outer,12.1,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,98.73431230028939,392.29684824984776,404.5309401914459,outfield_outer,10.6,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,85.67900262048683,398.837931569718,407.93698918932625,outfield_outer,9.1,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,72.22291504640098,404.5206634370544,410.9174084963477,outfield_outer,7.6,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,58.414178293099894,409.1732247111791,413.3218407563325,outfield_outer,6.1,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,44.36434215668127,413.16634474840896,415.54136170513306,outfield_outer,4.6,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,30.07650714764837,416.1873443244706,417.2726948388284,outfield_outer,3.1,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,15.708967201539393,418.8133222147432,419.1078268358745,outfield_outer,1.6,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,1.208970171867132,420.581130369776,420.5828679725257,outfield_outer,0.1,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-13.327910484362244,421.9748629058053,422.1852888510593,outfield_outer,-1.4,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-27.915530467767507,422.6592841154465,423.5801545047626,outfield_outer,-2.8,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-42.514308750398826,422.2319169146942,424.3668909210301,outfield_outer,-4.3,12,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-52.309165430661274,412.3651552676246,415.66966459791655,outfield_outer,-5.4,12,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-61.07118554675709,400.8713461655981,405.4966410227157,outfield_outer,-6.5,12,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-72.69733722207131,392.0678244242574,398.75065114423313,outfield_outer,-7.9,12,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-85.85557663967926,385.8291982136997,395.2661764360293,outfield_outer,-9.4,12,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-99.62571858097046,380.98172251179693,393.7922760680186,outfield_outer,-11,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-112.95934740393525,375.0401270798616,391.6821556900463,outfield_outer,-12.6,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-123.82248550945324,365.6025471509616,386.00159378040115,outfield_outer,-14,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-135.8419307139179,357.3018738695542,382.2533965980939,outfield_outer,-15.6,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-147.78990003358965,348.89847369411734,378.9089593794572,outfield_outer,-17.2,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-159.4144472184062,340.06651818086914,375.5771595419634,outfield_outer,-18.8,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-170.66373520527654,330.74836113750627,372.18354196466424,outfield_outer,-20.5,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-181.90987779904873,321.4284411254074,369.33378725101,outfield_outer,-22.1,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-192.33872868589842,311.20975511132497,365.84928348837656,outfield_outer,-23.8,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-202.68475633297925,300.89886347019757,362.796411899864,outfield_outer,-25.5,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-211.81709168414474,289.50025842282906,358.71559759287607,outfield_outer,-27.1,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-220.9372207064569,278.0904287841787,355.1725525358935,outfield_outer,-28.8,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-229.74987641585383,266.4586955832444,351.83126945316303,outfield_outer,-30.6,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-237.4836273083098,254.06775076539427,347.77707690199867,outfield_outer,-32.3,7,ESE
+LoanDepot Park,Miami Marlins,marlins,MIA,-245.10236960045543,241.6048792129595,344.16288184995636,outfield_outer,-34.1,7,ESE
+Citi Field,New York Mets,mets,NYM,-247.77990609551827,238.51127462862868,343.9222441042117,outfield_outer,-34.6,8,NNE
+Citi Field,New York Mets,mets,NYM,-241.4529013061975,251.74472235861396,348.8193067830334,outfield_outer,-32.9,8,NNE
+Citi Field,New York Mets,mets,NYM,-235.10471158719983,264.9681453408572,354.23487046855513,outfield_outer,-31.2,8,NNE
+Citi Field,New York Mets,mets,NYM,-228.76166880663402,278.19401861221894,360.17192159691143,outfield_outer,-29.6,8,NNE
+Citi Field,New York Mets,mets,NYM,-217.5662787151162,287.44524750970476,360.4994534667966,outfield_outer,-27.8,8,NNE
+Citi Field,New York Mets,mets,NYM,-205.63530274173635,295.9780230746259,360.4009820697626,outfield_outer,-26.1,8,NNE
+Citi Field,New York Mets,mets,NYM,-193.67592095878047,304.4708365438021,360.8501803587112,outfield_outer,-24.3,8,NNE
+Citi Field,New York Mets,mets,NYM,-181.655593656436,312.87416192660703,361.78584260298095,outfield_outer,-22.6,8,NNE
+Citi Field,New York Mets,mets,NYM,-169.4403740237936,320.99493744701795,362.97078424569935,outfield_outer,-20.9,8,NNE
+Citi Field,New York Mets,mets,NYM,-157.24178894922514,329.1403956713388,364.771682363966,outfield_outer,-19.2,8,NNE
+Citi Field,New York Mets,mets,NYM,-145.07512757551729,337.33322461238635,367.2063412693785,outfield_outer,-17.5,8,NNE
+Citi Field,New York Mets,mets,NYM,-132.85669311025595,345.4486005807112,370.1157069719744,outfield_outer,-15.8,8,NNE
+Citi Field,New York Mets,mets,NYM,-120.58558677913486,353.48432539739963,373.4863478636441,outfield_outer,-14.1,8,NNE
+Citi Field,New York Mets,mets,NYM,-108.40349477627596,361.6543022865018,377.55152236753923,outfield_outer,-12.5,8,NNE
+Citi Field,New York Mets,mets,NYM,-96.52921471942119,370.2648640393804,382.6407699611334,outfield_outer,-11,8,NNE
+Citi Field,New York Mets,mets,NYM,-84.69779609431967,378.9352142946657,388.2854791204265,outfield_outer,-9.4,8,NNE
+Citi Field,New York Mets,mets,NYM,-72.88025148854096,387.62441332981587,394.41629893593,outfield_outer,-8,8,NNE
+Citi Field,New York Mets,mets,NYM,-61.04755704725582,396.29292701728485,400.9674403556541,outfield_outer,-6.6,8,NNE
+Citi Field,New York Mets,mets,NYM,-49.23985049151599,404.99503078889813,407.9773741767151,outfield_outer,-5.2,8,NNE
+Citi Field,New York Mets,mets,NYM,-37.40305343219453,413.6580237920992,415.34557786695706,outfield_outer,-3.9,8,NNE
+Citi Field,New York Mets,mets,NYM,-23.239184225836564,416.42766306000004,417.0756025531765,outfield_outer,-2.4,8,NNE
+Citi Field,New York Mets,mets,NYM,-8.570891022729334,416.42766306000004,416.5158565223375,outfield_outer,-0.9,8,NNE
+Citi Field,New York Mets,mets,NYM,6.096267893029379,416.54110313646055,416.5857115700958,outfield_outer,0.6,8,NNE
+Citi Field,New York Mets,mets,NYM,20.764198130593,416.5774033200001,417.0945754632162,outfield_outer,2.1,8,NNE
+Citi Field,New York Mets,mets,NYM,34.594025653887684,412.53883111445583,413.9867555710247,outfield_outer,3.6,8,NNE
+Citi Field,New York Mets,mets,NYM,47.08121512263851,404.844300349614,407.5727522087224,outfield_outer,5,8,NNE
+Citi Field,New York Mets,mets,NYM,59.53314937824544,397.09143829233636,401.52933422101165,outfield_outer,6.4,8,NNE
+Citi Field,New York Mets,mets,NYM,71.9932664787997,389.3517840004396,395.95181793068264,outfield_outer,7.9,8,NNE
+Citi Field,New York Mets,mets,NYM,84.45528705001182,381.61509731331273,390.8487917445173,outfield_outer,9.4,8,NNE
+Citi Field,New York Mets,mets,NYM,96.90928908219846,373.8655107858362,386.22121959515806,outfield_outer,10.9,8,NNE
+Citi Field,New York Mets,mets,NYM,109.34945738355485,366.0937557532775,382.07583256680635,outfield_outer,12.5,8,NNE
+Citi Field,New York Mets,mets,NYM,121.78947268736394,358.32175717148914,378.45363959133726,outfield_outer,14.1,8,NNE
+Citi Field,New York Mets,mets,NYM,134.2628015846001,350.60352105993104,375.43218944167165,outfield_outer,15.7,8,NNE
+Citi Field,New York Mets,mets,NYM,147.2917257785998,344.0392561241054,374.24305235670846,outfield_outer,17.4,8,NNE
+Citi Field,New York Mets,mets,NYM,161.51162270130953,340.44021598700704,376.809693252297,outfield_outer,19,8,NNE
+Citi Field,New York Mets,mets,NYM,175.72771907291659,336.8263555242706,379.91081193660733,outfield_outer,20.7,8,NNE
+Citi Field,New York Mets,mets,NYM,187.114684448988,328.39006554984473,377.9575905948651,outfield_outer,22.3,8,NNE
+Citi Field,New York Mets,mets,NYM,195.50143540944705,316.3558999493115,371.88958936745325,outfield_outer,23.8,8,NNE
+Citi Field,New York Mets,mets,NYM,203.86657893721497,304.3067608116118,366.284297620331,outfield_outer,25.4,8,NNE
+Citi Field,New York Mets,mets,NYM,212.2307582139488,292.25690651349623,361.186924094583,outfield_outer,27,8,NNE
+Citi Field,New York Mets,mets,NYM,220.53937463099376,280.16878749585413,356.5559777223303,outfield_outer,28.7,8,NNE
+Citi Field,New York Mets,mets,NYM,225.01629353174397,266.41136065416936,348.722447571661,outfield_outer,30.1,8,NNE
+Citi Field,New York Mets,mets,NYM,229.2968919481884,252.70384324425237,341.22763230359124,outfield_outer,31.7,8,NNE
+Citi Field,New York Mets,mets,NYM,237.75944315246616,240.72297684418322,338.3446532589158,outfield_outer,33.5,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,238.4904478471097,246.25250863759123,342.80897264310613,outfield_outer,33.1,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,231.5587477618192,259.1017540831779,347.4955721070434,outfield_outer,31.3,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,224.62052472861785,271.9469546393163,352.7173461384597,outfield_outer,29.7,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,217.69220870717038,284.79776814166325,358.4685013641768,outfield_outer,28,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,210.71211909700085,297.62098566892655,364.6612787846991,outfield_outer,26.5,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,203.71969091878637,310.4372836329357,371.3125631290188,outfield_outer,25,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,192.2989892584988,318.9944740929657,372.4733222281671,outfield_outer,23.3,12,NNE
+Nationals Park,Washington Nationals,nationals,WAS,178.92104639611162,324.83861745106543,370.854241220185,outfield_outer,21.6,12,NNE
+Nationals Park,Washington Nationals,nationals,WAS,165.64874764381403,330.91821381208223,370.0626593275022,outfield_outer,19.9,12,NNE
+Nationals Park,Washington Nationals,nationals,WAS,152.3416270901773,336.9242368650012,369.7646720977358,outfield_outer,18.2,12,NNE
+Nationals Park,Washington Nationals,nationals,WAS,139.04059153168083,342.9440832594876,370.0580094203747,outfield_outer,16.6,12,NNE
+Nationals Park,Washington Nationals,nationals,WAS,125.73706031714593,348.9583859045133,370.9201577567345,outfield_outer,14.9,12,NNE
+Nationals Park,Washington Nationals,nationals,WAS,112.34761468039802,354.76482758117953,372.1291031524936,outfield_outer,13.2,12,NNE
+Nationals Park,Washington Nationals,nationals,WAS,99.01011350658308,360.7020542615118,374.04408099188134,outfield_outer,11.5,12,NNE
+Nationals Park,Washington Nationals,nationals,WAS,85.69862157900504,366.6969400112661,376.57787979934193,outfield_outer,9.9,12,NNE
+Nationals Park,Washington Nationals,nationals,WAS,72.37242520383278,372.6592304132474,379.621745876179,outfield_outer,8.2,12,NNE
+Nationals Park,Washington Nationals,nationals,WAS,59.018396369765,378.5601388633116,383.1330706768452,outfield_outer,6.6,12,NNE
+Nationals Park,Washington Nationals,nationals,WAS,45.715006961489884,384.5748434131018,387.2824189757403,outfield_outer,5.1,12,NNE
+Nationals Park,Washington Nationals,nationals,WAS,32.44344337350866,390.65834397779315,392.00321266209266,outfield_outer,3.6,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,19.115837308032827,396.6190535247538,397.0794490462314,outfield_outer,2.1,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,5.784688433825862,402.5720120971336,402.6135709886232,outfield_outer,0.6,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-7.573156060086943,408.41995144661325,408.4901583053922,outfield_outer,-0.8,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-21.16625122167787,405.87022444378647,406.4217628041451,outfield_outer,-2.2,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-33.986221482810045,398.8840967477549,400.32934677456626,outfield_outer,-3.7,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-46.778161801779405,391.84686803732114,394.6291479505933,outfield_outer,-5.1,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-59.5069672980046,384.697331939112,389.27254765533763,outfield_outer,-6.6,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-72.33060422534824,377.7180523227004,384.5811271475216,outfield_outer,-8.1,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-85.12854403353901,370.6920583850743,380.3412561884833,outfield_outer,-9.7,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-98.23395362033823,372.3133107600546,385.05468574346133,outfield_outer,-11.1,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-111.21520257251218,365.6769499751956,382.2151920403042,outfield_outer,-12.7,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-124.0154677455691,358.6551359578432,379.4908994812541,outfield_outer,-14.3,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-136.78974035251557,351.5858870541789,377.2586235480674,outfield_outer,-15.9,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-149.60836190366697,344.5978837198304,375.67321359884625,outfield_outer,-17.6,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-162.33664013056799,337.4463386812281,374.4639050939992,outfield_outer,-19.3,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-175.13792909455915,330.42687930324587,373.97221390580967,outfield_outer,-20.9,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-187.24395617768542,322.6193535595574,373.0194987078526,outfield_outer,-22.6,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-197.74423430090116,312.78565729241666,370.050874349864,outfield_outer,-24.2,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-206.22835613301635,301.004588551783,364.8751803049289,outfield_outer,-25.8,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-214.03104459790973,288.6651704582264,359.35618637690004,outfield_outer,-27.4,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-221.70642378596884,276.2456829250085,354.2109762312116,outfield_outer,-29.1,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-229.4487517196289,263.86827701405946,349.67584600607506,outfield_outer,-30.8,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-237.09271499374168,251.4295261498214,345.58611390365115,outfield_outer,-32.5,8,NNE
+Nationals Park,Washington Nationals,nationals,WAS,-244.8151590139626,239.0398278055343,342.1615135580436,outfield_outer,-34.3,8,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,232.24058568991248,224.3626151968978,322.9152717658067,outfield_outer,34.5,21,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,224.16728928642553,236.51861442122205,325.8711839880272,outfield_outer,32.6,21,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,215.97015794273406,248.59140103231434,329.30349799086315,outfield_outer,30.7,21,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,207.65421792493117,260.58145598671945,333.2010945752931,outfield_outer,28.9,21,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,199.524538920242,272.69998399019477,337.89839138354546,outfield_outer,27.1,21,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,191.42060595170733,284.8357742051504,343.1810989112982,outfield_outer,25.4,21,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,183.2435470296402,296.92248072485955,348.91425463544556,outfield_outer,23.8,21,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,175.07418571014625,309.01429467342876,355.1630679203392,outfield_outer,22.2,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,166.88269977106296,321.0909209666564,361.869057823537,outfield_outer,20.6,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,158.8211828382608,333.25369659844966,369.1641835480195,outfield_outer,19.1,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,150.63635420869412,345.33518734471244,376.75947609541925,outfield_outer,17.7,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,142.43049055815646,357.40238021227503,384.7374507661513,outfield_outer,16.3,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,132.84131994991984,367.94465973641616,391.19060432809994,outfield_outer,14.9,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,118.958794357575,372.21307267060644,390.7604972638636,outfield_outer,13.3,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,104.84148091004832,375.9039724555424,390.25060234068724,outfield_outer,11.7,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,90.75957326887611,379.7318457349891,390.42742578519005,outfield_outer,10.1,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,76.69684008032355,383.6266216139361,391.2183406861555,outfield_outer,8.5,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,62.59379462662035,387.3743945559712,392.3989101454855,outfield_outer,6.9,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,48.507062708603826,391.1842480126365,394.1802265789449,outfield_outer,5.3,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,34.42401070322241,395.0042423231252,396.5014047467698,outfield_outer,3.7,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,20.333229758232807,398.7991020912,399.3171221737786,outfield_outer,2.2,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,6.259950237820865,402.6581633169851,402.7068207304016,outfield_outer,0.7,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-7.85446242263412,406.36399848291927,406.4398994229954,outfield_outer,-0.8,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-21.93522997324407,410.1925310574435,410.77861050606185,outfield_outer,-2.3,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-35.603331075604665,409.42948021355875,410.97456910571,outfield_outer,-3.7,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-47.87816787544788,401.55846780844496,404.4026731214514,outfield_outer,-5.1,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-60.02555714590197,393.47181853821803,398.02404386474984,outfield_outer,-6.5,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-72.18717221225518,385.40654683849647,392.10865098589187,outfield_outer,-8,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-84.34661881943487,377.33801874499073,386.65014224317315,outfield_outer,-9.5,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-96.52002217891864,369.2906352864486,381.69580557256296,outfield_outer,-11,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-108.68296129821084,361.22743318677584,377.22307003052583,outfield_outer,-12.6,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-120.83501712577073,353.1481278265788,373.24884668435743,outfield_outer,-14.2,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-132.9636028675166,345.03437254015347,369.7675457928779,outfield_outer,-15.8,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-145.13041952095324,336.9769888678174,366.9009807792138,outfield_outer,-17.5,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-157.2375605382909,328.8318386906736,364.4914657172673,outfield_outer,-19.2,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-169.4318716662981,320.8168482489012,362.80932906514875,outfield_outer,-20.9,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-181.5634552383659,312.7066118755674,361.59468108476216,outfield_outer,-22.6,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-193.72668532866118,304.6439265874142,361.0234765427699,outfield_outer,-24.3,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-205.89370832437598,296.5873091692436,361.04882092012946,outfield_outer,-26.1,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-218.04498534824927,288.50654590413376,361.63468122547687,outfield_outer,-27.8,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-226.2637485869714,277.1986192987183,357.8188905937527,outfield_outer,-29.4,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-231.89372801066185,263.73576020829233,351.1854955765239,outfield_outer,-31,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-237.43834036580859,250.23742877176252,344.95758613773444,outfield_outer,-32.6,7,NNE
+Oriole Park at Camden Yards,Baltimore Orioles,orioles,BAL,-242.89758497491383,236.70425687041148,339.1579897440413,outfield_outer,-34.3,7,NNE
+PETCO Park,San Diego Padres,padres,SD,240.9989087903077,216.26683561738483,323.8083047515551,outfield_outer,36.1,11,N
+PETCO Park,San Diego Padres,padres,SD,231.38391644218754,227.13077344675742,324.23279450827835,outfield_outer,34.1,11,N
+PETCO Park,San Diego Padres,padres,SD,223.85682122947958,238.59303189444032,327.1674055885589,outfield_outer,32.4,7,N
+PETCO Park,San Diego Padres,padres,SD,223.5115819075664,253.122639474987,337.6810593764581,outfield_outer,31.1,7,N
+PETCO Park,San Diego Padres,padres,SD,223.12945968470754,267.65134763787756,348.4594663250828,outfield_outer,29.9,7,N
+PETCO Park,San Diego Padres,padres,SD,215.27808160000708,278.9716048518069,352.37736693915514,outfield_outer,28.2,7,N
+PETCO Park,San Diego Padres,padres,SD,204.99768352878863,289.2450013112119,354.52323060089077,outfield_outer,26.5,7,N
+PETCO Park,San Diego Padres,padres,SD,194.74580560151463,299.5467926584864,357.2872930729124,outfield_outer,24.8,7,N
+PETCO Park,San Diego Padres,padres,SD,184.47349974295713,309.8282789896974,360.58845595655526,outfield_outer,23.1,7,N
+PETCO Park,San Diego Padres,padres,SD,174.20449607206783,320.1130588979319,364.444202764585,outfield_outer,21.4,7,N
+PETCO Park,San Diego Padres,padres,SD,163.92759398471802,330.3899609852812,368.8221555024511,outfield_outer,19.8,7,N
+PETCO Park,San Diego Padres,padres,SD,153.65069189737068,340.66686307263035,373.7143919041478,outfield_outer,18.2,7,N
+PETCO Park,San Diego Padres,padres,SD,143.39137562292828,350.9612134015199,379.12380552439976,outfield_outer,16.7,7,N
+PETCO Park,San Diego Padres,padres,SD,133.11549434694783,361.23908041280913,384.98494522867287,outfield_outer,15.2,7,N
+PETCO Park,San Diego Padres,padres,SD,122.6035380528006,371.24945611999584,390.9703137227394,outfield_outer,13.7,7,N
+PETCO Park,San Diego Padres,padres,SD,110.4025630175392,379.0951128041989,394.8440584241708,outfield_outer,12.2,7,N
+PETCO Park,San Diego Padres,padres,SD,97.86942018675494,386.4537636341829,398.6539035739102,outfield_outer,10.7,7,N
+PETCO Park,San Diego Padres,padres,SD,84.47031223686055,391.78587915641225,400.78848381129364,outfield_outer,9.1,7,N
+PETCO Park,San Diego Padres,padres,SD,70.14953807940434,394.26433461244073,400.4563936811902,outfield_outer,7.6,7,N
+PETCO Park,San Diego Padres,padres,SD,55.844014707742076,396.8293663543179,400.739441507631,outfield_outer,6,7,N
+PETCO Park,San Diego Padres,padres,SD,41.385159211106895,397.8360862223938,399.98285326208753,outfield_outer,4.5,7,N
+PETCO Park,San Diego Padres,padres,SD,26.853343871231388,397.6267388889262,398.5324648714442,outfield_outer,2.9,7,N
+PETCO Park,San Diego Padres,padres,SD,12.322090069235125,397.3664959034817,397.55750020630484,outfield_outer,1.3,7,N
+PETCO Park,San Diego Padres,padres,SD,-2.2100956724725203,397.1944538561205,397.2006025888472,outfield_outer,-0.2,7,N
+PETCO Park,San Diego Padres,padres,SD,-16.74168255278737,396.96063545890803,397.31351605330315,outfield_outer,-1.8,7,N
+PETCO Park,San Diego Padres,padres,SD,-30.932597695647914,395.3487104572495,396.55696748438413,outfield_outer,-3.4,7,N
+PETCO Park,San Diego Padres,padres,SD,-44.60410855264068,390.92443847771534,393.4608533245624,outfield_outer,-4.9,7,N
+PETCO Park,San Diego Padres,padres,SD,-59.132660074127486,390.538503161789,394.9898656159332,outfield_outer,-6.5,7,N
+PETCO Park,San Diego Padres,padres,SD,-73.66000726522493,390.1165705648903,397.0097420714308,outfield_outer,-8,7,N
+PETCO Park,San Diego Padres,padres,SD,-86.88027531511153,384.98084484439613,394.6624293442873,outfield_outer,-9.5,7,N
+PETCO Park,San Diego Padres,padres,SD,-99.53952643845382,377.84137492445325,390.7329291580029,outfield_outer,-11.1,7,N
+PETCO Park,San Diego Padres,padres,SD,-112.19481877750277,370.69490916299856,387.30142400962126,outfield_outer,-12.6,7,N
+PETCO Park,San Diego Padres,padres,SD,-123.50056745045534,361.7077883695447,382.2105628155399,outfield_outer,-14.1,7,N
+PETCO Park,San Diego Padres,padres,SD,-133.78993334928714,351.4433791807129,376.04812861595923,outfield_outer,-15.6,7,N
+PETCO Park,San Diego Padres,padres,SD,-144.06683543663624,341.16647709336377,370.33743824385823,outfield_outer,-17.2,7,N
+PETCO Park,San Diego Padres,padres,SD,-154.34373752398554,330.88957500601447,365.1162830668249,outfield_outer,-18.8,7,N
+PETCO Park,San Diego Padres,padres,SD,-164.6243076622801,320.61635041116756,360.41088610676235,outfield_outer,-20.4,7,N
+PETCO Park,San Diego Padres,padres,SD,-174.90456195446947,310.34283750513646,356.23627353657344,outfield_outer,-22.1,7,N
+PETCO Park,San Diego Padres,padres,SD,-185.1744112848622,300.05890124513786,352.5973720990199,outfield_outer,-23.8,7,N
+PETCO Park,San Diego Padres,padres,SD,-195.4526841756524,289.7833704391112,349.53705602484905,outfield_outer,-25.5,7,N
+PETCO Park,San Diego Padres,padres,SD,-205.7331676887381,279.51005102603455,347.061961199753,outfield_outer,-27.3,7,N
+PETCO Park,San Diego Padres,padres,SD,-216.0136512018238,269.23673161295784,345.1815683885382,outfield_outer,-29.1,7,N
+PETCO Park,San Diego Padres,padres,SD,-226.29413471490955,258.9634121998812,343.9056327898326,outfield_outer,-30.9,4,N
+PETCO Park,San Diego Padres,padres,SD,-236.16907680195337,248.3211297585198,342.69405644398705,outfield_outer,-32.7,4,N
+PETCO Park,San Diego Padres,padres,SD,-244.2415420227416,236.2357796415902,339.79593057085987,outfield_outer,-34.5,4,N
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,242.5938368894719,231.12210030583557,335.0659561139216,outfield_outer,34.8,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,232.5869650366744,241.2154539337437,335.08445431179473,outfield_outer,33,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,222.571498173019,251.30475687645315,335.69651864104196,outfield_outer,31.1,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,212.69841129677923,261.5308219870953,337.10381934564253,outfield_outer,29.3,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,202.72158721731472,271.6588102783601,338.9609876162172,outfield_outer,27.5,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,192.74253996600967,281.78434397399036,341.39728062976855,outfield_outer,25.8,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,182.632598665112,291.7794158832321,344.22360992286974,outfield_outer,24,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,172.6626697797088,301.91412758029225,347.7995657962007,outfield_outer,22.3,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,162.6139428714079,311.97070147587965,351.8082048439717,outfield_outer,20.6,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,152.58282295957935,322.0429522066894,356.36102610739346,outfield_outer,19,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,142.53155176618463,332.0951590138158,361.389592945464,outfield_outer,17.4,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,132.48392331448196,342.15306850803336,366.90695309064466,outfield_outer,15.9,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,122.48007910632354,352.25423875979305,372.9402344909068,outfield_outer,14.4,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,112.42613224538403,362.30573031432,379.3482271347124,outfield_outer,12.9,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,102.42008052682613,372.4049524007419,386.2322118463456,outfield_outer,11.5,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,92.34963922097825,382.4397395719198,393.4318368765836,outfield_outer,10.2,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,82.32789997252688,392.52342119747266,401.06423338719065,outfield_outer,8.9,13,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,70.45108171394834,399.7845968901926,405.9446745867215,outfield_outer,7.5,6,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,56.34550857645217,401.5566640255194,405.4905310362289,outfield_outer,6,6,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,42.22343698230645,403.1943705021696,405.3992094654843,outfield_outer,4.5,6,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,28.111665128770642,404.9187816820449,405.8934410349392,outfield_outer,3,6,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,13.99137363678822,406.571379065185,406.812050966058,outfield_outer,1.5,6,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-0.12660345200636913,408.23976117554326,408.23978080669536,outfield_outer,-0,6,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-14.231491815548925,410.01956109996974,410.26646931464904,outfield_outer,-1.5,6,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-28.35940979607905,411.60566888355544,412.5814862315819,outfield_outer,-3,6,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-42.479496699072264,412.27139829242304,414.4541150595518,outfield_outer,-4.4,6,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-53.27411653943839,403.7523528297091,407.2518801780829,outfield_outer,-5.6,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-63.35464814177351,393.7274955082266,398.79211647216465,outfield_outer,-6.9,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-73.40073176679194,383.66806595817394,390.6262308908431,outfield_outer,-8.1,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-86.29149529708202,380.2177381390995,389.88684327150503,outfield_outer,-9.6,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-100.17868943943701,378.65871184520114,391.6863411890568,outfield_outer,-11.1,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-110.99856411058025,369.6177570694198,385.92482114479134,outfield_outer,-12.5,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-121.01480775549554,359.5287108646011,379.3487546204172,outfield_outer,-14,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-131.07988757739,349.4883782902054,373.2613876189431,outfield_outer,-15.4,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-141.07711695955516,339.38107361915814,367.535394296267,outfield_outer,-16.9,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-151.1215477993708,329.32007641062927,362.33883995009455,outfield_outer,-18.5,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-161.16249651920273,319.2555051971745,357.6274987791139,outfield_outer,-20.1,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-171.38604769421025,309.3778339196708,353.6775670933478,outfield_outer,-21.7,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-181.43675153364822,299.32309469353083,350.01944206571613,outfield_outer,-23.4,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-191.46728958304124,289.2488584369588,346.8784010101523,outfield_outer,-25.1,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-201.52006480966793,279.1960832103321,344.3265737652025,outfield_outer,-26.9,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-211.58422519692877,269.15686530529035,342.36428331990896,outfield_outer,-28.6,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-221.59851992976104,259.06599603189204,340.91215046556647,outfield_outer,-30.4,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-231.67132240263675,249.0341700848952,340.1317678395521,outfield_outer,-32.2,11,NNE
+Citizens Bank Park,Philadelphia Phillies,phillies,PHI,-240.08090122776264,237.80891998286353,337.9229521026216,outfield_outer,-34,11,NNE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-236.6150966969277,240.705572582706,337.52907527687864,outfield_outer,-33.4,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-234.9202254594298,255.12604798432747,346.8094760672071,outfield_outer,-32,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-233.2554155126021,269.5499974628924,356.46218593029187,outfield_outer,-30.7,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-231.4914311293389,283.962144403129,366.36427519660396,outfield_outer,-29.4,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-227.55777472219864,297.44171796846496,374.5051620799782,outfield_outer,-28.1,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-216.75704941601947,307.08288726326435,375.87699865977623,outfield_outer,-26.4,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-205.5672622564116,316.33553367684533,377.26127442160146,outfield_outer,-24.8,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-194.40329706102108,325.61914187755247,379.23669055784836,outfield_outer,-23.1,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-183.17919802164997,334.8296993653011,381.6615597160825,outfield_outer,-21.5,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-172.00267869009176,344.09740128711826,384.69201063853023,outfield_outer,-19.9,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-160.81690060754292,353.3546903520266,388.22881489502157,outfield_outer,-18.4,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-149.67855962430752,362.66908580456715,392.3423721821642,outfield_outer,-16.8,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-138.49667092299387,371.93123149390755,396.88054729014715,outfield_outer,-15.3,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-127.32254180465834,381.20229792247204,401.90324904505576,outfield_outer,-13.9,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-116.18549816958179,390.51818362559925,407.43529759601233,outfield_outer,-12.4,6,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-105.01573661538487,392.934716516657,406.7259475136759,outfield_outer,-11.2,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-92.7140596771192,385.82446055597484,396.80777616513694,outfield_outer,-10.1,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-78.47754950460828,387.6883184381276,395.5514606592059,outfield_outer,-8.6,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-64.18010605448197,390.2175447690764,395.4602612890083,outfield_outer,-7,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-49.88561857017885,392.7652115317475,395.9205555786511,outfield_outer,-5.4,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-35.576200221847344,395.22744156519906,396.82539811407963,outfield_outer,-3.9,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-21.27582083335066,397.74181399095966,398.3104456939988,outfield_outer,-2.3,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,-6.983913201776131,400.30315193623557,400.364069933473,outfield_outer,-0.7,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,7.3733298966947505,400.76262009757437,400.8304425330469,outfield_outer,0.8,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,21.594711062034317,397.84346541159294,398.42910852064773,outfield_outer,2.3,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,35.806099777311694,394.86720836926264,396.4873125669944,outfield_outer,3.9,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,50.019640057823565,391.9037178747243,395.08288810773075,outfield_outer,5.5,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,64.23988504476736,388.9701033438275,394.2391458567664,outfield_outer,7,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,78.14731837526388,384.9792613211284,392.8307969299333,outfield_outer,8.6,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,91.14387290771636,378.5057372697371,389.32479848415153,outfield_outer,10.2,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,103.98672405411665,371.7352867158316,386.0056504368926,outfield_outer,11.7,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,116.98569688621775,365.26620732436345,383.54276878736596,outfield_outer,13.3,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,129.96645122878203,358.7617524314505,381.57734923955945,outfield_outer,14.9,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,142.95475005322066,352.2712879478978,380.1724883197751,outfield_outer,16.6,10,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,154.4218797901001,343.72903434768733,376.8232556670325,outfield_outer,18.1,21,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,162.6155490519638,331.7420962424883,369.4545103430624,outfield_outer,19.6,21,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,170.84413397595534,319.7791414284294,362.5553990863984,outfield_outer,21.1,21,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,178.99485007494417,307.76302412924144,356.0298237149913,outfield_outer,22.6,21,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,187.16661677914658,295.76119861318415,350.0086128106839,outfield_outer,24.2,21,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,195.34759696591115,283.76560381244593,344.50486433053175,outfield_outer,25.9,21,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,203.5752455134397,271.80208523831607,339.5868874467241,outfield_outer,27.6,21,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,211.74171715560854,259.79739568804195,335.15554835075426,outfield_outer,29.4,21,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,219.99463618655713,247.85233576498948,331.40371195117405,outfield_outer,31.2,21,ESE
+PNC Park,Pittsburgh Pirates,pirates,PIT,228.22230124400505,235.8890700226796,328.22107205551873,outfield_outer,33,21,ESE
+Globe Life Field,Texas Rangers,rangers,TEX,240.0965274991023,244.7633550994211,342.8635917047077,outfield_outer,33.3,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,238.4947342211397,259.3620349359696,352.34699291655545,outfield_outer,31.9,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,229.82399258134419,270.6776545749358,355.08514507399207,outfield_outer,30.3,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,219.43790639166812,281.08945902052477,356.601007757984,outfield_outer,28.5,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,209.02168255970605,291.4708297344305,358.671588456861,outfield_outer,26.7,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,198.6324175412505,301.8787846431202,361.36634862129733,outfield_outer,25,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,188.23403660244855,312.27826799989515,364.62277657966774,outfield_outer,23.3,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,177.80261036418082,322.6428261199154,368.39131572142503,outfield_outer,21.6,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,167.39695448683625,333.0349944331633,372.7385784817089,outfield_outer,20,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,157.00018036672571,343.43615401952087,377.6207734260716,outfield_outer,18.4,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,146.6281492611347,353.8500163732963,383.0269549824498,outfield_outer,16.9,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,133.2084997452255,358.0096613894793,381.9887721551294,outfield_outer,15.3,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,121.1081385596043,364.7923941027445,384.37048796777356,outfield_outer,13.8,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,110.64990413640673,375.13175165798486,391.1102560498561,outfield_outer,12.3,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,100.17936662837482,385.4584703317451,398.2639047774116,outfield_outer,10.9,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,89.75214006544749,395.8291022052106,405.8769823467583,outfield_outer,9.6,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,78.77962585775592,405.1643885538302,412.75223948815477,outfield_outer,8.3,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,64.15247850355935,406.0619186704712,411.098312198547,outfield_outer,6.7,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,49.44727167682304,405.94584486,408.94628209017964,outfield_outer,5.2,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,34.742432030806135,405.79610460000004,407.28063431981315,outfield_outer,3.7,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,20.03606458201404,405.79610460000004,406.2904409316921,outfield_outer,2.1,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,5.329697133224427,405.79610460000004,405.8311030220159,outfield_outer,0.6,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-9.376197569087966,405.7042317685514,405.8125635755564,outfield_outer,-1,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-24.082267251688886,405.64636434,406.36058925324164,outfield_outer,-2.5,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-38.788634700478504,405.64636434,407.4966638933222,outfield_outer,-4.1,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-53.487332984541695,405.4731735628734,408.9858057059527,outfield_outer,-5.6,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-67.12288581460611,400.71476586266266,406.29768074707147,outfield_outer,-7.1,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-80.65677316043823,394.9619014704015,403.1134067105304,outfield_outer,-8.7,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-94.22280737376275,389.2849757301022,400.5255669224868,outfield_outer,-10.2,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-107.759741317267,383.538292861274,398.38898571585116,outfield_outer,-11.8,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-121.29548178538771,377.7887541713741,396.78323638972984,outfield_outer,-13.4,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-134.58229948014662,371.630949385207,395.2492351343822,outfield_outer,-14.9,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-145.4359484389453,361.7592688910547,389.89919687904717,outfield_outer,-16.4,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-155.85004404270472,351.3754559117844,384.3877563676129,outfield_outer,-17.9,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-166.34541726374542,341.07441045625467,379.47668085500493,outfield_outer,-19.5,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-176.74438941340637,330.67543830659366,374.94642909137787,outfield_outer,-21.1,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-187.11738451950785,320.250815855633,370.90901936407516,outfield_outer,-22.7,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-197.50443912463766,309.8405184653624,367.4359132649152,outfield_outer,-24.4,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-207.8845370301143,299.4227716710549,364.51334259722455,outfield_outer,-26.1,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-218.35137247382886,289.0922929169277,362.2867313126048,outfield_outer,-27.8,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-228.59983702656274,278.54546688343703,360.3407590182978,outfield_outer,-29.5,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-235.5812175237617,265.9379382492538,355.2766486137836,outfield_outer,-31.2,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-239.8763115892767,251.87292433699739,347.822677345435,outfield_outer,-32.7,8,SSE
+Globe Life Field,Texas Rangers,rangers,TEX,-244.20874538372775,237.81928651535605,340.8752328353695,outfield_outer,-34.3,8,SSE
+Tropicana Field,Tampa Bay Rays,rays,TB,238.29935927080962,229.14550445566644,330.5968040394829,outfield_outer,34.6,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,236.63976664534064,243.63878255320031,339.64427791730407,outfield_outer,33.1,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,226.08005937824245,254.13991858758823,340.1459855241211,outfield_outer,31.2,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,215.63351409986922,264.7532632653542,341.4558577806397,outfield_outer,29.4,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,205.11272556610697,275.29248449076334,343.3033384723404,outfield_outer,27.5,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,194.52744047113956,285.76829081909136,345.6941439103612,outfield_outer,25.7,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,184.0383222539559,296.3396768171419,348.83707961473795,outfield_outer,23.9,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,173.52536806082549,306.8875534731988,352.5493211416105,outfield_outer,22.1,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,162.99194321958066,317.4151823986864,356.8175606268368,outfield_outer,20.4,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,152.46602061815588,327.95064688184385,361.6593898039366,outfield_outer,18.7,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,141.93529058770756,338.481376912292,367.03578739771143,outfield_outer,17.1,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,131.47847998156917,349.08521292424354,373.024230554301,outfield_outer,15.5,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,120.88696267302964,359.55466153697137,379.33258807710746,outfield_outer,13.9,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,110.35623264258122,370.0853915674198,386.18867815444037,outfield_outer,12.5,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,99.86044575417404,380.6509333719122,393.53175437711536,outfield_outer,11,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,89.34664917799422,391.1985318170219,401.2718716968946,outfield_outer,9.6,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,77.9704340947682,400.772313646991,408.28646313451134,outfield_outer,8.3,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,65.61913199980162,408.8781994662517,414.1101936479846,outfield_outer,6.8,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,50.8737104884636,410.5120655905461,413.6523787122236,outfield_outer,5.3,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,35.989711579678506,411.01880017954517,412.59146069765103,outfield_outer,3.8,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,21.10488922603881,411.500103813039,412.0409588710633,outfield_outer,2.2,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,6.2211810633095705,412.0089379163798,412.0559039945985,outfield_outer,0.6,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-8.662398940354853,412.52949757511067,412.6204351761738,outfield_outer,-0.9,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-23.54563674525352,413.05556162250855,413.72610988071006,outfield_outer,-2.4,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-38.4303348162967,413.5429201779013,415.3247373602477,outfield_outer,-4,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-53.31417352348308,414.0478461817827,417.4661902792431,outfield_outer,-5.5,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-68.19934514586365,414.51964715204673,420.0924761923045,outfield_outer,-7,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-80.22454251763543,408.5592829424814,416.3612192563549,outfield_outer,-8.3,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-91.85063017222248,399.58952935883997,410.0101586988469,outfield_outer,-9.7,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-102.8259289720055,389.6697861679946,403.00832984091846,outfield_outer,-11.1,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-113.42280463674388,379.20577569423455,395.8051956853663,outfield_outer,-12.5,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-123.98420664081394,368.70601390711806,388.9938408093732,outfield_outer,-13.9,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-134.47655544889034,358.1372916708033,382.5523018499516,outfield_outer,-15.4,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-145.0910003878782,347.6910684154245,376.7498871259482,outfield_outer,-17,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-155.65313552120605,337.191973558794,371.3843368130344,outfield_outer,-18.6,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-166.1838655516542,326.66124352834584,366.50326764324427,outfield_outer,-20.2,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-176.80661488766546,316.22526491624535,362.2968358119966,outfield_outer,-21.9,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-187.49009620439222,305.8541470756078,358.7468403457789,outfield_outer,-23.6,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-197.9960256711112,295.2997525462581,355.5339224819997,outfield_outer,-25.4,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-208.60463705227446,284.8475211564123,353.06374057479184,outfield_outer,-27.2,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-219.19312174720932,274.37540287599546,351.1801337271967,outfield_outer,-29,11,NE
+Tropicana Field,Tampa Bay Rays,rays,TB,-229.74737654357412,263.8697448453687,349.8729759118512,outfield_outer,-30.8,11,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,247.97458749584092,291.039094024977,382.35474404616957,outfield_outer,30.3,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,239.0645202812635,302.5787574288936,385.62384431531706,outfield_outer,28.7,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,226.02342605084075,309.3426942115936,383.1181170159503,outfield_outer,27.1,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,212.81418911379893,315.8703131301484,380.87259524032675,outfield_outer,25.5,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,199.60276079716206,322.3941287089936,379.1823259909146,outfield_outer,23.8,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,186.4091624315124,328.95302547131223,378.0984908792255,outfield_outer,22.2,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,173.21276247680177,335.5063521282313,377.58068462679296,outfield_outer,20.5,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,160.02828569013295,342.08444517563095,377.6649571406408,outfield_outer,18.8,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,146.83668406223973,348.64793621928055,378.3072761874367,outfield_outer,17.1,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,133.62846541700765,355.1778880565912,379.4837268369289,outfield_outer,15.5,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,120.43812827057526,361.7441954089861,381.2665808242499,outfield_outer,13.8,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,107.23496356626138,368.2835404470029,383.5780280141664,outfield_outer,12.2,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,95.69781064527449,376.27261545136975,388.2514032182153,outfield_outer,10.7,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,91.22901427787079,390.3127575762229,400.83261066543383,outfield_outer,9.9,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,86.41720094865254,404.21268964839294,413.34710727497276,outfield_outer,9.1,5,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,77.01584207797738,410.6350781724458,417.79493457517003,outfield_outer,8,18,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,62.795941343634276,406.7755238452093,411.5940439908935,outfield_outer,6.6,18,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,48.58644097868512,402.87798203026915,405.7971299205517,outfield_outer,5.2,18,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,34.36330335655441,399.03077548276957,400.5076733346754,outfield_outer,3.7,18,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,20.134228824129842,395.2051785817517,395.7177281196493,outfield_outer,2.2,18,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,5.901383253758981,391.39429427985607,391.43878182818617,outfield_outer,0.6,18,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-8.311733033450764,387.5098917583623,387.5990210470055,outfield_outer,-0.9,18,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-22.542962078804347,383.69239490087796,384.35405428336213,outfield_outer,-2.5,18,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-36.74835775896217,379.7806414386432,381.55442260512194,outfield_outer,-4.1,18,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-50.233806050138824,379.15350453274976,382.46675054146715,outfield_outer,-5.7,18,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-61.651763866787554,379.3225218527184,384.30003327165116,outfield_outer,-6.9,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-72.1236326871924,368.96125985280764,375.94445023722335,outfield_outer,-8.3,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-82.4458187397653,358.44699037321084,367.80641366795516,outfield_outer,-9.7,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-92.8856001893628,348.04955209063723,360.2307946761789,outfield_outer,-11.2,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-103.26310196990393,337.5906664653005,353.03077247307004,outfield_outer,-12.8,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-113.62211002817426,327.11338857182574,346.2847857908239,outfield_outer,-14.4,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-123.9612833743746,316.6165528067418,340.0182955181182,outfield_outer,-16,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-134.51084915538127,306.3355472473403,334.56634027921757,outfield_outer,-17.8,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-144.9755917900383,295.9641729750458,329.5644305741666,outfield_outer,-19.6,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-155.34171204976735,285.49361339023267,325.01946216982833,outfield_outer,-21.4,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-165.74879802945892,275.0635735822564,321.1426996835702,outfield_outer,-23.3,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-176.20007744881698,264.67818216152216,317.9638460663366,outfield_outer,-25.2,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-186.60938888393403,254.25048840596884,315.3829020005825,outfield_outer,-27.2,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-197.03925169457273,243.84292911524327,313.50253713145406,outfield_outer,-29.2,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-207.486490514245,233.45285073290663,312.33135811384466,outfield_outer,-31.2,37,NE
+Fenway Park,Boston Red Sox,red_sox,BOS,-217.86542430739308,222.9948578426077,311.7563948548373,outfield_outer,-33.3,37,NE
+Great American Ballpark,Cincinnati Reds,reds,CIN,237.24494947578532,231.5652739320805,331.52321508909057,outfield_outer,34.3,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,229.25418731418446,243.30087372825045,334.2944773070851,outfield_outer,32.5,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,221.2121733408928,255.00069771079842,337.5798890147267,outfield_outer,30.7,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,212.76351832697767,266.40559945891835,340.94025598913925,outfield_outer,29,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,204.00373363073945,277.5787348021805,344.48146154715056,outfield_outer,27.2,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,194.94968899661043,288.51436508407056,348.2038484849636,outfield_outer,25.5,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,185.75214319281517,299.32996514108925,352.2815446941407,outfield_outer,23.9,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,175.84842564392667,309.4657371240663,355.9377912714374,outfield_outer,22.2,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,165.28180109738656,318.94816679387793,359.2297410782847,outfield_outer,20.5,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,154.6493066140136,328.35519928290154,362.95116053307936,outfield_outer,18.9,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,143.63358283165,337.3110034619372,366.61876544109884,outfield_outer,17.3,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,132.52031771105666,346.14632612612513,370.6466156554693,outfield_outer,15.7,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,120.9439906805827,354.36139378278006,374.4321651319761,outfield_outer,14.1,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,109.15355327620249,362.259184856786,378.3466865269522,outfield_outer,12.6,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,97.12137682566664,369.79381291246494,382.3349655797286,outfield_outer,11,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,84.9744986490773,377.1227201572189,386.57756204860374,outfield_outer,9.5,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,72.28943211065175,383.498144770827,390.25195584077056,outfield_outer,8,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,59.5538459936186,389.77262563702925,394.29603126155786,outfield_outer,6.5,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,46.714433954570154,395.8327129497792,398.5796971508687,outfield_outer,5,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,33.445721284391475,400.85653932893905,402.2494019821614,outfield_outer,3.6,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,20.02090287660342,405.4732143066636,405.96719580795184,outfield_outer,2.1,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,6.439153014903991,409.5982728325582,409.6488835563502,outfield_outer,0.7,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-7.1758417221835575,408.17727610256105,408.24034762738506,outfield_outer,-0.8,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-20.68323147362837,403.80383058553076,404.33319139014515,outfield_outer,-2.2,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-34.20836670930163,399.48559439660374,400.9475682471785,outfield_outer,-3.7,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-47.7172761966021,395.119825076087,397.9907217709735,outfield_outer,-5.2,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-61.233630690771555,390.7746457174649,395.54314715740435,outfield_outer,-6.7,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-74.7465934112153,386.41828389813617,393.581177595375,outfield_outer,-8.2,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-88.26291512799577,382.0749225744624,392.13720640507097,outfield_outer,-9.8,8,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-101.78689554773996,377.7533030807252,391.22644349998217,outfield_outer,-11.3,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-112.90335727335028,369.10385126769165,385.9855192934523,outfield_outer,-12.8,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-122.86091530432687,358.9851991587161,379.4274340693357,outfield_outer,-14.2,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-132.94150539505054,348.98760439280915,373.45119075527674,outfield_outer,-15.6,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-142.88539971244717,338.8539734175528,367.74753942324264,outfield_outer,-17.1,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-152.92478714781282,328.81458598218717,362.6362123104104,outfield_outer,-18.7,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-163.02661428265222,318.83927680505735,358.10076989310795,outfield_outer,-20.3,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-173.06602752044162,308.80198584503023,353.9922546377823,outfield_outer,-22,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-183.09367118264618,298.7510286704374,350.39330695488957,outfield_outer,-23.6,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-193.22946060317648,288.8092234578592,347.4886933402671,outfield_outer,-25.3,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-203.23120265276657,278.7327808672335,344.9563521109172,outfield_outer,-27.1,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-213.290607147877,268.7139122890298,343.07440848187207,outfield_outer,-28.8,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-223.32616603470385,258.67127334379677,341.7387951185252,outfield_outer,-30.6,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-232.37208855532825,247.86291414437036,339.7540459622296,outfield_outer,-32.4,12,ESE
+Great American Ballpark,Cincinnati Reds,reds,CIN,-236.99234477324245,234.4379360751491,333.35644189410095,outfield_outer,-34,12,ESE
+Coors Field,Colorado Rockies,rockies,COL,251.1183318538329,257.86729623092896,359.9388268282562,outfield_outer,33.2,17,N
+Coors Field,Colorado Rockies,rockies,COL,239.6710289673741,267.40017212433133,359.0892008657485,outfield_outer,31.4,17,N
+Coors Field,Colorado Rockies,rockies,COL,228.23045533091124,276.94100773474804,358.86691475488914,outfield_outer,29.6,17,N
+Coors Field,Colorado Rockies,rockies,COL,216.739406900874,286.42112268952985,359.1838387601443,outfield_outer,27.8,17,N
+Coors Field,Colorado Rockies,rockies,COL,205.27924706650626,295.9385423889173,360.1655038277107,outfield_outer,26.1,17,N
+Coors Field,Colorado Rockies,rockies,COL,193.85126589069532,305.4945703646162,361.8082998076281,outfield_outer,24.3,17,N
+Coors Field,Colorado Rockies,rockies,COL,182.48964670826913,315.12936063747225,364.1551662293025,outfield_outer,22.6,17,N
+Coors Field,Colorado Rockies,rockies,COL,171.09033076299747,324.71940297835727,367.03486476248094,outfield_outer,20.8,17,N
+Coors Field,Colorado Rockies,rockies,COL,159.65804355969746,334.2702788265748,370.4420469926522,outfield_outer,19.1,17,N
+Coors Field,Colorado Rockies,rockies,COL,148.2167532795623,343.8102599233292,374.3977841564796,outfield_outer,17.5,17,N
+Coors Field,Colorado Rockies,rockies,COL,136.79125350035184,353.36926863518084,378.92174264610384,outfield_outer,15.9,17,N
+Coors Field,Colorado Rockies,rockies,COL,125.3516957954304,362.9114178746169,383.9501853920049,outfield_outer,14.3,17,N
+Coors Field,Colorado Rockies,rockies,COL,113.94287255261912,372.4901382937289,389.52776708679403,outfield_outer,12.8,17,N
+Coors Field,Colorado Rockies,rockies,COL,102.535576332928,382.07057723667117,395.59002819066205,outfield_outer,11.3,17,N
+Coors Field,Colorado Rockies,rockies,COL,91.08950560173318,391.60486600899554,402.05928556954325,outfield_outer,9.8,17,N
+Coors Field,Colorado Rockies,rockies,COL,79.63694263815076,401.13143621061255,408.96023247883267,outfield_outer,8.4,17,N
+Coors Field,Colorado Rockies,rockies,COL,68.19617312157476,410.67212736868134,416.29594548343397,outfield_outer,7.1,17,N
+Coors Field,Colorado Rockies,rockies,COL,56.022765159078645,419.0365768225447,422.7649499795669,outfield_outer,5.7,17,N
+Coors Field,Colorado Rockies,rockies,COL,41.42632182311527,419.2076970307625,421.24960936436236,outfield_outer,4.2,17,N
+Coors Field,Colorado Rockies,rockies,COL,26.587661598778137,417.8922169627608,418.7371595014494,outfield_outer,2.7,8,N
+Coors Field,Colorado Rockies,rockies,COL,11.748610910421304,416.5812091931032,416.7468460721838,outfield_outer,1.2,8,N
+Coors Field,Colorado Rockies,rockies,COL,-3.092627532810463,415.29496852802305,415.30648349110606,outfield_outer,-0.3,8,N
+Coors Field,Colorado Rockies,rockies,COL,-17.934571263201054,414.0169810627211,414.4052478609367,outfield_outer,-1.9,8,N
+Coors Field,Colorado Rockies,rockies,COL,-32.77885783737631,412.7664093210047,414.065891115023,outfield_outer,-3.4,8,N
+Coors Field,Colorado Rockies,rockies,COL,-47.622425785814876,411.50742829282945,414.2538581327923,outfield_outer,-5,8,N
+Coors Field,Colorado Rockies,rockies,COL,-62.46366422904565,410.2211876277493,414.94955371423174,outfield_outer,-6.5,8,N
+Coors Field,Colorado Rockies,rockies,COL,-77.30490267227742,408.9349469626694,416.17765296148656,outfield_outer,-8,8,N
+Coors Field,Colorado Rockies,rockies,COL,-92.1452353643315,407.6384524824102,417.9232613083438,outfield_outer,-9.6,8,N
+Coors Field,Colorado Rockies,rockies,COL,-106.98432548184886,406.32789108183357,420.17615468969274,outfield_outer,-11.1,8,N
+Coors Field,Colorado Rockies,rockies,COL,-119.84999916402604,399.960093330586,417.5309552076685,outfield_outer,-12.5,8,N
+Coors Field,Colorado Rockies,rockies,COL,-129.4677906973124,388.5846421041816,409.5850740777525,outfield_outer,-13.8,8,N
+Coors Field,Colorado Rockies,rockies,COL,-139.00109713535568,377.13775911415297,401.93804790598944,outfield_outer,-15.2,8,N
+Coors Field,Colorado Rockies,rockies,COL,-148.48846096792795,365.65275976597087,394.6527128566262,outfield_outer,-16.6,8,N
+Coors Field,Colorado Rockies,rockies,COL,-157.982212127786,354.1732139629347,387.81057855301407,outfield_outer,-18,8,N
+Coors Field,Colorado Rockies,rockies,COL,-167.58503518602285,342.784584134294,381.5573549788044,outfield_outer,-19.5,8,N
+Coors Field,Colorado Rockies,rockies,COL,-177.13258800400467,331.34951824907455,375.72391057382845,outfield_outer,-21.1,8,N
+Coors Field,Colorado Rockies,rockies,COL,-186.58370372584298,319.83558102366055,370.2813489561629,outfield_outer,-22.7,8,N
+Coors Field,Colorado Rockies,rockies,COL,-196.14210772593233,308.4096722360799,365.4972672290964,outfield_outer,-24.3,8,N
+Coors Field,Colorado Rockies,rockies,COL,-205.69497975550755,296.97913010189023,361.25756519787114,outfield_outer,-26,8,N
+Coors Field,Colorado Rockies,rockies,COL,-215.2828965373997,285.578074017765,357.63327851477806,outfield_outer,-27.8,8,N
+Coors Field,Colorado Rockies,rockies,COL,-224.85833445279852,274.166448509279,354.5821654582725,outfield_outer,-29.5,8,N
+Coors Field,Colorado Rockies,rockies,COL,-234.34147166461545,262.67794174681046,352.01651441697805,outfield_outer,-31.3,8,N
+Coors Field,Colorado Rockies,rockies,COL,-243.79971083194977,251.1690539235791,350.0345592232403,outfield_outer,-33.1,8,N
+Coors Field,Colorado Rockies,rockies,COL,-253.20790070772784,239.6319392804548,348.62258576306573,outfield_outer,-34.9,8,N
+Kauffman Stadium,Kansas City Royals,royals,KC,245.942577599478,261.24039095098885,358.7956149961991,outfield_outer,32.5,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,240.9260345114745,275.483661886892,365.97349913898904,outfield_outer,30.9,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,232.68346420422964,288.06324665576994,370.2999170779599,outfield_outer,29.2,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,222.00529727470047,298.75592169277127,372.21156989610813,outfield_outer,27.5,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,211.36167877083147,309.4828575958746,374.77112802153334,outfield_outer,25.7,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,200.68976585670697,320.1817285532926,377.8792418471729,outfield_outer,24.1,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,190.0043216774517,330.8671727325483,381.54256413687125,outfield_outer,22.4,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,179.19956033575824,341.42964843343174,385.59912766227296,outfield_outer,20.8,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,167.69054519495538,351.22249204688444,389.20092223349775,outfield_outer,19.1,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,156.00895495301856,360.8068813269191,393.0908287385887,outfield_outer,17.5,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,143.72047807326007,369.57713757236047,396.53856865856807,outfield_outer,15.9,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,131.05295750072074,377.81665157986174,399.9003624413266,outfield_outer,14.3,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,118.12830399095262,385.6424527460898,403.32914296365817,outfield_outer,12.8,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,104.68749314872706,392.5250502347766,406.24547540074667,outfield_outer,11.2,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,90.8439422442768,398.5702975186738,408.79200567844475,outfield_outer,9.6,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,76.53219893602171,403.393987906035,410.5896819852115,outfield_outer,8.1,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,62.009200894066566,407.5639619111495,412.2541983342724,outfield_outer,6.5,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,47.25449391269367,410.80931510995356,413.51817442048895,outfield_outer,4.9,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,32.37167257761241,413.424069005398,414.68950555620796,outfield_outer,3.4,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,17.348760063555137,414.9923316838705,415.3548059576997,outfield_outer,1.8,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,2.255283016441211,415.57913492000006,415.5852544091764,outfield_outer,0.2,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-12.840304150246626,414.95970630359005,415.1583207238325,outfield_outer,-1.3,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-27.90998985727063,413.97551958381854,414.9152905696842,outfield_outer,-2.9,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-42.86310153446861,411.8085999659221,414.03329392579894,outfield_outer,-4.5,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-57.694615429482106,408.9187969468838,412.9688258767756,outfield_outer,-6,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-72.2915711118607,405.03146101716237,411.43232209868773,outfield_outer,-7.6,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-86.57740890147295,400.12832187007496,409.38774003950726,outfield_outer,-9.2,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-100.6520179159052,394.62872205481864,407.2623932812395,outfield_outer,-10.7,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-114.30708579356528,388.1627680657984,404.64360167327527,outfield_outer,-12.3,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-127.4725983883521,380.75961360797317,401.5310034041844,outfield_outer,-13.9,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-139.97248330685034,372.2921454390198,397.7357635901941,outfield_outer,-15.5,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-151.89914685455346,363.0126437444432,393.51179186076655,outfield_outer,-17,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-163.60398950698288,353.4547533979602,389.4823848163275,outfield_outer,-18.6,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-175.2797649860156,343.8638972559863,385.9603293728882,outfield_outer,-20.3,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-186.5812483488568,333.83233199945454,382.4350770047275,outfield_outer,-21.9,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-197.73135249156377,323.6392761184362,379.26253282470236,outfield_outer,-23.6,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-208.4167966708198,312.9538319391803,376.00221017959797,outfield_outer,-25.2,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-219.02547337701097,302.19303990625497,373.2194948764161,outfield_outer,-27,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-229.68578233831525,291.4841725685386,371.10454250295766,outfield_outer,-28.7,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-238.70773476009182,279.4292625440367,367.50795283938896,outfield_outer,-30.4,9,NE
+Kauffman Stadium,Kansas City Royals,royals,KC,-244.49557910124963,265.53224653941976,360.95077524826934,outfield_outer,-32,9,NE
+Comerica Park,Detroit Tigers,tigers,DET,237.1249357565595,251.23050405799054,345.4634587431563,outfield_outer,32.5,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,226.53966204234098,261.8956557904394,346.27958790573024,outfield_outer,30.6,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,215.86973324423414,272.47610392726097,347.6247530632943,outfield_outer,28.8,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,205.21980351127857,283.07722678567353,349.6396488927928,outfield_outer,27,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,194.619931617493,293.727841415777,352.3534625990917,outfield_outer,25.1,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,184.02099721158748,304.37983613883745,355.68358419057324,outfield_outer,23.4,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,173.41350909921988,315.02330648794526,359.5996784880419,outfield_outer,21.6,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,162.81710167419917,325.67793155206806,364.1092194625399,outfield_outer,19.9,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,152.19533295112583,336.30730858887324,369.14228311370084,outfield_outer,18.3,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,146.49381876842378,349.87553976987635,379.3063831081915,outfield_outer,17,11,SSE
+Comerica Park,Detroit Tigers,tigers,DET,141.97189544124538,364.09242645374536,390.7931858363908,outfield_outer,16,11,SSE
+Comerica Park,Detroit Tigers,tigers,DET,132.4022719407121,375.49976386415136,398.15880534919194,outfield_outer,14.6,11,SSE
+Comerica Park,Detroit Tigers,tigers,DET,121.78516900515922,386.13379291484057,404.88385176543676,outfield_outer,13.1,11,SSE
+Comerica Park,Detroit Tigers,tigers,DET,111.18448710671319,396.7841568708582,412.0675397515566,outfield_outer,11.7,11,SSE
+Comerica Park,Detroit Tigers,tigers,DET,100.5498780221876,407.40067946383033,419.62553735189596,outfield_outer,10.4,11,SSE
+Comerica Park,Detroit Tigers,tigers,DET,89.9033401953668,418.0052508601375,427.56403067251847,outfield_outer,9.1,11,SSE
+Comerica Park,Detroit Tigers,tigers,DET,79.1559761168841,428.44086056572286,435.6916794676183,outfield_outer,7.9,11,SSE
+Comerica Park,Detroit Tigers,tigers,DET,64.36073801013379,429.9626567680051,434.7530227752424,outfield_outer,6.4,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,49.341637197819736,429.48339107783283,432.3084319939596,outfield_outer,4.9,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,34.320630524334504,429.0665695633303,430.43701838530575,outfield_outer,3.4,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,19.300806028601887,428.61707300110834,429.0514146129705,outfield_outer,1.9,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,4.282251457443468,428.145370412891,428.1667851241341,outfield_outer,0.4,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-10.737403172878293,427.69001839812137,427.8247814985503,outfield_outer,-1.1,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-25.756769699468364,427.21954695221604,427.9952715666473,outfield_outer,-2.6,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-40.77499182846215,426.7232591232575,428.6669334522852,outfield_outer,-4.1,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-55.79441153497361,426.27780322850754,429.9136912030788,outfield_outer,-5.6,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-69.52460275539866,422.26852811050264,427.95371270840303,outfield_outer,-7,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-80.25010269519088,411.74395572387937,419.4915542150243,outfield_outer,-8.3,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-90.87441653711926,401.1171611767805,411.2823076324596,outfield_outer,-9.6,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-101.57105655248519,390.5640234789934,403.5553691444185,outfield_outer,-10.9,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-112.15736373514882,379.89942816754916,396.109643611525,outfield_outer,-12.3,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-122.85680523449571,369.3487775964634,389.245827343632,outfield_outer,-13.8,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-133.51487057155626,358.7562341784437,382.7953189703837,outfield_outer,-15.3,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-144.17774631402438,348.16822856597565,376.8399367303851,outfield_outer,-16.9,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-154.80332164825737,337.5426532317427,371.3476957570335,outfield_outer,-18.5,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-165.42889698249033,326.9170778975097,366.38981396579493,outfield_outer,-20.1,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-176.21700771661258,316.4581527534385,362.2129156348726,outfield_outer,-21.8,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-186.82762457018083,305.8178308298192,358.37006983841763,outfield_outer,-23.6,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-197.53725802906536,295.2786569377843,355.26110616365435,outfield_outer,-25.3,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-208.229953403806,284.7206446708512,352.7400728529951,outfield_outer,-27.1,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-218.8651493659753,274.10474326402476,350.76397176281887,outfield_outer,-29,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-229.53343076696117,263.5222143520211,349.4703897280053,outfield_outer,-30.8,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-240.27674369979314,253.01698250075506,348.9276529551126,outfield_outer,-32.6,8,SSE
+Comerica Park,Detroit Tigers,tigers,DET,-250.35108627821066,242.10006200921134,348.2644202693466,outfield_outer,-34.5,8,SSE
+Target Field,Minnesota Twins,twins,MIN,238.93554154000003,227.8547623,330.1635741777136,outfield_outer,34.8,23,E
+Target Field,Minnesota Twins,twins,MIN,229.48247684290456,238.77544561194452,331.17355058207306,outfield_outer,32.9,23,E
+Target Field,Minnesota Twins,twins,MIN,220.03165618782316,249.6980501920243,332.8108261376951,outfield_outer,31,23,E
+Target Field,Minnesota Twins,twins,MIN,208.7366465832483,258.4404275242283,332.2084318703031,outfield_outer,29.2,23,E
+Target Field,Minnesota Twins,twins,MIN,198.50833176431578,268.63848623756394,334.0242417368259,outfield_outer,27.3,23,E
+Target Field,Minnesota Twins,twins,MIN,188.3286881958676,278.8858797141317,336.51898713371503,outfield_outer,25.5,23,E
+Target Field,Minnesota Twins,twins,MIN,178.07851910425606,289.0624236745515,339.5129507794523,outfield_outer,23.7,23,E
+Target Field,Minnesota Twins,twins,MIN,167.80975808931245,299.2194939261915,343.0632892855773,outfield_outer,22,23,E
+Target Field,Minnesota Twins,twins,MIN,161.42000028000004,311.01257665676115,350.4072478261158,outfield_outer,20.6,23,E
+Target Field,Minnesota Twins,twins,MIN,157.83434148322448,324.1067722489054,360.4953247533828,outfield_outer,19.5,23,E
+Target Field,Minnesota Twins,twins,MIN,147.45659833298683,333.94797329174446,365.0543757546257,outfield_outer,17.9,23,E
+Target Field,Minnesota Twins,twins,MIN,135.4434693521009,341.9661998026915,367.8122009907064,outfield_outer,16.2,23,E
+Target Field,Minnesota Twins,twins,MIN,123.28900318450334,349.7659217703573,370.85897365184,outfield_outer,14.6,23,E
+Target Field,Minnesota Twins,twins,MIN,111.26560479960538,357.76986803141097,374.67227450484665,outfield_outer,13,23,E
+Target Field,Minnesota Twins,twins,MIN,99.21086401464615,365.7269716369019,378.9446045548503,outfield_outer,11.4,23,E
+Target Field,Minnesota Twins,twins,MIN,87.1484579483918,373.67231184249914,383.70020896593286,outfield_outer,9.8,23,E
+Target Field,Minnesota Twins,twins,MIN,75.06471328036616,381.5852263965052,388.8984394208027,outfield_outer,8.3,23,E
+Target Field,Minnesota Twins,twins,MIN,62.97169265190029,389.48413307237166,394.54191664585187,outfield_outer,6.9,23,E
+Target Field,Minnesota Twins,twins,MIN,50.93219145294975,397.4643713836383,400.7143803828241,outfield_outer,5.5,23,E
+Target Field,Minnesota Twins,twins,MIN,37.77471760614566,402.3971394352841,404.16628646625577,outfield_outer,4,23,E
+Target Field,Minnesota Twins,twins,MIN,23.369856856618124,403.4617686949516,404.13803212263684,outfield_outer,2.5,8,E
+Target Field,Minnesota Twins,twins,MIN,8.962062539642353,404.48612805105915,404.58540056544587,outfield_outer,1,8,E
+Target Field,Minnesota Twins,twins,MIN,-5.43782476549242,405.61436388644125,405.6508130513023,outfield_outer,-0.6,8,E
+Target Field,Minnesota Twins,twins,MIN,-19.84581503054096,406.63565101724777,407.11964955335594,outfield_outer,-2.1,8,E
+Target Field,Minnesota Twins,twins,MIN,-34.24735821751208,407.74222486541765,409.1779606516942,outfield_outer,-3.6,8,E
+Target Field,Minnesota Twins,twins,MIN,-48.452931680609495,407.06395773253354,409.9374980083179,outfield_outer,-5.1,8,E
+Target Field,Minnesota Twins,twins,MIN,-61.11774261266114,400.2514677444033,404.89086911613185,outfield_outer,-6.5,8,E
+Target Field,Minnesota Twins,twins,MIN,-73.53919554618201,392.8800324014101,399.7033063927701,outfield_outer,-8,8,E
+Target Field,Minnesota Twins,twins,MIN,-85.89425820901056,385.3977811264585,394.85348332067906,outfield_outer,-9.4,8,E
+Target Field,Minnesota Twins,twins,MIN,-98.30513126913756,378.00891333851746,390.5824335491923,outfield_outer,-10.9,8,E
+Target Field,Minnesota Twins,twins,MIN,-110.66831730265775,370.54012221784524,386.7136649096039,outfield_outer,-12.5,8,E
+Target Field,Minnesota Twins,twins,MIN,-123.0133288910269,363.0419839003023,383.3167895606965,outfield_outer,-14,8,E
+Target Field,Minnesota Twins,twins,MIN,-135.39854655783978,355.61040389451927,380.5148167522503,outfield_outer,-15.6,8,E
+Target Field,Minnesota Twins,twins,MIN,-147.55674689639775,347.86505996375774,377.8665022176964,outfield_outer,-17.2,8,E
+Target Field,Minnesota Twins,twins,MIN,-157.60124730430013,337.53062146986537,372.5118435455505,outfield_outer,-18.8,8,E
+Target Field,Minnesota Twins,twins,MIN,-167.1022976700229,326.65118867114455,366.91167458514127,outfield_outer,-20.3,8,E
+Target Field,Minnesota Twins,twins,MIN,-176.58087401384958,315.7523321020869,361.773880062397,outfield_outer,-21.9,8,E
+Target Field,Minnesota Twins,twins,MIN,-186.17598551365853,304.9571196423634,357.29587515468006,outfield_outer,-23.6,8,E
+Target Field,Minnesota Twins,twins,MIN,-195.71830728326165,294.1139082874006,353.28267273376815,outfield_outer,-25.2,8,E
+Target Field,Minnesota Twins,twins,MIN,-205.21279968174522,283.2291170979151,349.75852516455495,outfield_outer,-26.9,8,E
+Target Field,Minnesota Twins,twins,MIN,-214.63884561167603,272.2857379374842,346.71221081708853,outfield_outer,-28.7,8,E
+Target Field,Minnesota Twins,twins,MIN,-224.16849984683924,261.43264434608676,344.3813930127031,outfield_outer,-30.5,8,E
+Target Field,Minnesota Twins,twins,MIN,-233.64927678828482,250.53778285832925,342.5801587705509,outfield_outer,-32.3,8,E
+Target Field,Minnesota Twins,twins,MIN,-243.1543029331336,239.66313572545772,341.41240993944155,outfield_outer,-34.1,8,E
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,247.44577965000002,235.94073634000003,341.90268342213665,outfield_outer,34.8,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,237.7885334044342,246.640076542655,342.5999328306975,outfield_outer,33,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,228.18762827085044,257.39045448916823,343.9759290386704,outfield_outer,31.2,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,218.4721365118043,268.0368086494088,345.79445516519235,outfield_outer,29.4,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,208.93237829499867,278.84064811886896,348.4319815162715,outfield_outer,27.6,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,199.2923882621809,289.55486821135236,351.5102811073063,outfield_outer,25.9,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,189.78157041417376,300.3848651986724,355.3141028854534,outfield_outer,24.2,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,180.14130254825128,311.09983878093846,359.491305281931,outfield_outer,22.6,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,170.35130635846184,321.6780606059237,364.00047012774974,outfield_outer,20.9,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,160.71420447289833,332.3957597803427,369.2099628115523,outfield_outer,19.4,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,151.04132715936495,343.0810172639916,374.8573954411966,outfield_outer,17.8,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,140.54580274568553,352.90189500208766,379.8590135372513,outfield_outer,16.3,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,129.33657177754324,361.9627159527615,384.3760613501667,outfield_outer,14.7,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,117.40695366685034,370.04189242122783,388.2208069076328,outfield_outer,13.2,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,105.12641762932552,377.5834964608765,391.9449712436634,outfield_outer,11.7,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,91.87225886782889,383.23784820602697,394.0961307182083,outfield_outer,10.1,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,78.51836227154094,388.6605913046886,396.5125325221324,outfield_outer,8.6,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,65.1079806116275,393.9429336478038,399.28696962255356,outfield_outer,7,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,52.27333679622848,400.45798909611074,403.85529929754875,outfield_outer,5.6,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,39.21637406170571,405.99129033456296,407.8809284853498,outfield_outer,4.1,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,24.83019398068262,406.34515222,407.10308432363087,outfield_outer,2.6,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,10.416722405412216,406.34515222,406.47864745686996,outfield_outer,1.1,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-3.996749169855634,406.34515222,406.3648074533789,outfield_outer,-0.4,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-18.410220745126,406.34515222,406.76199301382525,outfield_outer,-1.9,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-32.82369232039389,406.34515222,407.6687104871293,outfield_outer,-3.5,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-46.594921653093266,403.17520360014356,405.858758094334,outfield_outer,-4.9,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-58.95056745598567,395.75333349649543,400.1198200251658,outfield_outer,-6.4,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-71.73891141793028,389.147569323027,395.7048169045327,outfield_outer,-7.8,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-85.07716427576636,383.6887273725973,393.00784138997665,outfield_outer,-9.4,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-98.28550619650348,377.9405529787638,390.5113344247471,outfield_outer,-10.9,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-110.65039126568621,370.546300459336,386.7144552138567,outfield_outer,-12.5,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-122.66465777625436,362.58938044913646,382.7762754950393,outfield_outer,-14,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-134.10973121751795,353.83461278104625,378.3970840389073,outfield_outer,-15.6,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-144.59367609176007,343.95578764600003,373.11246966686747,outfield_outer,-17.1,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-154.8612062222541,333.8410889977459,368.01068720325554,outfield_outer,-18.7,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-165.1885133686094,323.7875592046282,363.49089183172373,outfield_outer,-20.3,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-175.4976593924489,313.71501794238065,359.4670234316581,outfield_outer,-21.9,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-185.81733590199954,303.6529476544816,355.99606028855413,outfield_outer,-23.6,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-196.10585528106685,293.5587602278155,353.03576615126525,outfield_outer,-25.3,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-205.53122771511033,282.71911846340726,349.53281034948157,outfield_outer,-27,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-214.08182184532205,271.1159360676668,345.4488055189356,outfield_outer,-28.7,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-222.70163595354646,259.5642756120183,342.00823357103224,outfield_outer,-30.5,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-231.28684259891165,247.98691825217588,339.10339895610764,outfield_outer,-32.3,8,ESE
+Guaranteed Rate Field,Chicago White Sox,white_sox,CWS,-239.78190221008322,236.34303331367775,336.67995191783564,outfield_outer,-34.1,8,ESE
+Yankee Stadium,New York Yankees,yankees,NYY,235.64698075547614,230.87297970804872,329.8966994355124,outfield_outer,34.2,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,230.2084204945068,244.39977829542858,335.7486686458046,outfield_outer,32.5,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,222.05582420337112,256.6895364253835,339.40876119056907,outfield_outer,30.6,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,212.12566945132642,267.54528352087317,341.43488160180385,outfield_outer,28.8,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,201.79218502878368,277.9840342984926,343.50430748908576,outfield_outer,27,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,191.44492560612372,288.41038757600626,346.1671723345187,outfield_outer,25.2,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,181.08389118334668,298.82434335341446,349.4100225046521,outfield_outer,23.4,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,170.7090817604524,309.22590163071675,353.2169996402021,outfield_outer,21.7,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,160.320497337441,319.6150624079138,357.5702028756578,outfield_outer,20,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,150.01441888016865,329.925245446082,362.42929442114934,outfield_outer,18.3,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,140.03924752916032,340.29281483375644,367.9812368532052,outfield_outer,16.8,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,129.9642571966157,350.9951271724557,374.28369914742,outfield_outer,15.2,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,119.70849804710399,361.7877378852428,381.07806521605863,outfield_outer,13.7,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,109.19102024519675,372.42620239518095,388.1030212877546,outfield_outer,12.3,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,98.33087395546568,382.66607612533267,395.0978190144873,outfield_outer,10.8,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,87.04710934247991,392.26291449876186,401.80516837883584,outfield_outer,9.4,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,75.25877657081122,400.9722729385312,407.973831411314,outfield_outer,8,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,62.88492580503119,408.5497068677035,413.36107324612794,outfield_outer,6.6,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,49.80960842400004,414.7404164742187,417.7207322465101,outfield_outer,5.1,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,35.926965081178174,419.5315045406473,421.06701381381487,outfield_outer,3.7,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,21.690094518311394,423.1361997594546,423.69175558073624,outfield_outer,2.2,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,7.200188123806688,425.5288810426105,425.5897923005137,outfield_outer,0.7,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-7.439764211445592,426.69254193213123,426.75739645848614,outfield_outer,-0.7,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-22.125706115197467,426.6189114768602,427.1922781380735,outfield_outer,-2.2,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-36.772644944943494,425.51542979596167,427.1014029603378,outfield_outer,-3.7,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-51.288941457595726,423.2890583022359,426.38501661554005,outfield_outer,-5.2,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-65.56304416615703,419.83513497699124,424.9235852732605,outfield_outer,-6.7,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-79.49134244439155,415.1787306191436,422.72006325952276,outfield_outer,-8.1,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-92.97273573722136,409.3536444090263,419.77891297850437,outfield_outer,-9.6,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-105.88852266374873,402.33827108555926,416.039016934744,outfield_outer,-11.1,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-118.08807050148341,394.17192967517167,411.48062231241437,outfield_outer,-12.5,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-129.6772006035948,385.20549064799457,406.4473476131284,outfield_outer,-14,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-140.77223936757983,375.6048149938647,401.11818759953843,outfield_outer,-15.4,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-151.48951319093484,365.5357637026189,395.68354420228707,outfield_outer,-16.9,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-161.9453484711563,355.16419776409435,390.34331461529734,outfield_outer,-18.4,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-172.2560716057405,344.65597816812846,385.3049409131311,outfield_outer,-19.9,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-182.5380089921842,334.1769659045577,380.78126170809225,outfield_outer,-21.5,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-192.8990333819955,323.910818186442,376.999012224062,outfield_outer,-23.1,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-203.35664241028286,313.53244492761434,373.706459717612,outfield_outer,-24.7,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-213.32696448810853,302.63100362020845,370.261958793886,outfield_outer,-26.4,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-222.11951549506048,290.89153659526517,365.9985863722904,outfield_outer,-28,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-229.0536649343808,278.00739839301866,360.2134020009891,outfield_outer,-29.6,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-234.15940099804288,264.24179266861313,353.06422938112064,outfield_outer,-31.2,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-237.6109251522087,249.97128382257753,344.88345058526096,outfield_outer,-32.7,8,ENE
+Yankee Stadium,New York Yankees,yankees,NYY,-239.3603404047833,235.39390449755422,335.7136619699851,outfield_outer,-34.1,8,ENE
