@@ -15,13 +15,14 @@ library(DT)
 library(scroller)
 library(glue)
 library(ggimage)
+library(shinyWidgets)
 #library(gt) change hit detail later to gt table(?)
 
 #setwd("~/R/Dinger Machine")
 
 # TO DO:
 #   -add degree symbol(?)
-#   -upload to github
+#   -add font to r file
 
 # initial hit data
 hit_data <- read_csv("hit_data.csv",
@@ -36,12 +37,9 @@ total_dongs <- read_csv("dinger_total.csv",
                         col_types = cols())
 
 # stadium list
-stadium_list_detail <- hits_new %>% select(stadium, team) %>% distinct() %>%
-  mutate(ballpark = glue("{stadium} ({team})"))
-stadium_list <- stadium_list_detail %>% pull(ballpark)
-
-# get team list for selectinput
-team_list <- unique(hit_data$player_team) %>% sort()
+#stadium_list_detail <- hits_new %>% select(stadium, team) %>% distinct() %>%
+#  mutate(ballpark = glue("{stadium} ({team})"))
+#stadium_list <- stadium_list_detail %>% pull(ballpark)
 
 # get initial player list for selectinput
 player_list <- hit_data %>% select(player_name, player_team) %>% distinct() %>%
@@ -52,7 +50,8 @@ last_update <- arrange(hit_data, desc(game_date)) %>% slice(1) %>% pull(game_dat
 
 # get team logos
 mlb_logos <- read_csv("mlb_logos.csv", col_types = cols()) %>%
-  mutate(logo_html = glue("<img src = '{team_logo}' height = '45'></img>"))
+  mutate(logo_html = glue("<img src = '{team_logo}' height = '45'></img>")) %>%
+  arrange(stadium)
 
 team_logos <- mlb_logos %>%
   select(team_abbr, logo_html)
@@ -60,10 +59,34 @@ team_logos <- mlb_logos %>%
 stadium_logos <- mlb_logos %>%
   select(stadium, logo_html)
 
-# for geom_image on field
+# adding HTML code for venue select options list
+# stadium_options is what the client will see
+stadium_options <- list(content =  
+                          mapply(pull(mlb_logos, stadium), pull(mlb_logos, team_logo), FUN = function(stadium, team_logo) {
+                            HTML(paste(
+                              tags$img(src=team_logo, width=20, height=15),
+                              stadium
+                            ))
+                          }, SIMPLIFY = FALSE, USE.NAMES = FALSE)
+)
+
+# adding full team names for picker input for filtering by team
+# get team list
+team_list <- arrange(mlb_logos, full_team_name) %>% pull(team_abbr)
+# getting full name for display
+team_options <- list(content = sort(pull(mlb_logos, full_team_name)), SIMPLIFY = FALSE, USE.NAMES = FALSE)
+
+
+# for geom_image on field diagram
 transparent <- function(img) {
   magick::image_fx(img, expression = "0.5*a", channel = "alpha")
 }
+
+# add custom font
+# this doesn't work yet
+#dir.create('~/.fonts')
+#file.copy("~/www/Starjedi.ttf", "-/.fonts")
+#system('fc_cache -f ~/.fonts')
 
 ui <- fluidPage(
   scroller::use_scroller(),
@@ -96,18 +119,30 @@ ui <- fluidPage(
     fluidRow(
       column(
         width = 4,
-        selectInput(inputId = "team", label = "Select team(s)",
-                    choices = team_list, multiple = TRUE)
+        # old input that only had team abbreviations
+        #selectInput(inputId = "team", label = "Select team(s)",
+        #            choices = team_list, multiple = TRUE),
+        pickerInput(inputId = "team",  label = "Select team(s)",
+                    multiple = TRUE, options = list(`none-selected-text` = "All"),
+                    choices = team_list, choicesOpt = team_options)
       ),
       column(
         width = 4,
-        selectInput(inputId = "player", label = "Select player(s)",
-                    choices = player_list$player_name, multiple = TRUE)
+        #selectInput(inputId = "player", label = "Select player(s)",
+        #            choices = player_list$player_name, multiple = TRUE),
+        pickerInput(inputId = "player", label = "Select player(s)",
+                    choices = player_list$player_name, multiple = TRUE,
+                    options = list(`none-selected-text` = "All"))
       ),
       column(
         width = 4,
-        selectInput(inputId = "stadium", label = "Select ballpark(s)",
-                    choices = stadium_list, multiple = TRUE)
+        # old selectinput for venue, without using team logos
+        #selectInput(inputId = "stadium", label = "Select ballpark(s)",
+        #            choices = stadium_list, multiple = TRUE),
+        pickerInput(inputId = "stadium", label = "Select ballpark(s)",
+                    multiple = TRUE, options = list(`none-selected-text` = "All"),
+                    choices = pull(mlb_logos, stadium),
+                    choicesOpt = stadium_options)
       )
     ),
     actionButton(inputId = "submit", label = "View hits") %>%
@@ -150,7 +185,7 @@ ui <- fluidPage(
 server <- function(input, output, session){
   
   observeEvent(input$team,{
-    updateSelectInput(inputId = "player",
+    updatePickerInput(session, inputId = "player",
                       choices = filter(player_list, player_team %in% input$team) %>%
                         pull(player_name))
   })
@@ -171,18 +206,15 @@ server <- function(input, output, session){
     }
     
     if(is.null(input$stadium)){
-      park_filter <- stadium_list
+      park_filter <- pull(mlb_logos, stadium)
     } else {
       park_filter <- input$stadium
     }
     
-    stadiums <- filter(stadium_list_detail, ballpark %in% park_filter) %>%
-      pull(stadium)
-    
     hits <- hit_data %>%
       filter(player_team %in% team_filter &
                player_name %in% player_filter &
-               stadium_observed %in% stadiums) %>%
+               stadium_observed %in% park_filter) %>%
       left_join(team_logos, by = c("player_team" = "team_abbr")) %>%
       #mutate(launch_angle = glue("{launch_angle}\\degree")) %>%
       select(index, player_name, logo_html, game_date, stadium_observed, inning,
@@ -307,17 +339,25 @@ server <- function(input, output, session){
       hit_path <- hit_data %>%
         filter(index == hit_select)
       
+      park_name <- pull(hit_path, stadium_observed)
+      
+      did_dong <- filter(hits_new, index == hit_select & stadium == park_name) %>%
+        #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
+        pull(would_dong)
+      
+      hit_color <- ifelse(did_dong == 1, "blue", "red")
+      
       stadium_id <- hit_path %>%
         left_join(
-          select(mlb_logos, team_abbr, team),
-          by = c("player_team" = "team_abbr")
+          select(mlb_logos, stadium, team),
+          by = c("stadium_observed" = "stadium")
         ) %>%
         pull(team)
       
       stadium_logo <- hit_path %>%
         left_join(
-          select(mlb_logos, team_abbr, team_logo),
-          by = c("player_team" = "team_abbr")
+          select(mlb_logos, stadium, team_logo),
+          by = c("stadium_observed" = "stadium")
         ) %>%
         pull(team_logo)
       
@@ -329,11 +369,11 @@ server <- function(input, output, session){
         geom_mlb_stadium(stadium_ids = stadium_id,
                          stadium_segments = "all",
                          stadium_transform_coords = TRUE) +
-        geom_point(data = hit_path, aes(hc_x_, hc_y_), size = 4)+
+        geom_point(data = hit_path, aes(hc_x_, hc_y_), size = 6, color = hit_color)+
         geom_curve(
           data = hit_path,
           aes(x = 0, y = 0, xend = hc_x_, yend = hc_y_),
-          curvature = curv, angle = 135, size = 2
+          curvature = curv, angle = 135, size = 2, color = hit_color
         ) +
         theme_void() +
         coord_fixed()
@@ -344,7 +384,7 @@ server <- function(input, output, session){
         pull(index)
       
       parks <- filter(hits_new, index == hit_select) %>%
-        mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
+        #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         left_join(stadium_logos, by = "stadium") %>%
         select(stadium, logo_html, would_dong) %>% arrange(stadium) %>% arrange(desc(would_dong))
       
@@ -365,6 +405,12 @@ server <- function(input, output, session){
       hit_path <- hit_data %>%
         filter(index == hit_select)
       
+      did_dong <- filter(hits_new, index == hit_select & stadium == pull(parks[s2, , drop = FALSE],stadium)) %>%
+        #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
+        pull(would_dong)
+      
+      hit_color <- ifelse(did_dong == 1, "blue", "red")
+      
       curv <- pull(hit_path, spray_angle)/(-90)
       
       ggplot() +
@@ -373,11 +419,11 @@ server <- function(input, output, session){
         geom_mlb_stadium(stadium_ids = stadium_id,
                          stadium_segments = "all",
                          stadium_transform_coords = TRUE) +
-        geom_point(data = hit_path, aes(hc_x_, hc_y_), size = 4)+
+        geom_point(data = hit_path, aes(hc_x_, hc_y_), size = 6, color = hit_color)+
         geom_curve(
           data = hit_path,
           aes(x = 0, y = 0, xend = hc_x_, yend = hc_y_),
-          curvature = curv, angle = 135, size = 2
+          curvature = curv, angle = 135, size = 2, color = hit_color
           ) +
         theme_void() +
         coord_fixed()

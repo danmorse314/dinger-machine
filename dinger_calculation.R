@@ -40,6 +40,7 @@ hit_data <- hit_data %>%
       ,1)
   ) %>%
   mutate(index = row_number()) %>%
+  # update the index starting with the last hit in db +1
   mutate(index = index + last_index) %>%
   mutate(
     hit_direction = case_when(
@@ -136,8 +137,8 @@ hit_data %>%
   bind_rows(read_csv("hit_data.csv", col_types = cols())) %>%
   write_csv("hit_data.csv")
 hits_new %>%
-  mutate(index = row_number()) %>%
+  bind_rows(read_csv("dinger_detail.csv", col_types = cols())) %>%
   write_csv("dinger_detail.csv")
 total_dongs %>%
-  mutate(index = row_number()) %>%
+  bind_rows(read_csv("dinger_total.csv", col_types = cols())) %>%
   write_csv("dinger_total.csv")
