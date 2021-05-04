@@ -25,16 +25,21 @@ library(shinyWidgets)
 #   -add font to r file
 
 # initial hit data
-hit_data <- read_csv("hit_data.csv",
-                     col_types = cols())
+# old, dated, yuck
+#hit_data <- read_csv("hit_data.csv",
+#                     col_types = cols())
+# new, fancy, automated and pretty
+hit_data <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))
 
 # full hit data with a row for each stadium, each hit
-hits_new <- read_csv("dinger_detail.csv",
-                     col_types = cols())
+#hits_new <- read_csv("dinger_detail.csv",
+#                     col_types = cols())
+hits_new <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_detail.rds"))
 
 # initial hit data with number of stadiums it woud've donged in
-total_dongs <- read_csv("dinger_total.csv",
-                        col_types = cols())
+#total_dongs <- read_csv("dinger_total.csv",
+#                        col_types = cols())
+total_dongs <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_total.rds"))
 
 # stadium list
 #stadium_list_detail <- hits_new %>% select(stadium, team) %>% distinct() %>%
@@ -49,9 +54,10 @@ player_list <- hit_data %>% select(player_name, player_team) %>% distinct() %>%
 last_update <- arrange(hit_data, desc(game_date)) %>% slice(1) %>% pull(game_date)
 
 # get team logos
-mlb_logos <- read_csv("mlb_logos.csv", col_types = cols()) %>%
-  mutate(logo_html = glue("<img src = '{team_logo}' height = '45'></img>")) %>%
-  arrange(stadium)
+#mlb_logos <- read_csv("mlb_logos.csv", col_types = cols()) %>%
+#  mutate(logo_html = glue("<img src = '{team_logo}' height = '45'></img>")) %>%
+#  arrange(stadium)
+mlb_logos <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/mlb_logos.rds"))
 
 team_logos <- mlb_logos %>%
   select(team_abbr, logo_html)
