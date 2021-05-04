@@ -24,8 +24,8 @@ The only thing that remains is to find the height of the ball when it reaches th
 
 ![fence_heights](https://github.com/danmorse314/dinger-machine/blob/main/images/fence_heights.png)
 
-With all of those calculations done, each batted ball now has an estimate for whether or not it would've sailed over the wall at every ballpark. This is all entered in to an app made with R Shiny, the code for which can be found in this repository.
+With all of those calculations done, each batted ball now has an estimate for whether or not it would've sailed over the wall at every ballpark. This is all entered in to an app made with [R Shiny](https://github.com/rstudio/shiny), the code for which can be found in [this repository](https://github.com/danmorse314/dinger-machine/).
 
-Enjoy, and as always, goms.
+Enjoy, and as always, [goms](https://www.youtube.com/watch?v=TIgK56cAjfY)
 
 ![seager_double](https://github.com/danmorse314/dinger-machine/blob/main/images/seager_double.png)
