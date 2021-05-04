@@ -94,16 +94,16 @@ ui <- fluidPage(
     div(
       tags$em(style = "font-size: 65px; text-align:left; font-family:Star Jedi;
               color: white; background-color: darkgreen; display: block; margin-bottom:10px",
-        "Would it dong?",
-        br()
-        ),
+              "Would it dong?",
+              br()
+      ),
       fluidRow(
         column(
           width = 6,
           div(style = "font-size:14px; text-align:left;",
               "an app by  ",
               tags$a(href = "https://www.twitter.com/danmorse_",
-                 "Dan Morse", target = "_blank")
+                     "Dan Morse", target = "_blank")
           ),
         ),
         column(
@@ -112,7 +112,7 @@ ui <- fluidPage(
               glue("Updated: {last_update}"))
         )
       )
-      ),
+    ),
     windowTitle = "the dinger machine"
   ),
   mainPanel(
@@ -256,7 +256,7 @@ server <- function(input, output, session){
           )),
           lengthMenu = list(c(10, 25, 50), c('10', '25', '50')),
           pageLength = 10)
-        )
+      )
     })
     
     output$hr_qty <- renderUI({
@@ -361,6 +361,15 @@ server <- function(input, output, session){
         ) %>%
         pull(team_logo)
       
+      # make balls hit the wall if they got to the wall but didn't get over the fence
+      hit_path_wall <- hits_new %>%
+        filter(index == hit_select & stadium == park_name) %>%
+        mutate(
+          wall_y = ifelse(hc_y_ > y & would_dong == 0, y, hc_y_),
+          wall_x = ifelse(hc_y_ > y & would_dong == 0, x, hc_x_)
+        )
+      
+      # add a lil curve to the hit path for aesthetic purposes
       curv <- pull(hit_path, spray_angle)/(-90)
       
       ggplot() +
@@ -369,10 +378,19 @@ server <- function(input, output, session){
         geom_mlb_stadium(stadium_ids = stadium_id,
                          stadium_segments = "all",
                          stadium_transform_coords = TRUE) +
-        geom_point(data = hit_path, aes(hc_x_, hc_y_), size = 6, color = hit_color)+
+        geom_point(data = hit_path, aes(hc_x_, hc_y_), size = 6,
+                   color = hit_color,
+                   shape = ifelse(did_dong == 1, 19, 10)) +
+        # curve for original hit path
         geom_curve(
-          data = hit_path,
+          data = hit_path, linetype = "dashed",
           aes(x = 0, y = 0, xend = hc_x_, yend = hc_y_),
+          curvature = curv, angle = 135, size = .5, color = hit_color
+        ) +
+        # curve for hitting the wall (or full path for dongers)
+        geom_curve(
+          data = hit_path_wall,
+          aes(x = 0, y = 0, xend = wall_x, yend = wall_y),
           curvature = curv, angle = 135, size = 2, color = hit_color
         ) +
         theme_void() +
@@ -411,6 +429,15 @@ server <- function(input, output, session){
       
       hit_color <- ifelse(did_dong == 1, "blue", "red")
       
+      # make balls hit the wall if they got to the wall but didn't get over the fence
+      hit_path_wall <- hits_new %>%
+        filter(index == hit_select & stadium == pull(parks[s2, , drop = FALSE],stadium)) %>%
+        mutate(
+          wall_y = ifelse(hc_y_ > y & would_dong == 0, y, hc_y_),
+          wall_x = ifelse(hc_y_ > y & would_dong == 0, x, hc_x_)
+        )
+      
+      # add a lil curve to the hit path for aesthetic purposes
       curv <- pull(hit_path, spray_angle)/(-90)
       
       ggplot() +
@@ -419,16 +446,25 @@ server <- function(input, output, session){
         geom_mlb_stadium(stadium_ids = stadium_id,
                          stadium_segments = "all",
                          stadium_transform_coords = TRUE) +
-        geom_point(data = hit_path, aes(hc_x_, hc_y_), size = 6, color = hit_color)+
+        geom_point(data = hit_path, aes(hc_x_, hc_y_), size = 6,
+                   color = hit_color,
+                   shape = ifelse(did_dong == 1, 19, 10)) +
+        # curve for original hit path
         geom_curve(
-          data = hit_path,
+          data = hit_path, linetype = "dashed",
           aes(x = 0, y = 0, xend = hc_x_, yend = hc_y_),
+          curvature = curv, angle = 135, size = .5, color = hit_color
+        ) +
+        # curve for hitting the wall (or full path for dongers)
+        geom_curve(
+          data = hit_path_wall,
+          aes(x = 0, y = 0, xend = wall_x, yend = wall_y),
           curvature = curv, angle = 135, size = 2, color = hit_color
-          ) +
+        ) +
         theme_void() +
         coord_fixed()
     }
-
+    
   })
   
   output$hitdetail <- renderUI({
@@ -522,8 +558,8 @@ server <- function(input, output, session){
                   glue("This would have stayed in the yard at {park_name}"))
         }
       )
-    
-      }
+      
+    }
     
   })
   
