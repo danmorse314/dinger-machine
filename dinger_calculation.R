@@ -9,7 +9,7 @@
 library(GeomMLBStadiums)
 library(units)
 
-setwd("~/R/Dinger Machine")
+#setwd("~/R/Dinger Machine")
 
 # get highest index from old data
 last_index <- read_csv("hit_data.csv", col_types = cols()) %>%
@@ -142,3 +142,16 @@ hits_new %>%
 total_dongs %>%
   bind_rows(read_csv("dinger_total.csv", col_types = cols())) %>%
   write_csv("dinger_total.csv")
+
+# combine with hits already in database and save
+# to github repo maybe???
+hit_data %>%
+  bind_rows(read_csv("hit_data.csv", col_types = cols())) %>%
+  saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/hit_data.rds")
+hits_new %>%
+  bind_rows(read_csv("dinger_detail.csv", col_types = cols())) %>%
+  saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/dinger_detail.rds")
+total_dongs %>%
+  bind_rows(read_csv("dinger_total.csv", col_types = cols())) %>%
+  saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/dinger_total.rds")
+
