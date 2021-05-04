@@ -133,25 +133,25 @@ hit_data <- hit_data %>%
 #total_dongs %>% write_csv("dinger_total.csv")
 
 # combine with hits already in database and resave
-hit_data %>%
-  bind_rows(read_csv("hit_data.csv", col_types = cols())) %>%
-  write_csv("hit_data.csv")
-hits_new %>%
-  bind_rows(read_csv("dinger_detail.csv", col_types = cols())) %>%
-  write_csv("dinger_detail.csv")
-total_dongs %>%
-  bind_rows(read_csv("dinger_total.csv", col_types = cols())) %>%
-  write_csv("dinger_total.csv")
+#hit_data %>%
+#  bind_rows(read_csv("hit_data.csv", col_types = cols())) %>%
+#  write_csv("hit_data.csv")
+#hits_new %>%
+#  bind_rows(read_csv("dinger_detail.csv", col_types = cols())) %>%
+#  write_csv("dinger_detail.csv")
+#total_dongs %>%
+#  bind_rows(read_csv("dinger_total.csv", col_types = cols())) %>%
+#  write_csv("dinger_total.csv")
 
 # combine with hits already in database and save
 # to github repo maybe???
 hit_data %>%
-  bind_rows(read_csv("hit_data.csv", col_types = cols())) %>%
+  bind_rows(readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))) %>%
   saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/hit_data.rds")
 hits_new %>%
-  bind_rows(read_csv("dinger_detail.csv", col_types = cols())) %>%
+  bind_rows(readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_detail.rds"))) %>%
   saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/dinger_detail.rds")
 total_dongs %>%
-  bind_rows(read_csv("dinger_total.csv", col_types = cols())) %>%
+  bind_rows(readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_total.rds"))) %>%
   saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/dinger_total.rds")
 
