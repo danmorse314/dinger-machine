@@ -7,9 +7,7 @@
 library(baseballr)
 library(tidyverse)
 
-setwd("~/R/Dinger Machine")
-
-last_update <- arrange(read_csv("hit_data.csv", col_types = cols()), desc(game_date)) %>%
+last_update <- arrange(readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds")), desc(game_date)) %>%
   slice(1) %>% pull(game_date)
 
 hit_data <- scrape_statcast_savant(start_date = last_update + 1) %>%

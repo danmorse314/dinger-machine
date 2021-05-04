@@ -12,7 +12,7 @@ library(units)
 #setwd("~/R/Dinger Machine")
 
 # get highest index from old data
-last_index <- read_csv("hit_data.csv", col_types = cols()) %>%
+last_index <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds")) %>%
   pull(index) %>%
   max()
 
@@ -65,7 +65,7 @@ hit_data <- hit_data %>%
   )
 
 # get outfield dimensions
-fences <- read_csv("fence_heights_complete.csv",
+fences <- read_csv("https://raw.githubusercontent.com/danmorse314/dinger-machine/main/data/fence_heights_complete.csv",
                    col_types = cols())
 
 # acceleration due to gravity in ft/s^2
@@ -128,9 +128,9 @@ hit_data <- hit_data %>%
   left_join(stadium_details, by = c("home_team" = "team_abbr"))
 
 # saving initial data
-#hit_data %>% write_csv("hit_data.csv")
-#hits_new %>% write_csv("dinger_detail.csv")
-#total_dongs %>% write_csv("dinger_total.csv")
+#hit_data %>% saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/hit_data.rds")
+#hits_new %>% saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/dinger_detail.rds")
+#total_dongs %>% saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/dinger_total.rds")
 
 # combine with hits already in database and resave
 #hit_data %>%
