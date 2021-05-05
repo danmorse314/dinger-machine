@@ -135,18 +135,6 @@ hit_data <- hit_data %>%
 #hits_new %>% saveRDS("data/dinger_detail.rds")
 #total_dongs %>% saveRDS("data/dinger_total.rds")
 
-# combine with hits already in database and resave
-# old, gross
-#hit_data %>%
-#  bind_rows(read_csv("hit_data.csv", col_types = cols())) %>%
-#  write_csv("hit_data.csv")
-#hits_new %>%
-#  bind_rows(read_csv("dinger_detail.csv", col_types = cols())) %>%
-#  write_csv("dinger_detail.csv")
-#total_dongs %>%
-#  bind_rows(read_csv("dinger_total.csv", col_types = cols())) %>%
-#  write_csv("dinger_total.csv")
-
 # combine with hits already in database and save
 hit_data %>%
   bind_rows(readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))) %>%
