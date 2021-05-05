@@ -7,14 +7,17 @@
 # first, scrape data from scrape_baseball_savant.R
 
 library(GeomMLBStadiums)
+library(tidyverse)
 library(units)
 
 #setwd("~/R/Dinger Machine")
 
 # get highest index from old data
 last_index <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds")) %>%
-  pull(index) %>%
+  dplyr::pull(index) %>%
   max()
+
+hit_data <- read_csv("daily_hit_data.csv", col_types = cols())
 
 # transform batted balls data in same fashion so we're working in feet all around
 hit_data <- hit_data %>%
@@ -59,7 +62,7 @@ hit_data <- hit_data %>%
       events == "double_play" ~ "In play, out(s)",
       events == "triple" ~ "Triple",
       events == "sac_fly" ~ "Sac fly",
-      events == "sing;e" ~ "Single",
+      events == "single" ~ "Single",
       events == "field_error" ~ "Error"
     )
   )
@@ -128,11 +131,12 @@ hit_data <- hit_data %>%
   left_join(stadium_details, by = c("home_team" = "team_abbr"))
 
 # saving initial data
-#hit_data %>% saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/hit_data.rds")
-#hits_new %>% saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/dinger_detail.rds")
-#total_dongs %>% saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/dinger_total.rds")
+#hit_data %>% saveRDS("data/hit_data.rds")
+#hits_new %>% saveRDS("data/dinger_detail.rds")
+#total_dongs %>% saveRDS("data/dinger_total.rds")
 
 # combine with hits already in database and resave
+# old, gross
 #hit_data %>%
 #  bind_rows(read_csv("hit_data.csv", col_types = cols())) %>%
 #  write_csv("hit_data.csv")
@@ -144,14 +148,25 @@ hit_data <- hit_data %>%
 #  write_csv("dinger_total.csv")
 
 # combine with hits already in database and save
-# to github repo maybe???
 hit_data %>%
   bind_rows(readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))) %>%
-  saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/hit_data.rds")
+  saveRDS("data/hit_data.rds")
 hits_new %>%
   bind_rows(readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_detail.rds"))) %>%
-  saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/dinger_detail.rds")
+  saveRDS("data/dinger_detail.rds")
 total_dongs %>%
   bind_rows(readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_total.rds"))) %>%
-  saveRDS("C:/Users/danmo/Documents/R/tmp/dinger-machine/data/dinger_total.rds")
+  saveRDS("data/dinger_total.rds")
 
+# commit & push to github
+#install.packages("git2r")
+library(git2r, exclude = "pull")
+repo <- repository(getwd())
+
+add(repo, "data/hit_data.rds")
+add(repo, "data/dinger_detail.rds")
+add(repo, "data/dinger_total.rds")
+
+commit(repo, message = paste0("Data updated: ", Sys.time()))
+
+push(repo, credentials = cred_token())

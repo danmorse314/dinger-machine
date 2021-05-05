@@ -25,26 +25,13 @@ library(shinyWidgets)
 #   -add font to r file
 
 # initial hit data
-# old, dated, yuck
-#hit_data <- read_csv("hit_data.csv",
-#                     col_types = cols())
-# new, fancy, automated and pretty
 hit_data <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))
 
 # full hit data with a row for each stadium, each hit
-#hits_new <- read_csv("dinger_detail.csv",
-#                     col_types = cols())
 hits_new <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_detail.rds"))
 
 # initial hit data with number of stadiums it woud've donged in
-#total_dongs <- read_csv("dinger_total.csv",
-#                        col_types = cols())
 total_dongs <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_total.rds"))
-
-# stadium list
-#stadium_list_detail <- hits_new %>% select(stadium, team) %>% distinct() %>%
-#  mutate(ballpark = glue("{stadium} ({team})"))
-#stadium_list <- stadium_list_detail %>% pull(ballpark)
 
 # get initial player list for selectinput
 player_list <- hit_data %>% select(player_name, player_team) %>% distinct() %>%
@@ -54,9 +41,6 @@ player_list <- hit_data %>% select(player_name, player_team) %>% distinct() %>%
 last_update <- arrange(hit_data, desc(game_date)) %>% slice(1) %>% pull(game_date)
 
 # get team logos
-#mlb_logos <- read_csv("mlb_logos.csv", col_types = cols()) %>%
-#  mutate(logo_html = glue("<img src = '{team_logo}' height = '45'></img>")) %>%
-#  arrange(stadium)
 mlb_logos <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/mlb_logos.rds"))
 
 team_logos <- mlb_logos %>%
@@ -82,6 +66,10 @@ team_list <- arrange(mlb_logos, full_team_name) %>% pull(team_abbr)
 # getting full name for display
 team_options <- list(content = sort(pull(mlb_logos, full_team_name)), SIMPLIFY = FALSE, USE.NAMES = FALSE)
 
+# get fence height data
+fences <- read_csv("https://github.com/danmorse314/dinger-machine/raw/main/data/fence_heights_complete.csv",
+                   col_types = cols()) %>%
+  select(stadium, x, y, fence_height)
 
 # for geom_image on field diagram
 transparent <- function(img) {
@@ -125,26 +113,18 @@ ui <- fluidPage(
     fluidRow(
       column(
         width = 4,
-        # old input that only had team abbreviations
-        #selectInput(inputId = "team", label = "Select team(s)",
-        #            choices = team_list, multiple = TRUE),
         pickerInput(inputId = "team",  label = "Select team(s)",
                     multiple = TRUE, options = list(`none-selected-text` = "All"),
                     choices = team_list, choicesOpt = team_options)
       ),
       column(
         width = 4,
-        #selectInput(inputId = "player", label = "Select player(s)",
-        #            choices = player_list$player_name, multiple = TRUE),
         pickerInput(inputId = "player", label = "Select player(s)",
                     choices = player_list$player_name, multiple = TRUE,
                     options = list(`none-selected-text` = "All"))
       ),
       column(
         width = 4,
-        # old selectinput for venue, without using team logos
-        #selectInput(inputId = "stadium", label = "Select ballpark(s)",
-        #            choices = stadium_list, multiple = TRUE),
         pickerInput(inputId = "stadium", label = "Select ballpark(s)",
                     multiple = TRUE, options = list(`none-selected-text` = "All"),
                     choices = pull(mlb_logos, stadium),
@@ -222,6 +202,7 @@ server <- function(input, output, session){
                player_name %in% player_filter &
                stadium_observed %in% park_filter) %>%
       left_join(team_logos, by = c("player_team" = "team_abbr")) %>%
+      # this was an attempt to add the degree symbol, it failed miserably
       #mutate(launch_angle = glue("{launch_angle}\\degree")) %>%
       select(index, player_name, logo_html, game_date, stadium_observed, inning,
              events, launch_speed, launch_angle, hit_distance_sc, hit_direction)
@@ -279,7 +260,6 @@ server <- function(input, output, session){
         
         HTML(glue("<div><span style='font-size: 24px;'>This hit would have gone yard in  </span><span style='font-size:50px'><b>{dong_qty}/30</b></span><span style='font-size: 24px;'>  MLB ballparks</span></div>"))
         
-        #div(glue("This hit would have gone yard in {dong_qty}/30 MLB ballparks"))
       }
       
     })
@@ -299,7 +279,7 @@ server <- function(input, output, session){
       parks <- filter(hits_new, index == hit_select) %>%
         mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         left_join(stadium_logos, by = "stadium") %>%
-        select(stadium, logo_html, would_dong) %>% arrange(stadium) %>% arrange(desc(would_dong))
+        select(stadium, logo_html, would_dong) %>% arrange(stadium) %>% arrange(would_dong)
       
       DT::datatable(
         parks,
@@ -378,12 +358,21 @@ server <- function(input, output, session){
       # add a lil curve to the hit path for aesthetic purposes
       curv <- pull(hit_path, spray_angle)/(-90)
       
+      # add fence heights
+      park_fences <- fences %>%
+        filter(stadium == park_name)
+      
       ggplot() +
         ggimage::geom_image(aes(x = 0, y = 250, image = stadium_logo),
                             size = 0.25, image_fun = transparent) +
         geom_mlb_stadium(stadium_ids = stadium_id,
                          stadium_segments = "all",
                          stadium_transform_coords = TRUE) +
+        # add colored fence heights
+        geom_path(data = park_fences,
+                  aes(x, y, color = fence_height),
+                  size = 2) +
+        # ball landing spot
         geom_point(data = hit_path, aes(hc_x_, hc_y_), size = 6,
                    color = hit_color,
                    shape = ifelse(did_dong == 1, 19, 10)) +
@@ -400,7 +389,8 @@ server <- function(input, output, session){
           curvature = curv, angle = 135, size = 2, color = hit_color
         ) +
         theme_void() +
-        coord_fixed()
+        coord_fixed() +
+        labs(color = "Wall Height (ft)")
       
     } else {
       
@@ -408,9 +398,9 @@ server <- function(input, output, session){
         pull(index)
       
       parks <- filter(hits_new, index == hit_select) %>%
-        #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
+        mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         left_join(stadium_logos, by = "stadium") %>%
-        select(stadium, logo_html, would_dong) %>% arrange(stadium) %>% arrange(desc(would_dong))
+        select(stadium, logo_html, would_dong) %>% arrange(stadium) %>% arrange(would_dong)
       
       stadium_id <- parks[s2, , drop = FALSE] %>%
         left_join(
@@ -429,7 +419,9 @@ server <- function(input, output, session){
       hit_path <- hit_data %>%
         filter(index == hit_select)
       
-      did_dong <- filter(hits_new, index == hit_select & stadium == pull(parks[s2, , drop = FALSE],stadium)) %>%
+      park_name <- pull(parks[s2, , drop = FALSE],stadium)
+      
+      did_dong <- filter(hits_new, index == hit_select & stadium == park_name) %>%
         #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         pull(would_dong)
       
@@ -437,7 +429,7 @@ server <- function(input, output, session){
       
       # make balls hit the wall if they got to the wall but didn't get over the fence
       hit_path_wall <- hits_new %>%
-        filter(index == hit_select & stadium == pull(parks[s2, , drop = FALSE],stadium)) %>%
+        filter(index == hit_select & stadium == park_name) %>%
         mutate(
           wall_y = ifelse(hc_y_ > y & would_dong == 0, y, hc_y_),
           wall_x = ifelse(hc_y_ > y & would_dong == 0, x, hc_x_)
@@ -446,12 +438,21 @@ server <- function(input, output, session){
       # add a lil curve to the hit path for aesthetic purposes
       curv <- pull(hit_path, spray_angle)/(-90)
       
+      # add fence heights
+      park_fences <- fences %>%
+        filter(stadium == park_name)
+      
       ggplot() +
         ggimage::geom_image(aes(x = 0, y = 250, image = stadium_logo),
                             size = 0.25, image_fun = transparent) +
         geom_mlb_stadium(stadium_ids = stadium_id,
                          stadium_segments = "all",
                          stadium_transform_coords = TRUE) +
+        # add colored fence heights
+        geom_path(data = park_fences,
+                  aes(x, y, color = fence_height),
+                  size = 2) +
+        # ball landing spot
         geom_point(data = hit_path, aes(hc_x_, hc_y_), size = 6,
                    color = hit_color,
                    shape = ifelse(did_dong == 1, 19, 10)) +
@@ -468,7 +469,8 @@ server <- function(input, output, session){
           curvature = curv, angle = 135, size = 2, color = hit_color
         ) +
         theme_void() +
-        coord_fixed()
+        coord_fixed() +
+        labs(color = "Wall Height (ft)")
     }
     
   })
@@ -528,7 +530,7 @@ server <- function(input, output, session){
       parks <- filter(hits_new, index == hit_select) %>%
         mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         left_join(stadium_logos, by = "stadium") %>%
-        select(stadium, logo_html, would_dong) %>% arrange(stadium) %>% arrange(desc(would_dong))
+        select(stadium, logo_html, would_dong) %>% arrange(stadium) %>% arrange(would_dong)
       
       park_name <- parks[s2, , drop = FALSE] %>%
         pull(stadium)

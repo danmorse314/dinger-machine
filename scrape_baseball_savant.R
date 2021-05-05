@@ -7,8 +7,10 @@
 library(baseballr)
 library(tidyverse)
 
-last_update <- arrange(readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds")), desc(game_date)) %>%
-  slice(1) %>% pull(game_date)
+last_update <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds")) %>%
+  arrange(desc(game_date)) %>%
+  slice(1) %>%
+  dplyr::pull(game_date)
 
 hit_data <- scrape_statcast_savant(start_date = last_update + 1) %>%
   janitor::clean_names() %>%
@@ -20,3 +22,5 @@ hit_data <- scrape_statcast_savant(start_date = last_update + 1) %>%
          plate_z, hc_x, hc_y, hit_distance_sc,
          launch_angle, launch_speed) %>%
   filter(hit_distance_sc >= 300)
+
+hit_data %>% write_csv("daily_hit_data.csv")
