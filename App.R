@@ -399,6 +399,10 @@ server <- function(input, output, session){
           curvature = curv, angle = 135, size = 2, color = hit_color
         ) +
         theme_void() +
+        theme(
+          legend.title = element_text(size = 16),
+          legend.text = element_text(size = 14)
+        ) +
         coord_fixed() +
         labs(color = "Wall Height (ft)")
       
@@ -479,6 +483,10 @@ server <- function(input, output, session){
           curvature = curv, angle = 135, size = 2, color = hit_color
         ) +
         theme_void() +
+        theme(
+          legend.title = element_text(size = 16),
+          legend.text = element_text(size = 14)
+        ) +
         coord_fixed() +
         labs(color = "Wall Height (ft)")
     }
