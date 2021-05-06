@@ -16,6 +16,7 @@ library(scroller)
 library(glue)
 library(ggimage)
 library(shinyWidgets)
+library(units)
 #library(gt) change hit detail later to gt table(?)
 
 #setwd("~/R/Dinger Machine")
@@ -28,7 +29,7 @@ library(shinyWidgets)
 hit_data <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))
 
 # full hit data with a row for each stadium, each hit
-hits_new <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_detail.rds"))
+#hits_new <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_detail.rds"))
 
 # initial hit data with number of stadiums it woud've donged in
 total_dongs <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_total.rds"))
@@ -60,6 +61,10 @@ stadium_options <- list(content =
                           }, SIMPLIFY = FALSE, USE.NAMES = FALSE)
 )
 
+
+# acceleration due to gravity in ft/s^2
+g <- -32.174
+
 # adding full team names for picker input for filtering by team
 # get team list
 team_list <- tibble(team_abbr = "All") %>%
@@ -73,8 +78,7 @@ team_options <- list(content = c("All",sort(pull(mlb_logos, full_team_name))), S
 
 # get fence height data
 fences <- read_csv("https://github.com/danmorse314/dinger-machine/raw/main/data/fence_heights_complete.csv",
-                   col_types = cols()) %>%
-  select(stadium, x, y, fence_height)
+                   col_types = cols())
 
 # for geom_image on field diagram
 transparent <- function(img) {
@@ -220,6 +224,58 @@ server <- function(input, output, session){
     hits
   })
   
+  hit_new <- reactive({
+    
+    # calculates if selected hit would've donged
+    
+    s <- input$hitlist_rows_selected
+    
+    hit_select <- hits()[s, , drop = FALSE] %>%
+      pull(index)
+    
+    hit_path <- hit_data %>%
+      filter(index == hit_select)
+    
+    # adding fence height at batted ball location for each stadium, each hit
+    hit_new <- NULL
+    
+    for(j in c(unique(fences$team))){
+      # who is screaming 'stop using for loops' outside my house
+      # show yourself coward, I will never stop using for loops
+      fences_i <- filter(fences, team == j)
+      nearest_fence <- tibble(
+        angle_diff = abs(dplyr::pull(hit_path, spray_angle) -
+                           dplyr::pull(fences_i, spray_angle_stadia)),
+        index = dplyr::pull(hit_path, index)) %>%
+        bind_cols(fences_i) %>%
+        arrange(angle_diff) %>%
+        slice(1) %>%
+        select(stadium, x, y, d_wall, index, fence_height, team, team_abbr)
+      hit_new <- bind_rows(hit_new, nearest_fence)
+      rm(nearest_fence)
+      rm(fences_i)
+      
+    }
+    
+    hit_new <- hit_path %>%
+      left_join(hit_new, by = "index") %>%
+      mutate(
+        #launch_speed_x = launch_speed_fts * cos(launch_angle_rads),
+        #launch_speed_y = launch_speed_fts * sin(launch_angle_rads),
+        total_time = -(launch_speed_y + sqrt(launch_speed_y^2 + (2*g * plate_z))) / g,
+        acceleration_x = (-2*launch_speed_x / total_time) + (2*hit_distance_sc/total_time^2),
+        time_wall = (-launch_speed_x + sqrt(launch_speed_x^2 + 2*acceleration_x*d_wall))/acceleration_x,
+        height_at_wall = (launch_speed_y * time_wall) + (.5*g*(time_wall^2)),
+        height_at_wall = ifelse(is.na(height_at_wall), 0, height_at_wall),
+        would_dong = ifelse(height_at_wall > fence_height, 1, 0),
+        would_dong = ifelse(team_abbr == home_team & events == "Home Run", 1, would_dong),
+        would_dong = ifelse(team_abbr == home_team & events != "Home Run", 0, would_dong)
+      )
+    
+    hit_new
+    
+  })
+  
   observeEvent(input$submit,{
     
     output$hitlist <- DT::renderDataTable({
@@ -286,6 +342,12 @@ server <- function(input, output, session){
       hit_select <- hits()[s, , drop = FALSE] %>%
         pull(index)
       
+      hit_path <- hit_data %>%
+        filter(index == hit_select)
+      
+      # a lot of this notation is super ugly because I made a major edit and was lazy
+      hits_new <- hit_new()
+      
       parks <- filter(hits_new, index == hit_select) %>%
         mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         left_join(stadium_logos, by = "stadium") %>%
@@ -335,9 +397,11 @@ server <- function(input, output, session){
       hit_path <- hit_data %>%
         filter(index == hit_select)
       
+      hits_new <- hit_new()
+      
       park_name <- pull(hit_path, stadium_observed)
       
-      did_dong <- filter(hits_new, index == hit_select & stadium == park_name) %>%
+      did_dong <- filter(hits_new, stadium == park_name) %>%
         #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         pull(would_dong)
       
@@ -359,7 +423,7 @@ server <- function(input, output, session){
       
       # make balls hit the wall if they got to the wall but didn't get over the fence
       hit_path_wall <- hits_new %>%
-        filter(index == hit_select & stadium == park_name) %>%
+        filter(stadium == park_name) %>%
         mutate(
           wall_y = ifelse(hc_y_ > y & would_dong == 0, y, hc_y_),
           wall_x = ifelse(hc_y_ > y & would_dong == 0, x, hc_x_)
@@ -370,7 +434,8 @@ server <- function(input, output, session){
       
       # add fence heights
       park_fences <- fences %>%
-        filter(stadium == park_name)
+        filter(stadium == park_name) %>%
+        select(stadium, x, y, fence_height)
       
       ggplot() +
         ggimage::geom_image(aes(x = 0, y = 250, image = stadium_logo),
@@ -411,7 +476,12 @@ server <- function(input, output, session){
       hit_select <- hits()[s, , drop = FALSE] %>%
         pull(index)
       
-      parks <- filter(hits_new, index == hit_select) %>%
+      hit_path <- hit_data %>%
+        filter(index == hit_select)
+      
+      hits_new <- hit_new()
+      
+      parks <- hits_new %>%
         mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         left_join(stadium_logos, by = "stadium") %>%
         select(stadium, logo_html, would_dong) %>% arrange(stadium) %>% arrange(would_dong)
@@ -430,12 +500,9 @@ server <- function(input, output, session){
         ) %>%
         pull(team_logo)
       
-      hit_path <- hit_data %>%
-        filter(index == hit_select)
-      
       park_name <- pull(parks[s2, , drop = FALSE],stadium)
       
-      did_dong <- filter(hits_new, index == hit_select & stadium == park_name) %>%
+      did_dong <- filter(hits_new, stadium == park_name) %>%
         #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         pull(would_dong)
       
@@ -443,7 +510,7 @@ server <- function(input, output, session){
       
       # make balls hit the wall if they got to the wall but didn't get over the fence
       hit_path_wall <- hits_new %>%
-        filter(index == hit_select & stadium == park_name) %>%
+        filter(stadium == park_name) %>%
         mutate(
           wall_y = ifelse(hc_y_ > y & would_dong == 0, y, hc_y_),
           wall_x = ifelse(hc_y_ > y & would_dong == 0, x, hc_x_)
@@ -454,7 +521,8 @@ server <- function(input, output, session){
       
       # add fence heights
       park_fences <- fences %>%
-        filter(stadium == park_name)
+        filter(stadium == park_name) %>%
+        select(stadium, x, y, fence_height)
       
       ggplot() +
         ggimage::geom_image(aes(x = 0, y = 250, image = stadium_logo),
@@ -506,13 +574,17 @@ server <- function(input, output, session){
       hit_select <- hits()[s, , drop = FALSE] %>%
         pull(index)
       
-      hit_detail <- hit_data %>%
-        filter(index == hit_select) %>%
+      hit_path <- hit_data %>%
+        filter(index == hit_select)
+      
+      hits_new <- hit_new()
+      
+      hit_detail <- hit_path %>%
         select(player_name, player_team, launch_speed, launch_angle, events, stadium_observed)
       
       park_name <- pull(hit_detail, stadium_observed)
       
-      park_view <- filter(hits_new, index == hit_select & stadium == park_name) %>%
+      park_view <- filter(hits_new, stadium == park_name) %>%
         #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         select(stadium, would_dong)
       
@@ -545,7 +617,12 @@ server <- function(input, output, session){
       hit_select <- hits()[s, , drop = FALSE] %>%
         pull(index)
       
-      parks <- filter(hits_new, index == hit_select) %>%
+      hit_path <- hit_data %>%
+        filter(index == hit_select)
+      
+      hits_new <- hit_new()
+      
+      parks <- hits_new %>%
         mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         left_join(stadium_logos, by = "stadium") %>%
         select(stadium, logo_html, would_dong) %>% arrange(stadium) %>% arrange(would_dong)
@@ -553,11 +630,10 @@ server <- function(input, output, session){
       park_name <- parks[s2, , drop = FALSE] %>%
         pull(stadium)
       
-      hit_detail <- hit_data %>%
-        filter(index == hit_select) %>%
+      hit_detail <- hit_path %>%
         select(player_name, player_team, launch_speed, launch_angle, events)
       
-      park_view <- filter(hits_new, index == hit_select & stadium == park_name) %>%
+      park_view <- filter(hits_new, stadium == park_name) %>%
         #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         select(stadium, would_dong)
       
