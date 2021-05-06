@@ -62,9 +62,14 @@ stadium_options <- list(content =
 
 # adding full team names for picker input for filtering by team
 # get team list
-team_list <- arrange(mlb_logos, full_team_name) %>% pull(team_abbr)
+team_list <- tibble(team_abbr = "All") %>%
+  bind_rows(
+    arrange(mlb_logos, full_team_name) %>%
+      select(team_abbr)
+  ) %>%
+  pull(team_abbr)
 # getting full name for display
-team_options <- list(content = sort(pull(mlb_logos, full_team_name)), SIMPLIFY = FALSE, USE.NAMES = FALSE)
+team_options <- list(content = c("All",sort(pull(mlb_logos, full_team_name))), SIMPLIFY = FALSE, USE.NAMES = FALSE)
 
 # get fence height data
 fences <- read_csv("https://github.com/danmorse314/dinger-machine/raw/main/data/fence_heights_complete.csv",
@@ -114,7 +119,7 @@ ui <- fluidPage(
       column(
         width = 4,
         pickerInput(inputId = "team",  label = "Select team(s)",
-                    multiple = TRUE, options = list(`none-selected-text` = "All"),
+                    multiple = FALSE, options = list(`none-selected-text` = "All"),
                     choices = team_list, choicesOpt = team_options)
       ),
       column(
@@ -171,15 +176,20 @@ ui <- fluidPage(
 server <- function(input, output, session){
   
   observeEvent(input$team,{
+    if(input$team == "All"){
+      team_filter <- team_list
+    } else {
+      team_filter <- input$team
+    }
     updatePickerInput(session, inputId = "player",
-                      choices = filter(player_list, player_team %in% input$team) %>%
+                      choices = filter(player_list, player_team %in% team_filter) %>%
                         pull(player_name))
   })
   
-  hits <- reactive({
+  hits <- eventReactive(input$submit, {
     
     # show all if any selections are blank
-    if(is.null(input$team)){
+    if(input$team == "All"){
       team_filter <- team_list
     } else {
       team_filter <- input$team
