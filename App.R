@@ -580,7 +580,7 @@ server <- function(input, output, session){
       hits_new <- hit_new()
       
       hit_detail <- hit_path %>%
-        select(player_name, player_team, launch_speed, launch_angle, events, stadium_observed)
+        select(player_name, player_team, launch_speed, launch_angle, events, hit_distance_sc, stadium_observed)
       
       park_name <- pull(hit_detail, stadium_observed)
       
@@ -600,6 +600,8 @@ server <- function(input, output, session){
         HTML(glue("<span style = 'font-size:20px;'><b>Exit velo:</b> {pull(hit_detail, launch_speed)} mph</span>")),
         br(),
         HTML(glue("<span style = 'font-size:20px;'><b>Launch angle:</b> {pull(hit_detail, launch_angle)} deg</span>")),
+        br(),
+        HTML(glue("<span style = 'font-size:20px;'><b>Proj. distance:</b> {pull(hit_detail, hit_distance_sc)} ft</span>")),
         br(),
         HTML(glue("<span style = 'font-size:20px;'><b>Actual result:</b> {pull(hit_detail, events)}</span>")),
         br(),
@@ -631,7 +633,7 @@ server <- function(input, output, session){
         pull(stadium)
       
       hit_detail <- hit_path %>%
-        select(player_name, player_team, launch_speed, launch_angle, events)
+        select(player_name, player_team, launch_speed, launch_angle, events, hit_distance_sc)
       
       park_view <- filter(hits_new, stadium == park_name) %>%
         #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
@@ -649,6 +651,8 @@ server <- function(input, output, session){
         HTML(glue("<span style = 'font-size:20px;'><b>Exit velo:</b> {pull(hit_detail, launch_speed)} mph</span>")),
         br(),
         HTML(glue("<span style = 'font-size:20px;'><b>Launch angle:</b> {pull(hit_detail, launch_angle)} deg</span>")),
+        br(),
+        HTML(glue("<span style = 'font-size:20px;'><b>Proj. distance:</b> {pull(hit_detail, hit_distance_sc)} ft</span>")),
         br(),
         HTML(glue("<span style = 'font-size:20px;'><b>Actual result:</b> {pull(hit_detail, events)}</span>")),
         br(),
