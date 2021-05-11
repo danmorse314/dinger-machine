@@ -647,11 +647,11 @@ server <- function(input, output, session){
         left_join(team_logos, by = c("player_team" = "team_abbr")) %>%
         pull(logo_html)
       
-      pull(hit_detail, headshot)
+      headshot <- pull(hit_detail, headshot)
       
       div(
-        HTML(paste(team_logo)),
-        #HTML(paste(headshot)),
+        #HTML(paste(team_logo)),
+        HTML(paste(headshot)),
         tags$b(style = "font-size: 32px;",
                glue("{pull(hit_detail,player_name)}")),
         br(),

@@ -181,6 +181,7 @@ hit_data <- hit_data %>%
   mutate(name_last = ifelse(name_first == "Tommy" & name_last == "La", "La Stella", name_last)) %>%
   mutate(name_last = ifelse(name_first == "Michael" & name_last == "A.", "Taylor", name_last)) %>%
   left_join(ids, by = c("name_first","name_last")) %>%
+  mutate(key_mlbam = ifelse(player_name == "Miguel Rojas", 500743, key_mlbam)) %>%
   select(-name_first, -name_last) %>%
   left_join(team_logos, by = c("player_team" = "team_abbr")) %>%
   mutate(
