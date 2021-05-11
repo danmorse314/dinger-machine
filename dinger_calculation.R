@@ -9,15 +9,28 @@
 library(GeomMLBStadiums)
 library(tidyverse)
 library(units)
+library(baseballr)
 
-#setwd("~/R/Dinger Machine")
+last_update <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds")) %>%
+  arrange(desc(game_date)) %>%
+  slice(1) %>%
+  dplyr::pull(game_date)
+
+hit_data <- scrape_statcast_savant(start_date = last_update + 1) %>%
+  janitor::clean_names() %>%
+  mutate(player_team = ifelse(inning_topbot == "Top", away_team, home_team)) %>%
+  # discard unneccessary columns
+  select(game_date, game_type, player_name, player_team, events, des, home_team,
+         away_team, bb_type, outs_when_up, inning, inning_topbot,
+         #  these here are the ones used in calculations
+         plate_z, hc_x, hc_y, hit_distance_sc,
+         launch_angle, launch_speed) %>%
+  filter(hit_distance_sc >= 300)
 
 # get highest index from old data
 last_index <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds")) %>%
   dplyr::pull(index) %>%
   max()
-
-hit_data <- read_csv("daily_hit_data.csv", col_types = cols())
 
 # transform batted balls data in same fashion so we're working in feet all around
 hit_data <- hit_data %>%
@@ -129,6 +142,60 @@ stadium_details <- hits_new %>% select(stadium, team_abbr) %>% distinct() %>%
 
 hit_data <- hit_data %>%
   left_join(stadium_details, by = c("home_team" = "team_abbr"))
+
+# add headshots
+# get team logos for failed headshots
+mlb_logos <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/mlb_logos.rds"))
+
+team_logos <- mlb_logos %>%
+  select(team_abbr, logo_html)
+
+# get player ids from baseballr
+chadwick_player_lu_table <- baseballr::get_chadwick_lu()
+
+# fix a few names
+ids <- chadwick_player_lu_table %>%
+  mutate(
+    name_first = chartr("áéèàôîíúñóÁ", "aeeaoiiunoA", name_first),
+    name_last = chartr("áéèàôîíúñóÁ", "aeeaoiiunoA", name_last),
+    name_first = case_when(
+      name_first == "J. P." ~ "J.P.",
+      name_first == "J. D." ~ "J.D.",
+      name_first == "J. T." ~ "J.T.",
+      name_first == "C. J." ~ "C.J.",
+      name_first == "Philip" & name_last == "Gosselin" ~ "Phil",
+      name_last == "Vogelbach" ~ "Daniel",
+      name_first == "Matthew" & name_last == "Joyce" ~ "Matt",
+      TRUE ~ name_first
+    )) %>%
+  select(name_first, name_last, key_mlbam) %>%
+  filter(!is.na(key_mlbam))
+
+# append player headshots to hit data
+hit_data <- hit_data %>%
+  # remove accents temporarily
+  mutate(gringo = chartr("áéèàôîíúñó", "aeeaoiiuno", player_name)) %>%
+  separate(gringo, into = c("name_first","name_last"), sep = " ",
+           remove = TRUE, extra = "drop") %>%
+  # fix a few discovered problem names
+  mutate(name_last = ifelse(name_first == "Tommy" & name_last == "La", "La Stella", name_last)) %>%
+  mutate(name_last = ifelse(name_first == "Michael" & name_last == "A.", "Taylor", name_last)) %>%
+  left_join(ids, by = c("name_first","name_last")) %>%
+  select(-name_first, -name_last) %>%
+  left_join(team_logos, by = c("player_team" = "team_abbr")) %>%
+  mutate(
+    # if the player_id is missing, use team logo
+    headshot = ifelse(!is.na(key_mlbam),
+                      glue("<img src = 'https://img.mlbstatic.com/mlb-photos/image/upload/q_100/v1/people/{key_mlbam}/headshot/67/current' height = '75'></img>"),
+                      logo_html)
+  ) %>%
+  # remove duplicate player_id guys
+  group_by(index) %>%
+  arrange(-key_mlbam) %>%
+  # using the latest player_id, not very scientific but hopefully works for the most part
+  slice(1) %>%
+  ungroup() %>%
+  select(-key_mlbam, -logo_html)
 
 # saving initial data
 #hit_data %>% saveRDS("data/hit_data.rds")

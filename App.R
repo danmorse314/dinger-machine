@@ -17,6 +17,7 @@ library(glue)
 library(ggimage)
 library(shinyWidgets)
 library(units)
+library(baseballr)
 #library(gt) change hit detail later to gt table(?)
 
 #setwd("~/R/Dinger Machine")
@@ -26,7 +27,8 @@ library(units)
 #   -add font to r file
 
 # initial hit data
-hit_data <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))
+#hit_data <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))
+hit_data <- readRDS("data/hit_data.rds")
 
 # full hit data with a row for each stadium, each hit
 #hits_new <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_detail.rds"))
@@ -580,7 +582,7 @@ server <- function(input, output, session){
       hits_new <- hit_new()
       
       hit_detail <- hit_path %>%
-        select(player_name, player_team, launch_speed, launch_angle, events, hit_distance_sc, stadium_observed)
+        select(player_name, player_team, launch_speed, launch_angle, events, hit_distance_sc, stadium_observed, headshot)
       
       park_name <- pull(hit_detail, stadium_observed)
       
@@ -592,8 +594,11 @@ server <- function(input, output, session){
         left_join(team_logos, by = c("player_team" = "team_abbr")) %>%
         pull(logo_html)
       
+      headshot <- pull(hit_detail, headshot)
+      
       div(
-        HTML(paste(team_logo)),
+        #HTML(paste(team_logo)),
+        HTML(paste(headshot)),
         tags$b(style = "font-size: 32px;",
                glue("{pull(hit_detail,player_name)}")),
         br(),
@@ -633,7 +638,7 @@ server <- function(input, output, session){
         pull(stadium)
       
       hit_detail <- hit_path %>%
-        select(player_name, player_team, launch_speed, launch_angle, events, hit_distance_sc)
+        select(player_name, player_team, launch_speed, launch_angle, events, hit_distance_sc, headshot)
       
       park_view <- filter(hits_new, stadium == park_name) %>%
         #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
@@ -643,8 +648,11 @@ server <- function(input, output, session){
         left_join(team_logos, by = c("player_team" = "team_abbr")) %>%
         pull(logo_html)
       
+      pull(hit_detail, headshot)
+      
       div(
         HTML(paste(team_logo)),
+        #HTML(paste(headshot)),
         tags$b(style = "font-size: 32px;",
                glue("{pull(hit_detail,player_name)}")),
         br(),
