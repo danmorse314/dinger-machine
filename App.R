@@ -27,8 +27,7 @@ library(baseballr)
 #   -add font to r file
 
 # initial hit data
-#hit_data <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))
-hit_data <- readRDS("data/hit_data.rds")
+hit_data <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))
 
 # full hit data with a row for each stadium, each hit
 #hits_new <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_detail.rds"))
