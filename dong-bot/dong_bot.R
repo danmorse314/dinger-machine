@@ -46,7 +46,6 @@ hit_detail <- calculate_dingers(hit_data)
 # counting up the dinger parks
 total_dongs <- get_dong_total(hit_detail)
 
-# 
 hit_data <- hit_data %>%
   dplyr::left_join(
     total_dongs %>%
@@ -56,7 +55,11 @@ hit_data <- hit_data %>%
   # only tweet if it would've donged in at least one park
   dplyr::filter(total_dongs > 0) %>%
   # make sure we haven't tweeted the play already
-  dplyr::filter(play_id %not_in% done_plays$play_id)
+  dplyr::filter(play_id %not_in% done_plays$play_id) %>%
+  # post oldest hits first
+  # shouldn't be necessary if it automates often enough
+  dplyr::mutate(post_order = row_number()) %>%
+  dplyr::arrange(-post_order)
 
 # this part is a test
 # trying out just 3 tweets at once
@@ -78,3 +81,10 @@ if(nrow(hit_data > 0)) {
 
 # update the finished plays
 done_plays %>% write_csv("dong-bot/data/done_plays.csv")
+
+# manually posting some hits
+#hit <- hit_data[2,]
+#draw_hit_plot(hit)
+#tweet <- write_tweet(hit)
+#rtweet::post_tweet(tweet, media = "dong-bot/hit_chart.png")
+#done_plays <- done_plays %>% bind_rows(select(hit, play_id))

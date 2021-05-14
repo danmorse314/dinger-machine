@@ -339,6 +339,7 @@ draw_hit_plot <- function(hit){
     ggimage::geom_image(aes(x = 0, y = 250, image = stadium_logo),
                         size = 0.25, image_fun = transparent) +
     GeomMLBStadiums::geom_mlb_stadium(stadium_ids = stadium_id,
+                                      #color = "white",
                                       stadium_segments = "all",
                                       stadium_transform_coords = TRUE) +
     # add colored fence heights
@@ -367,13 +368,17 @@ draw_hit_plot <- function(hit){
                             image = ifelse(did_dong == 1, '1f4a5', '274c'))) +
     ggplot2::theme_void() +
     ggplot2::theme(
-      legend.title = element_text(size = 16),
-      legend.text = element_text(size = 14),
-      plot.title = element_text(size = 20)
+      legend.title = element_text(size = 16),#, color = "white"),
+      legend.text = element_text(size = 14),#, color = "white"),
+      #plot.background = element_rect(fill = "#0B7900"),
+      #panel.background = element_rect(fill = "#0B7900"),
+      #plot.title = element_text(size = 20, hjust = .1),
+      plot.caption = element_text(size = 14, hjust = 0),
+      plot.margin = grid::unit(c(0.5,0.5,0.5,0.5), "mm")
     ) +
     ggplot2::coord_fixed() +
     ggplot2::labs(color = "Wall Height (ft)",
-                  title = stadium_name)
+                  caption = "@would_it_dong")
   
-  ggsave("dong-bot/hit_chart.png", width = 6, height = 6, dpi = 500)
+  ggsave("dong-bot/hit_chart.png", width = 6, height = 4, dpi = 500)
 }
