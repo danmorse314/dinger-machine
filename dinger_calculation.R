@@ -86,9 +86,8 @@ if(nrow(hit_data) > 0) {
     )
   
   # get outfield dimensions
-  fences <- read_csv("https://raw.githubusercontent.com/danmorse314/dinger-machine/main/data/fence_heights_complete.csv",
-                     col_types = cols())
-  
+  fences <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/dong-bot/data/fences.rds"))
+
   # acceleration due to gravity in ft/s^2
   g <- -32.174
   
@@ -231,6 +230,7 @@ if(nrow(hit_data) > 0) {
     saveRDS("data/dinger_total.rds")
   
   # commit & push to github
+  
   suppressWarnings(library(git2r, exclude = "pull"))
   repo <- repository(getwd())
   
