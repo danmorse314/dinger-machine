@@ -125,6 +125,16 @@ calculate_dingers <- function(hits){
   # calculate whether or not it would've been a dinger
   hits_new <- hit_data %>%
     dplyr::left_join(hits_new, by = "play_id") %>%
+    dplyr::left_join(
+      dplyr::select(team_hashtags, full_team_name, team_abbr) %>%
+        dplyr::rename(home_abbr = team_abbr),
+      by = c("home_team" = "full_team_name")
+    ) %>%
+    dplyr::left_join(
+      dplyr::select(team_hashtags, full_team_name, team_abbr) %>%
+        dplyr::rename(away_abbr = team_abbr),
+      by = c("away_team" = "full_team_name")
+    ) %>%
     dplyr::mutate(
       total_time = -(launch_speed_y + sqrt(launch_speed_y^2 + (2*g * plate_z))) / g,
       acceleration_x = (-2*launch_speed_x / total_time) + (2*hit_distance_sc/total_time^2),
@@ -132,8 +142,8 @@ calculate_dingers <- function(hits){
       height_at_wall = (launch_speed_y * time_wall) + (.5*g*(time_wall^2)),
       height_at_wall = ifelse(is.na(height_at_wall), 0, height_at_wall),
       would_dong = ifelse(height_at_wall > fence_height, 1, 0),
-      would_dong = ifelse(team_abbr == home_team & events == "Home Run", 1, would_dong),
-      would_dong = ifelse(team_abbr == home_team & events != "Home Run", 0, would_dong)
+      would_dong = ifelse(team_abbr == home_abbr & events == "Home Run", 1, would_dong),
+      would_dong = ifelse(team_abbr == home_abbr & events != "Home Run", 0, would_dong)
     )
   
   return(hits_new)
@@ -269,7 +279,31 @@ write_tweet <- function(hit){
     {inning_half} {inning}"
     )
     
-  } else{
+  } else if(dongs == 29) {
+    
+    dong_stadium <- hit_detail %>%
+      dplyr::filter(play_id == dplyr::pull(hit, play_id)) %>%
+      dplyr::filter(would_dong == 0) %>%
+      dplyr::pull(stadium)
+    
+    tweet <- glue::glue(
+      "{player_name} vs {pitcher_name}
+    #{hashtag}
+    
+    {play_result} {result_emoji}
+    
+    Exit velo: {exit_velo} mph
+    Launch angle: {launch_angle} deg
+    Proj. distance: {hit_distance} ft
+    
+    This would have been a home run in {dongs}/30 MLB ballparks.
+    Only {dong_stadium} would've held this one in.
+    
+    {away_team} ({away_score}) @ {home_team} ({home_score})
+    {inning_half} {inning}"
+    )
+    
+  } else {
     
     tweet <- glue::glue(
       "{player_name} vs {pitcher_name}
@@ -312,11 +346,19 @@ draw_hit_plot <- function(hit){
     filter(stadium == stadium_name) %>%
     select(stadium, x, y, fence_height)
   
-  did_dong <- hit %>%
-    dplyr::mutate(would_dong = ifelse(events == "Home Run", 1, 0)) %>%
-    dplyr::pull(would_dong)
+  play_result <- dplyr::pull(hit, events)
   
-  hit_color <- ifelse(did_dong == 1, "blue", "red")
+  #did_dong <- hit %>%
+  #  dplyr::mutate(would_dong = ifelse(events == "Home Run", 1, 0)) %>%
+  #  dplyr::pull(would_dong)
+  
+  # for the emoji choice
+  hit_events <- c("Single","Double","Triple","Field Error","Fielders Choice")
+  out_events <- c("Flyout","Lineout","Pop Out","Sac Fly","Double Play",
+                  "Sac Fly Double Play","Fielders Choice Out")
+  
+  hit_color <- ifelse(play_result %in% hit_events | play_result == "Home Run",
+                      "blue", "red")
   
   # make balls hit the wall if they got to the wall but didn't get over the fence
   hit_path_wall <- hit_detail %>%
@@ -365,7 +407,13 @@ draw_hit_plot <- function(hit){
     # ball landing spot
     ggimage::geom_emoji(data = hit,
                         aes(hc_x_, hc_y_,
-                            image = ifelse(did_dong == 1, '1f4a5', '274c'))) +
+                            image = dplyr::case_when(
+                              play_result == "Home Run" ~ '1f4a5',
+                              play_result %in% out_events ~ '274c',
+                              play_result %in% hit_events ~ '26be'
+                            )
+                            #image = ifelse(did_dong == 1, '1f4a5', '274c')
+                            ), size = .07) +
     ggplot2::theme_void() +
     ggplot2::theme(
       legend.title = element_text(size = 16),#, color = "white"),
@@ -380,5 +428,5 @@ draw_hit_plot <- function(hit){
     ggplot2::labs(color = "Wall Height (ft)",
                   caption = "@would_it_dong")
   
-  ggsave("dong-bot/hit_chart.png", width = 6, height = 4, dpi = 500)
+  ggsave("hit_chart.png", width = 6, height = 4, dpi = 500)
 }
