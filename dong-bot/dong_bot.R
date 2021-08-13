@@ -88,10 +88,3 @@ if(length(game_ids) > 0) {
   
 }
 
-# manually posting some hits
-#hit <- hit_data[3,]
-#draw_hit_plot(hit)
-#tweet <- write_tweet(hit)
-#rtweet::post_tweet(tweet, media = "hit_chart.png")
-#done_plays <- done_plays %>% bind_rows(select(hit, play_id))
-#done_plays %>% write_csv("data/done_plays.csv")
