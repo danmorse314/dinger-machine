@@ -7,8 +7,6 @@ fetch_live_games <- function(day){
     dplyr::select(game_pk, gameType, season, officialDate, status.abstractGameState,
            status.detailedState, teams.away.team.name, teams.home.team.name, venue.name) %>%
     janitor::clean_names() %>%
-    # this one just for testing
-    #dplyr::filter(status_detailed_state == "Final") %>%
     dplyr::filter(status_detailed_state == "In Progress" | status_detailed_state == "Final") %>%
     dplyr::rename(away_team = teams_away_team_name) %>%
     dplyr::rename(home_team = teams_home_team_name)
@@ -510,10 +508,6 @@ draw_hit_plot <- function(hit){
     ggplot2::geom_path(data = park_fences,
                        aes(x, y, color = fence_height),
                        size = 2) +
-    # ball landing spot
-    #ggplot2::geom_point(data = hit, aes(hc_x_, hc_y_), size = 6,
-    #                    color = hit_color,
-    #                    shape = ifelse(did_dong == 1, 19, 10)) +
     # curve for original hit path
     ggplot2::geom_curve(
       data = hit, linetype = "dashed",
@@ -554,12 +548,6 @@ draw_hit_plot <- function(hit){
     ) +
     ggplot2::theme_void() +
     ggplot2::theme(
-      #legend.title = element_text(size = 14),#, color = "white"),
-      #legend.text = element_text(size = 12),#, color = "white"),
-      #plot.background = element_rect(fill = "#0B7900"),
-      #panel.background = element_rect(fill = "#0B7900"),
-      #plot.title = element_text(size = 20, hjust = .1),
-      #plot.caption = element_text(size = 14, hjust = 1),
       plot.margin = grid::unit(c(0.5,0.5,0.5,0.5), "mm")
     ) +
     ggplot2::coord_fixed() +
