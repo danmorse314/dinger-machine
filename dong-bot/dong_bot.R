@@ -40,8 +40,6 @@ games <- fetch_live_games(dates_to_pull)
 game_ids <- games %>%
   pull(game_pk)
 
-Sys.setenv("TWITTER_PAT" = "C:/Users/Dan/Google Drive/Windows/Desktop/dong-bot/.rtweet_token1.rds")
-
 # get twitter authorization token saved in environment
 twitter_token <- rtweet::get_token()
 
@@ -111,11 +109,3 @@ if(length(game_ids) > 0) {
     }
   }
 }
-
-# manually posting some hits
-#hit <- hit_data[3,]
-#draw_hit_plot(hit)
-#tweet <- write_tweet(hit)
-#rtweet::post_tweet(tweet, media = "hit_chart.png")
-#done_plays <- done_plays %>% bind_rows(select(hit, play_id))
-#done_plays %>% write_csv("data/done_plays.csv")
