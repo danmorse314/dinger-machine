@@ -9,7 +9,7 @@ fetch_live_games <- function(day){
     janitor::clean_names() %>%
     # this one just for testing
     #dplyr::filter(status_detailed_state == "Final") %>%
-    dplyr::filter(status_detailed_state == "In Progress") %>%
+    dplyr::filter(status_detailed_state == "In Progress" | status_detailed_state == "Final") %>%
     dplyr::rename(away_team = teams_away_team_name) %>%
     dplyr::rename(home_team = teams_home_team_name)
   
@@ -21,10 +21,11 @@ clean_hits <- function(mlb_pbp, mlb_games){
   # games from fetch_live_games
 
   hit_data <- mlb_pbp %>%
+    dplyr::select(-game_date) %>%
     dplyr::left_join(
       dplyr::select(
         mlb_games,
-        game_type, game_pk, venue_name
+        game_type, game_pk, venue_name, official_date
         ),
       by = "game_pk") %>%
     janitor::clean_names() %>%
@@ -33,6 +34,7 @@ clean_hits <- function(mlb_pbp, mlb_games){
       player_name = matchup_batter_full_name,
       player_team = batting_team,
       player_id = matchup_batter_id,
+      game_date = official_date,
       headshot = glue::glue("https://img.mlbstatic.com/mlb-photos/image/upload/q_100/v1/people/{player_id}/headshot/67/current"),
       events = result_event,
       des = result_description,
@@ -102,13 +104,14 @@ clean_hits <- function(mlb_pbp, mlb_games){
 
 calculate_dingers <- function(hits){
   # hits: cleaned pbp data from clean_hits function
+  # require: fences <- data/fences.rds
   
   # adding fence height at batted ball location for each stadium, each hit
   hits_new <- NULL
   
   # calculate dingerness in each ballpark
-  for(j in c(unique(fences$team))){
-    fences_i <- dplyr::filter(fences, team == j)
+  for(j in c(unique(fences$stadium))){
+    fences_i <- dplyr::filter(fences, stadium == j)
     for(i in 1:nrow(hit_data)){
       nearest_fence <- dplyr::tibble(angle_diff = abs(hit_data$spray_angle[i] - fences_i$spray_angle_stadia),
                               play_id = hit_data$play_id[i]) %>%
@@ -153,6 +156,7 @@ get_dong_total <- function(hits_detailed){
   # hits_detailed from calculate dingers function
   
   total_dongs <- hits_detailed  %>%
+    filter(stadium != "Sahlen Field") %>%
     dplyr::group_by(player_name, player_team, game_date, events, launch_speed, launch_angle,
              hit_distance_sc, hit_direction, stadium_observed, play_id) %>%
     dplyr::summarize(
@@ -171,12 +175,14 @@ write_tweet <- function(hit){
   # get team abbreviations for matchup data
   hit <- hit %>%
     dplyr::left_join(
-      dplyr::select(team_hashtags, full_team_name, team_abbr),
+      dplyr::select(team_hashtags, full_team_name, team_abbr) %>%
+        dplyr::distinct(), #  because TOR is on there twice
       by = c("home_team" = "full_team_name")
     ) %>%
     dplyr::rename(home_abbr = team_abbr) %>%
     dplyr::left_join(
-      dplyr::select(team_hashtags, full_team_name, team_abbr),
+      dplyr::select(team_hashtags, full_team_name, team_abbr) %>%
+        dplyr::distinct(), #  because TOR is on there twice
       by = c("away_team" = "full_team_name")
     ) %>%
     dplyr::rename(away_abbr = team_abbr)
@@ -216,6 +222,7 @@ write_tweet <- function(hit){
   
   hashtag <- team_hashtags %>%
     dplyr::filter(full_team_name == dplyr::pull(hit, player_team)) %>%
+    dplyr::slice(1) %>% #  because toronto is on there twice for 2 stadiums
     dplyr::pull(team_hashtag)
   
   result_emoji <- dplyr::case_when(
@@ -235,7 +242,49 @@ write_tweet <- function(hit){
     TRUE ~ "\U00026be"
   )
   
-  if(dongs == 30){
+  inning_emoji <- ifelse(
+    inning_half == "Top", "\U0001f53a", "\U0001f53b"
+  )
+  
+  out_events <- c("Flyout","Lineout","Pop Out","Sac Fly","Double Play",
+                  "Sac Fly Double Play","Fielders Choice Out")
+  
+  if(player_name == "Nick Castellanos"){
+    
+    direction <- dplyr::pull(hit, hit_direction) %>%
+      tolower()
+    
+    player_score <- ifelse(
+      dplyr::pull(hit, home_team) == dplyr::pull(hit, player_team),
+      home_score,
+      away_score
+      )
+    
+    opponent_score <- ifelse(
+      dplyr::pull(hit, home_team) == dplyr::pull(hit, player_team),
+      away_score,
+      home_score
+    )
+    
+    tweet <- glue::glue(
+      "{player_name} vs {pitcher_name}
+    #{hashtag}
+    
+    {play_result} {result_emoji}
+    
+    Exit velo: {exit_velo} mph
+    Launch angle: {launch_angle} deg
+    Proj. distance: {hit_distance} ft
+    
+    And there's a drive into deep {direction} field by Castellanos, and that'll be a home run in {dongs}/30 MLB ballparks
+    
+    {away_team} ({away_score}) @ {home_team} ({home_score})
+    {inning_emoji} {inning}
+    
+    I don't know if I'm going to be putting on this headset again. I don't know if it's going to be for the Reds. I don't know if it's going to be for my bosses at Fox"
+    ) %>% substr(1, 278)
+    
+  } else if(dongs == 30){
     
     lock_emoji <- "\U0001f512"
     
@@ -253,12 +302,41 @@ write_tweet <- function(hit){
     That's a dinger in all 30 MLB ballparks
       
     {away_team} ({away_score}) @ {home_team} ({home_score})
-    {inning_half} {inning}"
+    {inning_emoji} {inning}"
     )
     
-  } else if(dongs == 1) {
+  } else if(dongs == 1 & play_result == "Home Run") {
+    
+    unicorn_emoji <- "\U0001f984"
     
     dong_stadium <- hit_detail %>%
+      dplyr::filter(stadium != "Sahlen Field") %>%
+      dplyr::filter(play_id == dplyr::pull(hit, play_id)) %>%
+      dplyr::filter(would_dong == 1) %>%
+      dplyr::pull(stadium)
+    
+    tweet <- glue::glue(
+      "{player_name} vs {pitcher_name}
+    #{hashtag}
+    
+    {unicorn_emoji} IT'S A UNICORN {unicorn_emoji}
+    
+    {play_result} {result_emoji}
+    
+    Exit velo: {exit_velo} mph
+    Launch angle: {launch_angle} deg
+    Proj. distance: {hit_distance} ft
+    
+    This would have been a home run at {dong_stadium} and nowhere else.
+    
+    {away_team} ({away_score}) @ {home_team} ({home_score})
+    {inning_emoji} {inning}"
+    )
+    
+  } else if(dongs == 1 & play_result != "Home Run") {
+    
+    dong_stadium <- hit_detail %>%
+      dplyr::filter(stadium != "Sahlen Field") %>%
       dplyr::filter(play_id == dplyr::pull(hit, play_id)) %>%
       dplyr::filter(would_dong == 1) %>%
       dplyr::pull(stadium)
@@ -276,12 +354,41 @@ write_tweet <- function(hit){
     This would have been a home run at {dong_stadium} and nowhere else
     
     {away_team} ({away_score}) @ {home_team} ({home_score})
-    {inning_half} {inning}"
+    {inning_emoji} {inning}"
     )
     
-  } else if(dongs == 29) {
+  } else if(dongs == 29 & play_result %in% out_events) {
+    
+    unicorn_emoji <- "\U0001f984"
     
     dong_stadium <- hit_detail %>%
+      dplyr::filter(stadium != "Sahlen Field") %>%
+      dplyr::filter(play_id == dplyr::pull(hit, play_id)) %>%
+      dplyr::filter(would_dong == 0) %>%
+      dplyr::pull(stadium)
+    
+    tweet <- glue::glue(
+      "{player_name} vs {pitcher_name}
+    #{hashtag}
+    
+    {unicorn_emoji} IT'S A UNICORN {unicorn_emoji}
+    
+    {play_result} {result_emoji}
+    
+    Exit velo: {exit_velo} mph
+    Launch angle: {launch_angle} deg
+    Proj. distance: {hit_distance} ft
+    
+    This {tolower(play_result)} would have been a home run in every park except {dong_stadium}. That's gotta sting.
+    
+    {away_team} ({away_score}) @ {home_team} ({home_score})
+    {inning_emoji} {inning}"
+    )
+    
+  } else if(dongs == 29 & play_result %not_in% out_events) {
+    
+    dong_stadium <- hit_detail %>%
+      dplyr::filter(stadium != "Sahlen Field") %>%
       dplyr::filter(play_id == dplyr::pull(hit, play_id)) %>%
       dplyr::filter(would_dong == 0) %>%
       dplyr::pull(stadium)
@@ -300,7 +407,7 @@ write_tweet <- function(hit){
     Only {dong_stadium} would've held this one in.
     
     {away_team} ({away_score}) @ {home_team} ({home_score})
-    {inning_half} {inning}"
+    {inning_emoji} {inning}"
     )
     
   } else {
@@ -318,7 +425,7 @@ write_tweet <- function(hit){
     This would have been a home run in {dongs}/30 MLB ballparks
     
     {away_team} ({away_score}) @ {home_team} ({home_score})
-    {inning_half} {inning}"
+    {inning_emoji} {inning}"
     )
   }
   
@@ -330,7 +437,7 @@ draw_hit_plot <- function(hit){
   # hit: single hit sliced from calculate dingers function
   # require:
   #   -hit from calculate dingers function
-
+  
   stadium_name <- dplyr::pull(hit, stadium_observed)
   
   stadium_logo <- team_hashtags %>%
@@ -340,17 +447,13 @@ draw_hit_plot <- function(hit){
   stadium_id <- team_hashtags %>%
     dplyr::filter(stadium == stadium_name) %>%
     dplyr::pull(team)
-
+  
   # add fence heights
   park_fences <- fences %>%
     filter(stadium == stadium_name) %>%
     select(stadium, x, y, fence_height)
   
   play_result <- dplyr::pull(hit, events)
-  
-  #did_dong <- hit %>%
-  #  dplyr::mutate(would_dong = ifelse(events == "Home Run", 1, 0)) %>%
-  #  dplyr::pull(would_dong)
   
   # for the emoji choice
   hit_events <- c("Single","Double","Triple","Field Error","Fielders Choice")
@@ -377,13 +480,32 @@ draw_hit_plot <- function(hit){
   # add a lil curve to the hit path for aesthetic purposes
   curv <- dplyr::pull(hit, spray_angle)/(-90)
   
+  # get player headshot
+  headshot <- dplyr::pull(hit, headshot)
+  
+  # get dongs total
+  dongs <- dplyr::pull(hit, total_dongs)
+  
+  # get min x and y values to find plot corner
+  stadium_path <- filter(stadium_paths, stadium == stadium_name)
+  min_x <- min(stadium_path$x)
+  min_y <- min(stadium_path$y)
+  max_x <- max(stadium_path$x)
+  
+  # get player info
+  player_name <- dplyr::pull(hit, player_name)
+  
   ggplot2::ggplot() +
     ggimage::geom_image(aes(x = 0, y = 250, image = stadium_logo),
                         size = 0.25, image_fun = transparent) +
-    GeomMLBStadiums::geom_mlb_stadium(stadium_ids = stadium_id,
-                                      #color = "white",
-                                      stadium_segments = "all",
-                                      stadium_transform_coords = TRUE) +
+    geom_text(
+      aes(x = 0, y = 160, label = glue::glue("{stadium_name}")),
+      alpha = .3, vjust = 0
+    ) +
+    geom_path(
+      data = stadium_path,
+      aes(x, y, group = segment)
+    ) +
     # add colored fence heights
     ggplot2::geom_path(data = park_fences,
                        aes(x, y, color = fence_height),
@@ -413,20 +535,35 @@ draw_hit_plot <- function(hit){
                               play_result %in% hit_events ~ '26be'
                             )
                             #image = ifelse(did_dong == 1, '1f4a5', '274c')
-                            ), size = .07) +
+                        ), size = .07) +
+    # headshot
+    ggimage::geom_image(
+      data = hit,
+      aes(x = min_x, y = min_y+140, image = headshot),
+      size = .12, hjust = 0
+    ) +
+    geom_text(
+      aes(
+        x = min_x, y = min_y,
+        label = glue::glue("{player_name}\n{play_result}\nHR in {dongs}/30 parks")
+      ), hjust = 0, vjust = 0
+    ) +
+    geom_text(
+      aes(x = max_x, y = min_y, label = "@would_it_dong"),
+      hjust = 1, vjust = 0, alpha = .7
+    ) +
     ggplot2::theme_void() +
     ggplot2::theme(
-      legend.title = element_text(size = 16),#, color = "white"),
-      legend.text = element_text(size = 14),#, color = "white"),
+      #legend.title = element_text(size = 14),#, color = "white"),
+      #legend.text = element_text(size = 12),#, color = "white"),
       #plot.background = element_rect(fill = "#0B7900"),
       #panel.background = element_rect(fill = "#0B7900"),
       #plot.title = element_text(size = 20, hjust = .1),
-      plot.caption = element_text(size = 14, hjust = 0),
+      #plot.caption = element_text(size = 14, hjust = 1),
       plot.margin = grid::unit(c(0.5,0.5,0.5,0.5), "mm")
     ) +
     ggplot2::coord_fixed() +
-    ggplot2::labs(color = "Wall Height (ft)",
-                  caption = "@would_it_dong")
+    ggplot2::labs(color = "Wall Height (ft)")
   
   ggsave("hit_chart.png", width = 6, height = 4, dpi = 500)
 }
