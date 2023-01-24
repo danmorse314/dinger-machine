@@ -66,7 +66,7 @@ clean_hits <- function(mlb_pbp, mlb_games){
            launch_angle, launch_speed, headshot) %>%
     # only want deep fly balls
     dplyr::filter(hit_distance_sc >= 300) %>%
-    dplyr::select(player_name, everything()) %>%
+    dplyr::select(player_name, tidyselect::everything()) %>%
     # need to have x-y coordinates or we won't have hit direction
     dplyr::filter(!is.na(hc_x) & !is.na(hc_y)) %>%
     # fix hit coordinates
@@ -154,7 +154,7 @@ get_dong_total <- function(hits_detailed){
   # hits_detailed from calculate dingers function
   
   total_dongs <- hits_detailed  %>%
-    filter(stadium != "Sahlen Field") %>%
+    dplyr::filter(stadium != "Sahlen Field") %>%
     dplyr::group_by(player_name, player_team, game_date, events, launch_speed, launch_angle,
              hit_distance_sc, hit_direction, stadium_observed, play_id) %>%
     dplyr::summarize(
@@ -184,6 +184,14 @@ write_tweet <- function(hit){
       by = c("away_team" = "full_team_name")
     ) %>%
     dplyr::rename(away_abbr = team_abbr)
+  
+  if(stringr::str_detect(hit$des, "reviewed")){
+    hit <- hit %>%
+      tidyr::separate(
+        des, into = c("review","des"), sep = ": ", remove = TRUE
+      ) %>%
+      dplyr::select(-review)
+  }
   
   home_team <- dplyr::pull(hit, home_abbr)
   
@@ -240,6 +248,14 @@ write_tweet <- function(hit){
     TRUE ~ "\U00026be"
   )
   
+  ytd_hrs <- gsub(
+    "\\(([^()]+)\\)",    # Extract characters within parentheses
+    "\\1",
+    stringr::str_extract_all(
+      hit$des, "\\(([^()]+)\\)"
+      )[[1]]
+    )
+  
   inning_emoji <- ifelse(
     inning_half == "Top", "\U0001f53a", "\U0001f53b"
   )
@@ -264,8 +280,27 @@ write_tweet <- function(hit){
       home_score
     )
     
-    tweet <- glue::glue(
-      "{player_name} vs {pitcher_name}
+    if(length(ytd_hrs) != 0){
+      tweet <- glue::glue(
+        "{player_name} vs {pitcher_name}
+    #{hashtag}
+    
+    {play_result} {(ytd_hrs)} {result_emoji}
+    
+    Exit velo: {exit_velo} mph
+    Launch angle: {launch_angle} deg
+    Proj. distance: {hit_distance} ft
+    
+    And there's a drive into deep {direction} field by Castellanos, and that'll be a home run in {dongs}/30 MLB ballparks
+    
+    {away_team} ({away_score}) @ {home_team} ({home_score})
+    {inning_emoji} {inning}
+    
+    I don't know if I'm going to be putting on this headset again. I don't know if it's going to be for the Reds. I don't know if it's going to be for my bosses at Fox"
+      ) %>% substr(1, 278)
+    } else {
+      tweet <- glue::glue(
+        "{player_name} vs {pitcher_name}
     #{hashtag}
     
     {play_result} {result_emoji}
@@ -280,7 +315,52 @@ write_tweet <- function(hit){
     {inning_emoji} {inning}
     
     I don't know if I'm going to be putting on this headset again. I don't know if it's going to be for the Reds. I don't know if it's going to be for my bosses at Fox"
-    ) %>% substr(1, 278)
+      ) %>% substr(1, 278)
+    }
+    
+  } else if(stringr::str_detect(hit$des,"inside-the-park") & dongs > 1){
+    
+    play_result <- "Inside-the-park HR!"
+    
+    result_emoji <- "\U0001f3AA"
+    
+    tweet <- glue::glue(
+      "{player_name} vs {pitcher_name}
+    #{hashtag}
+    
+    {result_emoji} {play_result} {result_emoji}
+    
+    Exit velo: {exit_velo} mph
+    Launch angle: {launch_angle} deg
+    Proj. distance: {hit_distance} ft
+    
+    This would have been a home run in {dongs}/30 MLB ballparks
+      
+    {away_team} ({away_score}) @ {home_team} ({home_score})
+    {inning_emoji} {inning}"
+    )
+    
+  } else if(stringr::str_detect(hit$des,"inside-the-park") & dongs == 1){
+    
+    play_result <- "Inside-the-park HR!"
+    
+    result_emoji <- "\U0001f3AA"
+    
+    tweet <- glue::glue(
+      "{player_name} vs {pitcher_name}
+    #{hashtag}
+    
+    {result_emoji} {play_result} {result_emoji}
+    
+    Exit velo: {exit_velo} mph
+    Launch angle: {launch_angle} deg
+    Proj. distance: {hit_distance} ft
+    
+    This would  not have left the yard anywhere.
+      
+    {away_team} ({away_score}) @ {home_team} ({home_score})
+    {inning_emoji} {inning}"
+    )
     
   } else if(dongs == 30){
     
@@ -290,7 +370,7 @@ write_tweet <- function(hit){
       "{player_name} vs {pitcher_name}
     #{hashtag}
     
-    {play_result} {result_emoji}
+    {play_result} ({ytd_hrs}) {result_emoji}
     
     Exit velo: {exit_velo} mph
     Launch angle: {launch_angle} deg
@@ -303,7 +383,7 @@ write_tweet <- function(hit){
     {inning_emoji} {inning}"
     )
     
-  } else if(dongs == 1 & play_result == "Home Run") {
+  } else if(dongs == 1 & play_result == "Home Run" & stringr::str_detect(hit$des,"inside-the-park", negate = TRUE)) {
     
     unicorn_emoji <- "\U0001f984"
     
@@ -319,7 +399,7 @@ write_tweet <- function(hit){
     
     {unicorn_emoji} IT'S A UNICORN {unicorn_emoji}
     
-    {play_result} {result_emoji}
+    {play_result} ({ytd_hrs}) {result_emoji}
     
     Exit velo: {exit_velo} mph
     Launch angle: {launch_angle} deg
@@ -339,8 +419,27 @@ write_tweet <- function(hit){
       dplyr::filter(would_dong == 1) %>%
       dplyr::pull(stadium)
     
-    tweet <- glue::glue(
-      "{player_name} vs {pitcher_name}
+    if(length(ytd_hrs) != 0){
+      
+      tweet <- glue::glue(
+        "{player_name} vs {pitcher_name}
+    #{hashtag}
+    
+    {play_result} ({ytd_hrs}) {result_emoji}
+    
+    Exit velo: {exit_velo} mph
+    Launch angle: {launch_angle} deg
+    Proj. distance: {hit_distance} ft
+    
+    This would have been a home run at {dong_stadium} and nowhere else
+    
+    {away_team} ({away_score}) @ {home_team} ({home_score})
+    {inning_emoji} {inning}"
+      )
+    } else {
+      
+      tweet <- glue::glue(
+        "{player_name} vs {pitcher_name}
     #{hashtag}
     
     {play_result} {result_emoji}
@@ -353,9 +452,10 @@ write_tweet <- function(hit){
     
     {away_team} ({away_score}) @ {home_team} ({home_score})
     {inning_emoji} {inning}"
-    )
+      )
+    }
     
-  } else if(dongs == 29 & play_result %in% out_events) {
+  } else if(dongs == 29 & play_result != "Home Run") {
     
     unicorn_emoji <- "\U0001f984"
     
@@ -365,8 +465,29 @@ write_tweet <- function(hit){
       dplyr::filter(would_dong == 0) %>%
       dplyr::pull(stadium)
     
-    tweet <- glue::glue(
-      "{player_name} vs {pitcher_name}
+    if(length(ytd_hrs) != 0){
+      
+      tweet <- glue::glue(
+        "{player_name} vs {pitcher_name}
+    #{hashtag}
+    
+    {unicorn_emoji} IT'S A UNICORN {unicorn_emoji}
+    
+    {play_result} ({ytd_hrs}) {result_emoji}
+    
+    Exit velo: {exit_velo} mph
+    Launch angle: {launch_angle} deg
+    Proj. distance: {hit_distance} ft
+    
+    This {tolower(play_result)} would have been a home run in every park except {dong_stadium}. That's gotta sting.
+    
+    {away_team} ({away_score}) @ {home_team} ({home_score})
+    {inning_emoji} {inning}"
+      )
+    } else {
+      
+      tweet <- glue::glue(
+        "{player_name} vs {pitcher_name}
     #{hashtag}
     
     {unicorn_emoji} IT'S A UNICORN {unicorn_emoji}
@@ -381,9 +502,10 @@ write_tweet <- function(hit){
     
     {away_team} ({away_score}) @ {home_team} ({home_score})
     {inning_emoji} {inning}"
-    )
+      ) 
+    }
     
-  } else if(dongs == 29 & play_result %not_in% out_events) {
+  } else if(dongs == 29 & play_result == "Home Run") {
     
     dong_stadium <- hit_detail %>%
       dplyr::filter(stadium != "Sahlen Field") %>%
@@ -395,7 +517,7 @@ write_tweet <- function(hit){
       "{player_name} vs {pitcher_name}
     #{hashtag}
     
-    {play_result} {result_emoji}
+    {play_result} ({ytd_hrs}) {result_emoji}
     
     Exit velo: {exit_velo} mph
     Launch angle: {launch_angle} deg
@@ -410,8 +532,27 @@ write_tweet <- function(hit){
     
   } else {
     
-    tweet <- glue::glue(
-      "{player_name} vs {pitcher_name}
+    if(length(ytd_hrs) != 0){
+      
+      tweet <- glue::glue(
+        "{player_name} vs {pitcher_name}
+    #{hashtag}
+    
+    {play_result} ({ytd_hrs}) {result_emoji}
+    
+    Exit velo: {exit_velo} mph
+    Launch angle: {launch_angle} deg
+    Proj. distance: {hit_distance} ft
+    
+    This would have been a home run in {dongs}/30 MLB ballparks
+    
+    {away_team} ({away_score}) @ {home_team} ({home_score})
+    {inning_emoji} {inning}"
+      )
+    } else {
+     
+      tweet <- glue::glue(
+        "{player_name} vs {pitcher_name}
     #{hashtag}
     
     {play_result} {result_emoji}
@@ -424,13 +565,13 @@ write_tweet <- function(hit){
     
     {away_team} ({away_score}) @ {home_team} ({home_score})
     {inning_emoji} {inning}"
-    )
+      ) 
+    }
   }
   
   return(tweet)
 }
 
-# add player headshot somewhere to this?
 draw_hit_plot <- function(hit){
   # hit: single hit sliced from calculate dingers function
   # require:
@@ -448,8 +589,8 @@ draw_hit_plot <- function(hit){
   
   # add fence heights
   park_fences <- fences %>%
-    filter(stadium == stadium_name) %>%
-    select(stadium, x, y, fence_height)
+    dplyr::filter(stadium == stadium_name) %>%
+    dplyr::select(stadium, x, y, fence_height)
   
   play_result <- dplyr::pull(hit, events)
   
@@ -485,7 +626,7 @@ draw_hit_plot <- function(hit){
   dongs <- dplyr::pull(hit, total_dongs)
   
   # get min x and y values to find plot corner
-  stadium_path <- filter(stadium_paths, stadium == stadium_name)
+  stadium_path <- dplyr::filter(stadium_paths, stadium == stadium_name)
   min_x <- min(stadium_path$x)
   min_y <- min(stadium_path$y)
   max_x <- max(stadium_path$x)
@@ -494,35 +635,35 @@ draw_hit_plot <- function(hit){
   player_name <- dplyr::pull(hit, player_name)
   
   ggplot2::ggplot() +
-    ggimage::geom_image(aes(x = 0, y = 250, image = stadium_logo),
+    ggimage::geom_image(ggplot2::aes(x = 0, y = 250, image = stadium_logo),
                         size = 0.25, image_fun = transparent) +
-    geom_text(
-      aes(x = 0, y = 160, label = glue::glue("{stadium_name}")),
+    ggplot2::geom_text(
+      ggplot2::aes(x = 0, y = 160, label = glue::glue("{stadium_name}")),
       alpha = .3, vjust = 0
     ) +
-    geom_path(
+    ggplot2::geom_path(
       data = stadium_path,
-      aes(x, y, group = segment)
+      ggplot2::aes(x, y, group = segment)
     ) +
     # add colored fence heights
     ggplot2::geom_path(data = park_fences,
-                       aes(x, y, color = fence_height),
+                       ggplot2::aes(x, y, color = fence_height),
                        size = 2) +
     # curve for original hit path
     ggplot2::geom_curve(
       data = hit, linetype = "dashed",
-      aes(x = 0, y = 0, xend = hc_x_, yend = hc_y_),
+      ggplot2::aes(x = 0, y = 0, xend = hc_x_, yend = hc_y_),
       curvature = curv, angle = 135, size = .5, color = hit_color
     ) +
     # curve for hitting the wall (or full path for dongers)
     ggplot2::geom_curve(
       data = hit_path_wall,
-      aes(x = 0, y = 0, xend = wall_x, yend = wall_y),
+      ggplot2::aes(x = 0, y = 0, xend = wall_x, yend = wall_y),
       curvature = curv, angle = 135, size = 2, color = hit_color
     ) +
     # ball landing spot
     ggimage::geom_emoji(data = hit,
-                        aes(hc_x_, hc_y_,
+                        ggplot2::aes(hc_x_, hc_y_,
                             image = dplyr::case_when(
                               play_result == "Home Run" ~ '1f4a5',
                               play_result %in% out_events ~ '274c',
@@ -533,17 +674,17 @@ draw_hit_plot <- function(hit){
     # headshot
     ggimage::geom_image(
       data = hit,
-      aes(x = min_x, y = min_y+140, image = headshot),
+      ggplot2::aes(x = min_x, y = min_y+140, image = headshot),
       size = .12, hjust = 0
     ) +
-    geom_text(
-      aes(
+    ggplot2::geom_text(
+      ggplot2::aes(
         x = min_x, y = min_y,
         label = glue::glue("{player_name}\n{play_result}\nHR in {dongs}/30 parks")
       ), hjust = 0, vjust = 0
     ) +
-    geom_text(
-      aes(x = max_x, y = min_y, label = "@would_it_dong"),
+    ggplot2::geom_text(
+      ggplot2::aes(x = max_x, y = min_y, label = "@would_it_dong"),
       hjust = 1, vjust = 0, alpha = .7
     ) +
     ggplot2::theme_void() +
@@ -553,5 +694,19 @@ draw_hit_plot <- function(hit){
     ggplot2::coord_fixed() +
     ggplot2::labs(color = "Wall Height (ft)")
   
-  ggsave("hit_chart.png", width = 6, height = 4, dpi = 500)
+  ggplot2::ggsave("hit_chart.png", width = 6, height = 4, dpi = 500)
+  
+  description <- stringr::str_remove(hit$des, hit$player_name)
+  
+  description <- substring(description,1,nchar(description)-1)
+  
+  player_team <- hit$player_team
+  
+  player_name <- hit$player_name
+  
+  alt_text <- glue::glue(
+    "{player_name} of the {player_team}{description} at {stadium_name}. This would have been a home run in {dongs} MLB parks."
+  )
+  
+  return(alt_text)
 }
