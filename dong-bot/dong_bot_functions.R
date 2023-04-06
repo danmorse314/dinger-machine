@@ -185,7 +185,7 @@ write_tweet <- function(hit){
     ) %>%
     dplyr::rename(away_abbr = team_abbr)
   
-  if(stringr::str_detect(hit$des, "reviewed")){
+  if(stringr::str_detect(hit$des, "reviewed") | stringr::str_detect(hit$des, "challenged")){
     hit <- hit %>%
       tidyr::separate(
         des, into = c("review","des"), sep = ": ", remove = TRUE
