@@ -70,7 +70,7 @@ if(length(game_ids) > 0) {
     hit_data <- hit_data %>%
       dplyr::left_join(
         total_dongs %>%
-          dplyr::select(play_id, total_dongs),
+          dplyr::select(play_id, total_dongs, road_dong, road_stadium),
         by = "play_id"
       ) %>%
       # only tweet if it would've donged in at least one park
