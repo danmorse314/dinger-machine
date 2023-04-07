@@ -35,6 +35,7 @@ clean_hits <- function(mlb_pbp, mlb_games){
       game_date = official_date,
       headshot = glue::glue("https://img.mlbstatic.com/mlb-photos/image/upload/q_100/v1/people/{player_id}/headshot/67/current"),
       events = result_event,
+      rbi = result_rbi,
       des = result_description,
       bb_type = hit_data_trajectory,
       outs_when_up = count_outs_start,
@@ -58,7 +59,7 @@ clean_hits <- function(mlb_pbp, mlb_games){
     ) %>%
     # discard unneccessary columns
     dplyr::select(play_id, game_date, game_type, player_name, player_team,
-           events, des, home_team, away_team, bb_type, outs_when_up,
+           events, rbi, des, home_team, away_team, bb_type, outs_when_up,
            inning, inning_topbot, stadium_observed, pitcher_name,
            home_score, away_score,
            #  these here are the ones used in calculations
@@ -124,28 +125,30 @@ calculate_dingers <- function(hits){
   }
 
   # calculate whether or not it would've been a dinger
-  hits_new <- hit_data %>%
-    dplyr::left_join(hits_new, by = "play_id") %>%
-    dplyr::left_join(
-      dplyr::select(team_hashtags, full_team_name, team_abbr) %>%
-        dplyr::rename(home_abbr = team_abbr),
-      by = c("home_team" = "full_team_name")
-    ) %>%
-    dplyr::left_join(
-      dplyr::select(team_hashtags, full_team_name, team_abbr) %>%
-        dplyr::rename(away_abbr = team_abbr),
-      by = c("away_team" = "full_team_name")
-    ) %>%
-    dplyr::mutate(
-      total_time = -(launch_speed_y + sqrt(launch_speed_y^2 + (2*g * plate_z))) / g,
-      acceleration_x = (-2*launch_speed_x / total_time) + (2*hit_distance_sc/total_time^2),
-      time_wall = (-launch_speed_x + sqrt(launch_speed_x^2 + 2*acceleration_x*d_wall))/acceleration_x,
-      height_at_wall = (launch_speed_y * time_wall) + (.5*g*(time_wall^2)),
-      height_at_wall = ifelse(is.na(height_at_wall), 0, height_at_wall),
-      would_dong = ifelse(height_at_wall > fence_height, 1, 0),
-      would_dong = ifelse(team_abbr == home_abbr & events == "Home Run", 1, would_dong),
-      would_dong = ifelse(team_abbr == home_abbr & events != "Home Run", 0, would_dong)
-    )
+  suppressWarnings({
+    hits_new <- hit_data %>%
+      dplyr::left_join(hits_new, by = "play_id") %>%
+      dplyr::left_join(
+        dplyr::select(team_hashtags, full_team_name, team_abbr) %>%
+          dplyr::rename(home_abbr = team_abbr),
+        by = c("home_team" = "full_team_name")
+      ) %>%
+      dplyr::left_join(
+        dplyr::select(team_hashtags, full_team_name, team_abbr) %>%
+          dplyr::rename(away_abbr = team_abbr),
+        by = c("away_team" = "full_team_name")
+      ) %>%
+      dplyr::mutate(
+        total_time = -(launch_speed_y + sqrt(launch_speed_y^2 + (2*g * plate_z))) / g,
+        acceleration_x = (-2*launch_speed_x / total_time) + (2*hit_distance_sc/total_time^2),
+        time_wall = (-launch_speed_x + sqrt(launch_speed_x^2 + 2*acceleration_x*d_wall))/acceleration_x,
+        height_at_wall = (launch_speed_y * time_wall) + (.5*g*(time_wall^2)),
+        height_at_wall = ifelse(is.na(height_at_wall), 0, height_at_wall),
+        would_dong = ifelse(height_at_wall > fence_height, 1, 0),
+        would_dong = ifelse(team_abbr == home_abbr & events == "Home Run", 1, would_dong),
+        would_dong = ifelse(team_abbr == home_abbr & events != "Home Run", 0, would_dong)
+      )
+  })
   
   return(hits_new)
 }
@@ -159,6 +162,8 @@ get_dong_total <- function(hits_detailed){
              hit_distance_sc, hit_direction, stadium_observed, play_id) %>%
     dplyr::summarize(
       total_dongs = sum(would_dong),
+      road_dong = unique(would_dong[team_abbr == away_abbr]),
+      road_stadium = unique(stadium[team_abbr == away_abbr]),
       .groups = "drop"
     )
   
@@ -205,6 +210,14 @@ write_tweet <- function(hit){
   
   play_result <- dplyr::pull(hit, events)
   
+  if(play_result == "Home Run" & hit$rbi == 4){
+    play_result <- "Grand Slam"
+  }
+  
+  if(play_result == "Grand Slam" & hit$player_team == "Seattle Mariners"){
+    play_result <- "Grand Salami"
+  }
+  
   exit_velo <- dplyr::pull(hit, launch_speed)
   
   launch_angle <- dplyr::pull(hit, launch_angle)
@@ -212,6 +225,12 @@ write_tweet <- function(hit){
   hit_distance <- dplyr::pull(hit, hit_distance_sc)
   
   pitcher_name <- dplyr::pull(hit, pitcher_name)
+  
+  if(hit$road_dong == 0){
+    road_result <- glue::glue(", but not at {hit$road_stadium}")
+  } else {
+    road_result <- glue::glue(", including {hit$road_stadium}")
+  }
   
   inning <- hit %>%
     dplyr::mutate(inning = dplyr::case_when(
@@ -294,9 +313,7 @@ write_tweet <- function(hit){
     And there's a drive into deep {direction} field by Castellanos, and that'll be a home run in {dongs}/30 MLB ballparks
     
     {away_team} ({away_score}) @ {home_team} ({home_score})
-    {inning_emoji} {inning}
-    
-    I don't know if I'm going to be putting on this headset again. I don't know if it's going to be for the Reds. I don't know if it's going to be for my bosses at Fox"
+    {inning_emoji} {inning}"
       ) %>% substr(1, 278)
     } else {
       tweet <- glue::glue(
@@ -312,9 +329,7 @@ write_tweet <- function(hit){
     And there's a drive into deep {direction} field by Castellanos, and that'll be a home run in {dongs}/30 MLB ballparks
     
     {away_team} ({away_score}) @ {home_team} ({home_score})
-    {inning_emoji} {inning}
-    
-    I don't know if I'm going to be putting on this headset again. I don't know if it's going to be for the Reds. I don't know if it's going to be for my bosses at Fox"
+    {inning_emoji} {inning}"
       ) %>% substr(1, 278)
     }
     
@@ -471,7 +486,7 @@ write_tweet <- function(hit){
         "{player_name} vs {pitcher_name}
     #{hashtag}
     
-    {unicorn_emoji} IT'S A UNICORN {unicorn_emoji}
+    {unicorn_emoji} REVERSE UNICORN {unicorn_emoji}
     
     {play_result} ({ytd_hrs}) {result_emoji}
     
@@ -490,7 +505,7 @@ write_tweet <- function(hit){
         "{player_name} vs {pitcher_name}
     #{hashtag}
     
-    {unicorn_emoji} IT'S A UNICORN {unicorn_emoji}
+    {unicorn_emoji} REVERSE UNICORN {unicorn_emoji}
     
     {play_result} {result_emoji}
     
@@ -544,7 +559,7 @@ write_tweet <- function(hit){
     Launch angle: {launch_angle} deg
     Proj. distance: {hit_distance} ft
     
-    This would have been a home run in {dongs}/30 MLB ballparks
+    This would have been a home run in {dongs}/30 MLB ballparks{road_result}
     
     {away_team} ({away_score}) @ {home_team} ({home_score})
     {inning_emoji} {inning}"
@@ -561,7 +576,7 @@ write_tweet <- function(hit){
     Launch angle: {launch_angle} deg
     Proj. distance: {hit_distance} ft
     
-    This would have been a home run in {dongs}/30 MLB ballparks
+    This would have been a home run in {dongs}/30 MLB ballparks{road_result}
     
     {away_team} ({away_score}) @ {home_team} ({home_score})
     {inning_emoji} {inning}"
