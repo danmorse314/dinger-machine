@@ -18,16 +18,6 @@ library(ggimage)
 library(shinyWidgets)
 library(units)
 library(baseballr)
-#library(gt) change hit detail later to gt table(?)
-
-#setwd("~/R/Dinger Machine")
-
-# TO DO:
-#   -add degree symbol(?)
-#   -add font to r file
-
-# initial hit data
-#hit_data_old <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))
 
 hit_data <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/done_plays.rds")) |>
   dplyr::mutate(index = row_number(),
@@ -36,22 +26,6 @@ hit_data <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/
 # load stadium dimensions
 stadium_paths <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/stadium_paths.rds")) %>%
   dplyr::filter(stadium != "Sahlen Field")
-
-# full hit data with a row for each stadium, each hit
-#hits_new <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_detail.rds"))
-
-# initial hit data with number of stadiums it woud've donged in
-#total_dongs <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_total.rds"))
-
-# get initial player list for selectinput
-player_list <- hit_data %>% select(player_name, player_team) %>% distinct() %>%
-  left_join(mlb_logos |> select(full_team_name, team_abbr), by = c("player_team" = "full_team_name")) |>
-  select(-player_team) |>
-  rename(player_team = team_abbr) |>
-  arrange(player_name)
-
-# get latest date in data
-last_update <- arrange(hit_data, desc(game_date)) %>% slice(1) %>% pull(game_date)
 
 # get team logos
 mlb_logos <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/mlb_logos.rds")) |>
@@ -64,6 +38,16 @@ mlb_logos <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main
       TRUE ~ stadium
     )
   )
+
+# get initial player list for selectinput
+player_list <- hit_data %>% select(player_name, player_team) %>% distinct() %>%
+  left_join(mlb_logos |> select(full_team_name, team_abbr), by = c("player_team" = "full_team_name")) |>
+  select(-player_team) |>
+  rename(player_team = team_abbr) |>
+  arrange(player_name)
+
+# get latest date in data
+last_update <- arrange(hit_data, desc(game_date)) %>% slice(1) %>% pull(game_date)
 
 team_logos <- mlb_logos %>%
   select(team_abbr, logo_html)
