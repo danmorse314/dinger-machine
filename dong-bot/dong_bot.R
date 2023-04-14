@@ -104,24 +104,25 @@ if(length(game_ids) > 0) {
           access_secret = Sys.getenv("DONG_TWITTER_ACCESS_SECRET")
         )
         )
-      #Sys.sleep(3)
-      #tweet_url <- rtweet::get_my_timeline(
-      #  "would_it_dong",
-      #  n=1,
-      #  token = rtweet::rtweet_bot(
-      #    api_key       = Sys.getenv("DONG_TWITTER_API_KEY"),
-      #    api_secret    = Sys.getenv("DONG_TWITTER_API_SECRET"),
-      #    access_token  = Sys.getenv("DONG_TWITTER_ACCESS_TOKEN"),
-      #    access_secret = Sys.getenv("DONG_TWITTER_ACCESS_SECRET")
-      #  )
-      #  ) %>% dplyr::pull(source)
+      Sys.sleep(3)
+      tweet_url <- rtweet::get_timeline(
+        user = "would_it_dong",
+        n=1,
+        token = rtweet::rtweet_bot(
+          api_key       = Sys.getenv("DONG_TWITTER_API_KEY"),
+          api_secret    = Sys.getenv("DONG_TWITTER_API_SECRET"),
+          access_token  = Sys.getenv("DONG_TWITTER_ACCESS_TOKEN"),
+          access_secret = Sys.getenv("DONG_TWITTER_ACCESS_SECRET")
+        )
+      )
+      tweet_url <- stringr::str_remove(tweet_url$entities[[1]]$media$expanded_url, "photo/1")
       tweeted_play <- dplyr::select(
         hit, player_name, player_team, game_date, inning, home_team, away_team, events,
         launch_speed, launch_angle, hit_distance_sc, plate_z, hc_x_, hc_y_,
         spray_angle, hit_direction, stadium_observed, total_dongs,
         launch_speed_x, launch_speed_y, play_id
-        ) #%>%
-        #dplyr::mutate(url = tweet_url)
+        ) %>%
+        dplyr::mutate(url = tweet_url)
       done_plays <- dplyr::bind_rows(done_plays, tweeted_play)
       # update the finished plays
       done_plays %>% saveRDS("data/done_plays.rds")
