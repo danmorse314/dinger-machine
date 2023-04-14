@@ -27,23 +27,43 @@ library(baseballr)
 #   -add font to r file
 
 # initial hit data
-hit_data <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))
+#hit_data_old <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/hit_data.rds"))
+
+hit_data <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/done_plays.rds")) |>
+  dplyr::mutate(index = row_number(),
+                player_team = ifelse(player_team == "Cleveland Indians", "Cleveland Guardians", player_team))
+
+# load stadium dimensions
+stadium_paths <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/stadium_paths.rds")) %>%
+  dplyr::filter(stadium != "Sahlen Field")
 
 # full hit data with a row for each stadium, each hit
 #hits_new <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_detail.rds"))
 
 # initial hit data with number of stadiums it woud've donged in
-total_dongs <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_total.rds"))
+#total_dongs <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/dinger_total.rds"))
 
 # get initial player list for selectinput
 player_list <- hit_data %>% select(player_name, player_team) %>% distinct() %>%
+  left_join(mlb_logos |> select(full_team_name, team_abbr), by = c("player_team" = "full_team_name")) |>
+  select(-player_team) |>
+  rename(player_team = team_abbr) |>
   arrange(player_name)
 
 # get latest date in data
 last_update <- arrange(hit_data, desc(game_date)) %>% slice(1) %>% pull(game_date)
 
 # get team logos
-mlb_logos <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/mlb_logos.rds"))
+mlb_logos <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/mlb_logos.rds")) |>
+  mutate(
+    stadium = case_when(
+      stadium == "Great American Ballpark" ~ "Great American Ball Park",
+      stadium == "LoanDepot Park" ~ "loanDepot park",
+      stadium == "RingCentral Coliseum" ~ "Oakland Coliseum",
+      stadium == "PETCO Park" ~ "Petco Park",
+      TRUE ~ stadium
+    )
+  )
 
 team_logos <- mlb_logos %>%
   select(team_abbr, logo_html)
@@ -78,8 +98,11 @@ team_list <- tibble(team_abbr = "All") %>%
 team_options <- list(content = c("All",sort(pull(mlb_logos, full_team_name))), SIMPLIFY = FALSE, USE.NAMES = FALSE)
 
 # get fence height data
-fences <- read_csv("https://github.com/danmorse314/dinger-machine/raw/main/data/fence_heights_complete.csv",
-                   col_types = cols())
+#fences <- read_csv("https://github.com/danmorse314/dinger-machine/raw/main/data/fence_heights_complete.csv",
+#                   col_types = cols())
+
+fences <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/fences.rds")) |>
+  select(-left_y, -right_y, -index)
 
 # for geom_image on field diagram
 transparent <- function(img) {
@@ -123,14 +146,14 @@ ui <- fluidPage(
     fluidRow(
       column(
         width = 4,
-        pickerInput(inputId = "team",  label = "Select team(s)",
+        pickerInput(inputId = "team",  label = "Select team",
                     multiple = FALSE, options = list(`none-selected-text` = "All"),
                     choices = team_list, choicesOpt = team_options)
       ),
       column(
         width = 4,
         pickerInput(inputId = "player", label = "Select player(s)",
-                    choices = player_list$player_name, multiple = TRUE,
+                    choices = unique(player_list$player_name), multiple = TRUE,
                     options = list(`none-selected-text` = "All"))
       ),
       column(
@@ -162,7 +185,7 @@ ui <- fluidPage(
     ),
     tags$hr(),
     HTML("<span>
-            <img src = 'https://image.flaticon.com/icons/png/512/25/25231.png' height = '24px'
+            <img src = 'https://cdn-icons-png.flaticon.com/512/25/25231.png' height = '24px'
             </img>
             <a href='https://github.com/danmorse314/dinger-machine' target='_blank'>View code
             </a>
@@ -183,12 +206,14 @@ server <- function(input, output, session){
   observeEvent(input$team,{
     if(input$team == "All"){
       team_filter <- team_list
+      updatePickerInput(session, inputId = "player",
+                        choices = unique(player_list$player_name))
     } else {
       team_filter <- input$team
+      updatePickerInput(session, inputId = "player",
+                        choices = filter(player_list, player_team %in% team_filter) %>%
+                          pull(player_name))
     }
-    updatePickerInput(session, inputId = "player",
-                      choices = filter(player_list, player_team %in% team_filter) %>%
-                        pull(player_name))
   })
   
   hits <- eventReactive(input$submit, {
@@ -213,14 +238,27 @@ server <- function(input, output, session){
     }
     
     hits <- hit_data %>%
-      filter(player_team %in% team_filter &
+      left_join(
+        select(mlb_logos, full_team_name, team_abbr),
+        by = c("player_team" = "full_team_name")
+      ) |>
+      filter(team_abbr %in% team_filter &
                player_name %in% player_filter &
                stadium_observed %in% park_filter) %>%
-      left_join(team_logos, by = c("player_team" = "team_abbr")) %>%
+      left_join(team_logos, by = "team_abbr") %>%
+      mutate(
+        url = glue::glue(
+          "<a href=\'https://baseballsavant.mlb.com/sporty-videos?playId={play_id}'>Video</a>
+          <br><br>
+           <a href=\'{url}'>Tweet</a>"
+          )
+        ) |>
       # this was an attempt to add the degree symbol, it failed miserably
       #mutate(launch_angle = glue("{launch_angle}\\degree")) %>%
       select(index, player_name, logo_html, game_date, stadium_observed, inning,
-             events, launch_speed, launch_angle, hit_distance_sc, hit_direction)
+             events, launch_speed, launch_angle, hit_distance_sc, hit_direction,
+             total_dongs, url) |>
+      arrange(desc(index))
     
     hits
   })
@@ -258,20 +296,22 @@ server <- function(input, output, session){
       
     }
     
-    hit_new <- hit_path %>%
-      left_join(hit_new, by = "index") %>%
-      mutate(
-        #launch_speed_x = launch_speed_fts * cos(launch_angle_rads),
-        #launch_speed_y = launch_speed_fts * sin(launch_angle_rads),
-        total_time = -(launch_speed_y + sqrt(launch_speed_y^2 + (2*g * plate_z))) / g,
-        acceleration_x = (-2*launch_speed_x / total_time) + (2*hit_distance_sc/total_time^2),
-        time_wall = (-launch_speed_x + sqrt(launch_speed_x^2 + 2*acceleration_x*d_wall))/acceleration_x,
-        height_at_wall = (launch_speed_y * time_wall) + (.5*g*(time_wall^2)),
-        height_at_wall = ifelse(is.na(height_at_wall), 0, height_at_wall),
-        would_dong = ifelse(height_at_wall > fence_height, 1, 0),
-        would_dong = ifelse(team_abbr == home_team & events == "Home Run", 1, would_dong),
-        would_dong = ifelse(team_abbr == home_team & events != "Home Run", 0, would_dong)
-      )
+    suppressWarnings({
+      hit_new <- hit_path %>%
+        left_join(hit_new, by = "index") %>%
+        mutate(
+          #launch_speed_x = launch_speed_fts * cos(launch_angle_rads),
+          #launch_speed_y = launch_speed_fts * sin(launch_angle_rads),
+          total_time = -(launch_speed_y + sqrt(launch_speed_y^2 + (2*g * plate_z))) / g,
+          acceleration_x = (-2*launch_speed_x / total_time) + (2*hit_distance_sc/total_time^2),
+          time_wall = (-launch_speed_x + sqrt(launch_speed_x^2 + 2*acceleration_x*d_wall))/acceleration_x,
+          height_at_wall = (launch_speed_y * time_wall) + (.5*g*(time_wall^2)),
+          height_at_wall = ifelse(is.na(height_at_wall), 0, height_at_wall),
+          would_dong = ifelse(height_at_wall > fence_height, 1, 0),
+          would_dong = ifelse(team_abbr == home_team & events == "Home Run", 1, would_dong),
+          would_dong = ifelse(team_abbr == home_team & events != "Home Run", 0, would_dong)
+        )
+    })
     
     hit_new
     
@@ -293,7 +333,9 @@ server <- function(input, output, session){
           "Exit Velocity (mph)" = "launch_speed",
           "Launch Angle (deg)" = "launch_angle",
           "Projected Distance (ft)" = "hit_distance_sc",
-          "Hit Direction" = "hit_direction"
+          "Hit Direction" = "hit_direction",
+          "Dong in __ Parks" = "total_dongs",
+          "Links" = "url"
         ),
         escape = FALSE,
         callback = JS("
@@ -323,7 +365,7 @@ server <- function(input, output, session){
         hit_select <- hits()[s, , drop = FALSE] %>%
           pull(index)
         
-        dong_qty <- filter(total_dongs, index == hit_select) %>% pull(total_dongs)
+        dong_qty <- filter(hit_data, index == hit_select) %>% pull(total_dongs)
         
         HTML(glue("<div><span style='font-size: 24px;'>This hit would have gone yard in  </span><span style='font-size:50px'><b>{dong_qty}/30</b></span><span style='font-size: 24px;'>  MLB ballparks</span></div>"))
         
@@ -422,6 +464,8 @@ server <- function(input, output, session){
         ) %>%
         pull(team_logo)
       
+      stadium_path <- dplyr::filter(stadium_paths, stadium == park_name)
+      
       # make balls hit the wall if they got to the wall but didn't get over the fence
       hit_path_wall <- hits_new %>%
         filter(stadium == park_name) %>%
@@ -441,9 +485,14 @@ server <- function(input, output, session){
       ggplot() +
         ggimage::geom_image(aes(x = 0, y = 250, image = stadium_logo),
                             size = 0.25, image_fun = transparent) +
-        geom_mlb_stadium(stadium_ids = stadium_id,
-                         stadium_segments = "all",
-                         stadium_transform_coords = TRUE) +
+        ggplot2::geom_text(
+          ggplot2::aes(x = 0, y = 160, label = glue::glue("{park_name}")),
+          alpha = .3, vjust = 0
+        ) +
+        ggplot2::geom_path(
+          data = stadium_path,
+          ggplot2::aes(x, y, group = segment)
+        ) +
         # add colored fence heights
         geom_path(data = park_fences,
                   aes(x, y, color = fence_height),
@@ -503,6 +552,8 @@ server <- function(input, output, session){
       
       park_name <- pull(parks[s2, , drop = FALSE],stadium)
       
+      stadium_path <- filter(stadium_paths, stadium == park_name)
+      
       did_dong <- filter(hits_new, stadium == park_name) %>%
         #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         pull(would_dong)
@@ -528,9 +579,14 @@ server <- function(input, output, session){
       ggplot() +
         ggimage::geom_image(aes(x = 0, y = 250, image = stadium_logo),
                             size = 0.25, image_fun = transparent) +
-        geom_mlb_stadium(stadium_ids = stadium_id,
-                         stadium_segments = "all",
-                         stadium_transform_coords = TRUE) +
+        ggplot2::geom_text(
+          ggplot2::aes(x = 0, y = 160, label = glue::glue("{park_name}")),
+          alpha = .3, vjust = 0
+        ) +
+        ggplot2::geom_path(
+          data = stadium_path,
+          ggplot2::aes(x, y, group = segment)
+        ) +
         # add colored fence heights
         geom_path(data = park_fences,
                   aes(x, y, color = fence_height),
@@ -581,7 +637,7 @@ server <- function(input, output, session){
       hits_new <- hit_new()
       
       hit_detail <- hit_path %>%
-        select(player_name, player_team, launch_speed, launch_angle, events, hit_distance_sc, stadium_observed, headshot)
+        select(player_name, player_team, launch_speed, launch_angle, events, hit_distance_sc, stadium_observed)
       
       park_name <- pull(hit_detail, stadium_observed)
       
@@ -590,14 +646,15 @@ server <- function(input, output, session){
         select(stadium, would_dong)
       
       team_logo <- hit_detail %>%
-        left_join(team_logos, by = c("player_team" = "team_abbr")) %>%
+        left_join(select(mlb_logos, full_team_name, team_abbr), by = c("player_team" = "full_team_name")) |>
+        left_join(team_logos, by = "team_abbr") %>%
         pull(logo_html)
       
-      headshot <- pull(hit_detail, headshot)
+      #headshot <- pull(hit_detail, headshot)
       
       div(
-        #HTML(paste(team_logo)),
-        HTML(paste(headshot)),
+        HTML(paste(team_logo)),
+        #HTML(paste(headshot)),
         tags$b(style = "font-size: 32px;",
                glue("{pull(hit_detail,player_name)}")),
         br(),
@@ -611,10 +668,10 @@ server <- function(input, output, session){
         br(),
         if(pull(park_view, would_dong) == 1){
           tags$em(style = "font-size: 24px;",
-                  glue("This would have been a dinger at {park_name}"))
+                  glue("{park_name} did not hold this one in"))
         } else {
           tags$em(style = "font-size: 24px;",
-                  glue("This would have stayed in the yard at {park_name}"))
+                  glue("{park_name} held this one in"))
         }
       )
       
@@ -637,21 +694,22 @@ server <- function(input, output, session){
         pull(stadium)
       
       hit_detail <- hit_path %>%
-        select(player_name, player_team, launch_speed, launch_angle, events, hit_distance_sc, headshot)
+        select(player_name, player_team, launch_speed, launch_angle, events, hit_distance_sc)
       
       park_view <- filter(hits_new, stadium == park_name) %>%
         #mutate(would_dong = ifelse(would_dong == 1, "Yes", "No")) %>%
         select(stadium, would_dong)
       
       team_logo <- hit_detail %>%
-        left_join(team_logos, by = c("player_team" = "team_abbr")) %>%
+        left_join(select(mlb_logos, full_team_name, team_abbr), by = c("player_team" = "full_team_name")) |>
+        left_join(team_logos, by = "team_abbr") %>%
         pull(logo_html)
       
-      headshot <- pull(hit_detail, headshot)
+      #headshot <- pull(hit_detail, headshot)
       
       div(
-        #HTML(paste(team_logo)),
-        HTML(paste(headshot)),
+        HTML(paste(team_logo)),
+        #HTML(paste(headshot)),
         tags$b(style = "font-size: 32px;",
                glue("{pull(hit_detail,player_name)}")),
         br(),
