@@ -82,9 +82,6 @@ team_list <- tibble(team_abbr = "All") %>%
 team_options <- list(content = c("All",sort(pull(mlb_logos, full_team_name))), SIMPLIFY = FALSE, USE.NAMES = FALSE)
 
 # get fence height data
-#fences <- read_csv("https://github.com/danmorse314/dinger-machine/raw/main/data/fence_heights_complete.csv",
-#                   col_types = cols())
-
 fences <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/data/fences.rds")) |>
   select(-left_y, -right_y, -index)
 
@@ -92,12 +89,6 @@ fences <- readRDS(url("https://github.com/danmorse314/dinger-machine/raw/main/da
 transparent <- function(img) {
   magick::image_fx(img, expression = "0.5*a", channel = "alpha")
 }
-
-# add custom font
-# this doesn't work yet
-#dir.create('~/.fonts')
-#file.copy("~/www/Starjedi.ttf", "-/.fonts")
-#system('fc_cache -f ~/.fonts')
 
 ui <- fluidPage(
   scroller::use_scroller(),
@@ -283,6 +274,10 @@ server <- function(input, output, session){
     suppressWarnings({
       hit_new <- hit_path %>%
         left_join(hit_new, by = "index") %>%
+        left_join(
+          select(mlb_logos, stadium_team = full_team_name, team_abbr),
+          by = "team_abbr"
+        ) |>
         mutate(
           #launch_speed_x = launch_speed_fts * cos(launch_angle_rads),
           #launch_speed_y = launch_speed_fts * sin(launch_angle_rads),
@@ -292,8 +287,8 @@ server <- function(input, output, session){
           height_at_wall = (launch_speed_y * time_wall) + (.5*g*(time_wall^2)),
           height_at_wall = ifelse(is.na(height_at_wall), 0, height_at_wall),
           would_dong = ifelse(height_at_wall > fence_height, 1, 0),
-          would_dong = ifelse(team_abbr == home_team & events == "Home Run", 1, would_dong),
-          would_dong = ifelse(team_abbr == home_team & events != "Home Run", 0, would_dong)
+          would_dong = ifelse(stadium_team == home_team & events == "Home Run", 1, would_dong),
+          would_dong = ifelse(stadium_team == home_team & events != "Home Run", 0, would_dong)
         )
     })
     
