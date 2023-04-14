@@ -232,9 +232,9 @@ server <- function(input, output, session){
       left_join(team_logos, by = "team_abbr") %>%
       mutate(
         url = glue::glue(
-          "<a href=\'https://baseballsavant.mlb.com/sporty-videos?playId={play_id}'>Video</a>
+          "<a href=\'https://baseballsavant.mlb.com/sporty-videos?playId={play_id}' target='_blank'>Video</a>
           <br><br>
-           <a href=\'{url}'>Tweet</a>"
+           <a href=\'{url}' target='_blank'>Tweet</a>"
           )
         ) |>
       # this was an attempt to add the degree symbol, it failed miserably
