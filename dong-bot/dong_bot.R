@@ -116,6 +116,7 @@ if(length(game_ids) > 0) {
         )
       )
       tweet_url <- stringr::str_remove(tweet_url$entities[[1]]$media$expanded_url, "photo/1")
+      #tweet_url <- "https://twitter.com/would_it_dong"
       tweeted_play <- dplyr::select(
         hit, player_name, player_team, game_date, inning, home_team, away_team, events,
         launch_speed, launch_angle, hit_distance_sc, plate_z, hc_x_, hc_y_,

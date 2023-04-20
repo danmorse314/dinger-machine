@@ -470,7 +470,7 @@ write_tweet <- function(hit){
       )
     }
     
-  } else if(dongs == 29 & play_result != "Home Run") {
+  } else if(dongs == 29 & play_result != "Home Run" & play_result != "Grand Slam") {
     
     unicorn_emoji <- "\U0001f984"
     
