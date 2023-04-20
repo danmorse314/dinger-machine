@@ -134,5 +134,14 @@ if(length(game_ids) > 0) {
         Sys.sleep(30)
       }
     }
+    
+    # push data to github for app every hour
+    if(lubridate::minute(Sys.time()) < 5){
+      repo <- git2r::repository(getwd())
+      git2r::add(repo = repo, path = "data/done_plays.rds")
+      git2r::add(repo = repo, path = "data/done_plays.csv")
+      git2r::commit(repo = repo, message = glue::glue("data updated - {Sys.time()}"))
+      git2r::push(repo, credentials = git2r::cred_token())
+    }
   }
 }
