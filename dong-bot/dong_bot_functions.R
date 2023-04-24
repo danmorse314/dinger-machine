@@ -5,11 +5,16 @@ fetch_live_games <- function(day){
   
   games <- baseballr::get_game_pks_mlb(day, level_ids = c(1)) %>%
     dplyr::select(game_pk, gameType, season, officialDate, status.abstractGameState,
+                  teams.away.score, teams.home.score,
            status.detailedState, teams.away.team.name, teams.home.team.name, venue.name) %>%
     janitor::clean_names() %>%
     dplyr::filter(status_detailed_state == "In Progress" | status_detailed_state == "Final") %>%
-    dplyr::rename(away_team = teams_away_team_name) %>%
-    dplyr::rename(home_team = teams_home_team_name)
+    dplyr::rename(
+      away_team = teams_away_team_name,
+      home_team = teams_home_team_name,
+      away_score = teams_away_score,
+      home_score = teams_home_score
+    )
   
   return(games)
 }
@@ -58,7 +63,7 @@ clean_hits <- function(mlb_pbp, mlb_games){
       away_score = result_away_score
     ) %>%
     # discard unneccessary columns
-    dplyr::select(play_id, game_date, game_type, player_name, player_team,
+    dplyr::select(game_pk, play_id, game_date, game_type, player_name, player_team,
            events, rbi, des, home_team, away_team, bb_type, outs_when_up,
            inning, inning_topbot, stadium_observed, pitcher_name,
            home_score, away_score,
@@ -587,7 +592,7 @@ write_tweet <- function(hit){
   return(tweet)
 }
 
-draw_hit_plot <- function(hit){
+draw_hit_plot <- function(hit, email = FALSE, filepath = NULL){
   # hit: single hit sliced from calculate dingers function
   # require:
   #   -hit from calculate dingers function
@@ -709,7 +714,11 @@ draw_hit_plot <- function(hit){
     ggplot2::coord_fixed() +
     ggplot2::labs(color = "Wall Height (ft)")
   
-  ggplot2::ggsave("hit_chart.png", width = 6, height = 4, dpi = 500)
+  if(email == FALSE){
+    ggplot2::ggsave("hit_chart.png", width = 6, height = 4, dpi = 500)
+  } else {
+    ggplot2::ggsave(glue::glue("{filepath}"), width = 6, height = 4, dpi = 500)
+  }
   
   description <- stringr::str_remove(hit$des, hit$player_name)
   
@@ -724,4 +733,38 @@ draw_hit_plot <- function(hit){
   )
   
   return(alt_text)
+}
+
+write_text <- function(game_hits){
+  # get team abbreviations for matchup data
+  
+  home_team <- unique(game_hits$home_abbr)
+  
+  away_team <- unique(game_hits$away_abbr)
+  
+  home_hash <- unique(game_hits$home_hashtag)
+  
+  away_hash <- unique(game_hits$away_hashtag)
+  
+  home_final <- unique(game_hits$home_final)
+  
+  away_final <- unique(game_hits$away_final)
+  
+  winner <- ifelse(game_hits[1,]$home_final > game_hits[1,]$away_final, unique(game_hits$home_team), unique(game_hits$away_team))
+  
+  winner_final <- ifelse(winner == unique(game_hits$home_team), home_final, away_final)
+  
+  loser <- ifelse(winner == unique(game_hits$home_team), unique(game_hits$away_team), unique(game_hits$home_team))
+  
+  loser_final <- ifelse(loser == unique(game_hits$away_team), away_final, home_final)
+  
+  text <- glue::glue(
+    "Dong Report for #{home_team}vs{away_team}
+    {winner} defeat {loser} {winner_final}-{loser_final}
+    {nrow(game_hits)} dong-worthy batted balls
+    #{home_hash}
+    #{away_hash}"
+  )
+  
+  return(text)
 }

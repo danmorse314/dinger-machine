@@ -41,14 +41,6 @@ games <- fetch_live_games(dates_to_pull)
 game_ids <- games %>%
   dplyr::pull(game_pk)
 
-# get twitter authorization token saved in environment
-#twitter_token <- rtweet::rtweet_bot(
-#  api_key       = Sys.getenv("DONG_TWITTER_API_KEY"),
-#  api_secret    = Sys.getenv("DONG_TWITTER_API_SECRET"),
-#  access_token  = Sys.getenv("DONG_TWITTER_ACCESS_TOKEN"),
-#  access_secret = Sys.getenv("DONG_TWITTER_ACCESS_SECRET")
-#)
-
 if(length(game_ids) > 0) {
 
   # pull all live games
@@ -75,12 +67,6 @@ if(length(game_ids) > 0) {
       ) %>%
       # only tweet if it would've donged in at least one park
       dplyr::filter(total_dongs > 0) %>%
-      # make sure we haven't tweeted the play already
-      dplyr::filter(play_id %not_in% done_plays$play_id) %>%
-      # post oldest hits first
-      # shouldn't be necessary if it automates often enough
-      #dplyr::mutate(post_order = row_number()) %>%
-      #dplyr::arrange(-post_order) %>%
       dplyr::arrange(inning) %>%
       # make sure we can do the stadium plot or it'll error out
       dplyr::filter(stadium_observed %in% unique(stadium_paths$stadium))
