@@ -318,7 +318,9 @@ write_tweet <- function(hit){
     And there's a drive into deep {direction} field by Castellanos, and that'll be a home run in {dongs}/30 MLB ballparks
     
     {away_team} ({away_score}) @ {home_team} ({home_score})
-    {inning_emoji} {inning}"
+    {inning_emoji} {inning}
+        
+    I don't know if I'm going to be putting on this headset again"
       ) %>% substr(1, 278)
     } else {
       tweet <- glue::glue(
@@ -334,7 +336,9 @@ write_tweet <- function(hit){
     And there's a drive into deep {direction} field by Castellanos, and that'll be a home run in {dongs}/30 MLB ballparks
     
     {away_team} ({away_score}) @ {home_team} ({home_score})
-    {inning_emoji} {inning}"
+    {inning_emoji} {inning}
+        
+    I don't know if I'm going to be putting on this headset again"
       ) %>% substr(1, 278)
     }
     
