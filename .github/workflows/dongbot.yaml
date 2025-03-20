@@ -1,0 +1,24 @@
+name: dongbot
+
+on:
+  schedule:
+  #  - cron: '0 */3 * * *'
+  push:
+    branches:
+      - main
+
+jobs:
+  dongbot-post:
+    runs-on: macOS-latest
+    env:
+      DONG_TWITTER_API_KEY: ${{ secrets.DONG_TWITTER_API_KEY }}
+      DONG_TWITTER_API_SECRET: ${{ secrets.DONG_TWITTER_API_SECRET }}
+      DONG_TWITTER_ACCESS_TOKEN: ${{ secrets.DONG_TWITTER_ACCESS_TOKEN }}
+      DONG_TWITTER_ACCESS_SECRET: ${{ secrets.DONG_TWITTER_ACCESS_SECRET }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: r-lib/actions/setup-r@master
+      - name: Install packages
+        run: Rscript -e 'install.packages(c("rtweet","purrr","baseballr","dplyr","readr","magrittr","glue","stringr","magick","ggplot2","ggimage","grid","janitor","tidyselect","GeomMLBStadiums","units"), dependencies = TRUE)'
+      - name: Create and post tweet
+        run: Rscript dong_bot.R

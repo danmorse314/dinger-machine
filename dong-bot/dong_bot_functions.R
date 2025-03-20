@@ -34,7 +34,11 @@ clean_hits <- function(mlb_pbp, mlb_games){
     janitor::clean_names() %>%
     # change column names to more familiar form
     dplyr::mutate(
-      player_name = matchup_batter_full_name,
+      player_name = stringi::stri_trans_general(matchup_batter_full_name, "latin-ascii"),
+      player_name = gsub("\\!|\\*|\\@|\\#|\\$|\\%|\\^|\\&|","",player_name),
+      player_name = stringi::stri_trans_general(player_name, "title"),
+      #player_name_decoded2 = iconv(player_name_decoded, from = "UTF-8", to = "LATIN1", sub = ""),
+      #player_name = matchup_batter_full_name,
       player_team = batting_team,
       player_id = matchup_batter_id,
       game_date = official_date,
@@ -62,11 +66,12 @@ clean_hits <- function(mlb_pbp, mlb_games){
       home_score = result_home_score,
       away_score = result_away_score
     ) %>%
+    dplyr::arrange(end_time) %>%
     # discard unneccessary columns
     dplyr::select(game_pk, play_id, game_date, game_type, player_name, player_team,
            events, rbi, des, home_team, away_team, bb_type, outs_when_up,
            inning, inning_topbot, stadium_observed, pitcher_name,
-           home_score, away_score,
+           home_score, away_score, matchup_batter_full_name,
            #  these here are the ones used in calculations
            plate_z, hc_x, hc_y, hit_distance_sc,
            launch_angle, launch_speed, headshot) %>%
@@ -110,15 +115,19 @@ calculate_dingers <- function(hits){
   # hits: cleaned pbp data from clean_hits function
   # require: fences <- data/fences.rds
   
+  cat(paste("\nCalculating dong probabilities for",nrow(hits),"BIP...\n"))
+  cat("0%...........50%..........100%\n")
+
   # adding fence height at batted ball location for each stadium, each hit
   hits_new <- NULL
   
   # calculate dingerness in each ballpark
   for(j in c(unique(fences$stadium))){
+    cat("=")
     fences_i <- dplyr::filter(fences, stadium == j)
-    for(i in 1:nrow(hit_data)){
-      nearest_fence <- dplyr::tibble(angle_diff = abs(hit_data$spray_angle[i] - fences_i$spray_angle_stadia),
-                              play_id = hit_data$play_id[i]) %>%
+    for(i in 1:nrow(hits)){
+      nearest_fence <- dplyr::tibble(angle_diff = abs(hits$spray_angle[i] - fences_i$spray_angle_stadia),
+                              play_id = hits$play_id[i]) %>%
         dplyr::bind_cols(fences_i) %>%
         dplyr::arrange(angle_diff) %>%
         dplyr::slice(1) %>%
@@ -131,7 +140,7 @@ calculate_dingers <- function(hits){
 
   # calculate whether or not it would've been a dinger
   suppressWarnings({
-    hits_new <- hit_data %>%
+    hits_new <- hits %>%
       dplyr::left_join(hits_new, by = "play_id") %>%
       dplyr::left_join(
         dplyr::select(team_hashtags, full_team_name, team_abbr) %>%
@@ -161,6 +170,7 @@ calculate_dingers <- function(hits){
 get_dong_total <- function(hits_detailed){
   # hits_detailed from calculate dingers function
   
+  cat("\nGetting total dong stadiums...\n")
   total_dongs <- hits_detailed  %>%
     dplyr::filter(stadium != "Sahlen Field") %>%
     dplyr::group_by(player_name, player_team, game_date, events, launch_speed, launch_angle,
@@ -686,15 +696,27 @@ draw_hit_plot <- function(hit, email = FALSE, filepath = NULL){
       curvature = curv, angle = 135, size = 2, color = hit_color
     ) +
     # ball landing spot
-    ggimage::geom_emoji(data = hit,
-                        ggplot2::aes(hc_x_, hc_y_,
-                            image = dplyr::case_when(
-                              play_result == "Home Run" ~ '1f4a5',
-                              play_result %in% out_events ~ '274c',
-                              play_result %in% hit_events ~ '26be'
-                            )
-                            #image = ifelse(did_dong == 1, '1f4a5', '274c')
-                        ), size = .07) +
+    ggimage::geom_image(
+      data = hit,
+      ggplot2::aes(
+        x = hc_x_, y = hc_y_,
+        image = dplyr::case_when(
+          play_result == "Home Run" ~ "emojis/bomb.png",
+          play_result %in% out_events ~ "emojis/out.png",
+          TRUE ~ "emojis/baseball.png"
+        )
+      ),
+      size = 0.07
+    ) +
+    #ggimage::geom_emoji(data = hit,
+    #                    ggplot2::aes(hc_x_, hc_y_,
+    #                        image = dplyr::case_when(
+    #                          play_result == "Home Run" ~ '1f4a5',
+    #                          play_result %in% out_events ~ '274c',
+    #                          play_result %in% hit_events ~ '26be'
+    #                        )
+    #                        #image = ifelse(did_dong == 1, '1f4a5', '274c')
+    #                    ), size = .07) +
     # headshot
     ggimage::geom_image(
       data = hit,
@@ -713,6 +735,8 @@ draw_hit_plot <- function(hit, email = FALSE, filepath = NULL){
     ) +
     ggplot2::theme_void() +
     ggplot2::theme(
+      plot.background = ggplot2::element_rect(color = "white", fill = "white"),
+      panel.background = ggplot2::element_rect(color = "white", fill = "white"),
       plot.margin = grid::unit(c(0.5,0.5,0.5,0.5), "mm")
     ) +
     ggplot2::coord_fixed() +
@@ -724,7 +748,7 @@ draw_hit_plot <- function(hit, email = FALSE, filepath = NULL){
     ggplot2::ggsave(glue::glue("{filepath}"), width = 6, height = 4, dpi = 500)
   }
   
-  description <- stringr::str_remove(hit$des, hit$player_name)
+  description <- stringr::str_remove(hit$des, hit$matchup_batter_full_name)
   
   description <- substring(description,1,nchar(description)-1)
   
@@ -739,36 +763,92 @@ draw_hit_plot <- function(hit, email = FALSE, filepath = NULL){
   return(alt_text)
 }
 
-write_text <- function(game_hits){
-  # get team abbreviations for matchup data
+bs_post_custom <- function(text, images, images_alt, auth = bs_auth(get_bluesky_user(), get_bluesky_pass())){
   
-  home_team <- unique(game_hits$home_abbr)
+  # mirroring the bskyr bs_post function bc the actual one isn't working for me for some reason
   
-  away_team <- unique(game_hits$away_abbr)
+  if (missing(text)) {
+    cli::cli_abort('{.arg text} must not be missing.')
+  }
   
-  home_hash <- unique(game_hits$home_hashtag)
+  if (!missing(images)) {
+    if (length(images) > 4) {
+      cli::cli_abort('You can only attach up to 4 images to a post.')
+    }
+  }
   
-  away_hash <- unique(game_hits$away_hashtag)
+  if (!missing(images)) {
+    if (missing(images_alt)) {
+      cli::cli_abort('If {.arg images} is provided, {.arg images_alt} must also be provided.')
+    }
+  }
   
-  home_final <- unique(game_hits$home_final)
+  facets_l <- bskyr:::parse_facets(txt = text, auth = auth)
   
-  away_final <- unique(game_hits$away_final)
+  if (!missing(images)) {
+    if (is.list(images)) { # any(fs::path_ext(images) == '')
+      # then we assume it's a blob
+      blob <- images
+    } else {
+      # otherwise it's a set of paths
+      blob <- bs_upload_blob(images, auth = auth, clean = FALSE)
+    }
+  }
   
-  winner <- ifelse(game_hits[1,]$home_final > game_hits[1,]$away_final, unique(game_hits$home_team), unique(game_hits$away_team))
+  if (!missing(images_alt)) {
+    if (length(blob) != length(images_alt)) {
+      cli::cli_abort('{.arg images_alt} must be the same length as {.arg images}.')
+    }
+  }
   
-  winner_final <- ifelse(winner == unique(game_hits$home_team), home_final, away_final)
-  
-  loser <- ifelse(winner == unique(game_hits$home_team), unique(game_hits$away_team), unique(game_hits$home_team))
-  
-  loser_final <- ifelse(loser == unique(game_hits$away_team), away_final, home_final)
-  
-  text <- glue::glue(
-    "Dong Report for #{home_team}vs{away_team}
-    {winner} defeat {loser} {winner_final}-{loser_final}
-    {nrow(game_hits)} dong-worthy batted balls
-    #{home_hash}
-    #{away_hash}"
+  post <- list(
+    `$type` = 'app.bsky.feed.post',
+    text = text,
+    createdAt = bs_created_at()
   )
   
-  return(text)
+  if (!purrr::is_empty(facets_l)) {
+    post$facets <- facets_l[[1]]
+  }
+  
+  if (!missing(images)) {
+    if (!missing(images_alt)) {
+      img_incl <- lapply(seq_along(images), function(i) {
+        list(
+          image = blob[[i]]$blob,
+          alt = images_alt[[i]]
+        )
+      })
+    } else {
+      img_incl <- lapply(blob, function(x) {
+        list(
+          image = x$blob
+        )
+      })
+    }
+    
+    post$embed <- list(
+      '$type' = 'app.bsky.embed.images',
+      images = img_incl
+    )
+  }
+  
+  req <- httr2::request('https://bsky.social/xrpc/com.atproto.repo.createRecord') |>
+    httr2::req_auth_bearer_token(token = auth$accessJwt) |>
+    httr2::req_body_json(
+      data = list(
+        repo = auth$did,
+        collection = 'app.bsky.feed.post',
+        record = post
+      )
+    )
+  
+  resp <- req |>
+    httr2::req_perform() |>
+    httr2::resp_body_json()
+  
+  resp |>
+    dplyr::bind_rows() |>
+    bskyr:::clean_names() |>
+    bskyr:::add_req_url(req)
 }

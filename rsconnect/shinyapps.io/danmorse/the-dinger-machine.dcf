@@ -1,0 +1,14 @@
+name: the-dinger-machine
+title: the-dinger-machine
+username:
+account: danmorse
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 4078904
+bundleId: 7088670
+url: https://danmorse.shinyapps.io/the-dinger-machine/
+when: 1681459599.0419
+lastSyncTime: 1681459599.0419
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: .github/.gitignore|.github/workflows/dongbot.yaml|.Rbuildignore|dinger_calculation.R|hit_chart.png|images/fence_heights.png|images/outfield_walls.png|images/seager_double.png|logo.jpg|README.md|scrape_baseball_savant.R|data|dong-bot|favicon_io
