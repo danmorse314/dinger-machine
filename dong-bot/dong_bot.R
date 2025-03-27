@@ -135,7 +135,7 @@ if(length(game_ids) > 0) {
         
         tweet_url <- paste0(
           "https://bsky.app/profile/woulditdong.bsky.social/post/",
-          gsub(".*post\\/","",post_df$post_uri)
+          gsub(".*post\\/","",post_df$uri)
         )
         
       } else {stop("argument app must be either 'twitter' or 'bsky'")}
