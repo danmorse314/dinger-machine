@@ -78,9 +78,15 @@ if(length(game_ids) > 0) {
     
   }
   
-  if(nrow(hit_data) > 0) {
+  if(nrow(hit_data) < 1) {
+    message("no new hits found")
+  } else {
     
     if(app == "bsky"){
+      
+      set_bluesky_user("woulditdong.bsky.social")
+      set_bluesky_pass(Sys.getenv("bskypw"))
+      
       bs_auth(
         user = get_bluesky_user(),
         pass = get_bluesky_pass()
@@ -89,6 +95,9 @@ if(length(game_ids) > 0) {
     
     for(i in 1:nrow(hit_data)){
       #i <- 2
+      
+      message(paste("posting", i, "of", nrow(hit_data), "hits..."))
+      
       hit <- hit_data %>% dplyr::slice(i)
       tweet <- write_tweet(hit)
       alt_text <- draw_hit_plot(hit)
@@ -155,7 +164,7 @@ if(length(game_ids) > 0) {
       # wait 30 seconds before tweeting again if there's multiple tweets
       if(nrow(hit_data) - i > 0){
         Sys.sleep(30)
-      }
+      } else {message("Done!")}
     }
     
     # push data to github for app every hour
